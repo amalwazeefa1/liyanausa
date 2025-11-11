@@ -9,6 +9,9 @@
     <meta
         content="Liyana Logistics USA INC provides international freight forwarding and logistics services including sea/air export/import, project cargo, warehousing, and custom clearing."
         name="description" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
     <style>
         /* Global Styles */
@@ -199,10 +202,19 @@
         }
 
         .logo h1 {
+            line-height: 0.8;
             font-size: 1.5rem;
             margin-bottom: 0;
             color: var(--primary-blue);
             margin-left: 10px;
+        }
+
+        .small-text {
+            font-weight: 600 !important;
+            font-size: 18px;
+            font-family: "Italianno", cursive;
+            color: unset !important;
+            color: black !important;
         }
 
         .logo span {
@@ -303,10 +315,6 @@
             cursor: pointer;
             font-size: 1.5rem;
             color: var(--primary-blue);
-        }
-
-        span .small {
-            display: none;
         }
 
         /* Hero Section */
@@ -1186,7 +1194,7 @@
                 <img alt="Liyana Logistics Logo" class="logo-img" onclick="window.location.href='/'"
                     src="images/logo.png" />
                 <h1><a href="/">Liyana Logistics <span>USA INC.</span><br>
-                <span class="small">Your Ultimate Logistics Partner</span></a>
+                <span class="small-text">Your Ultimate Logistics Partner</span></a>
                 </h1>
             </div>
             <div class="hamburger">
