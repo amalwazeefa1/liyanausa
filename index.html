@@ -1,1468 +1,1606 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Liyana Logistics USA INC - Your Trusted Global Logistics Partner</title>
+    <title>
+      Liyana Logistics USA INC - Your Trusted Global Logistics Partner
+    </title>
     <meta
-        content="Liyana Logistics USA INC provides international freight forwarding and logistics services including sea/air export/import, project cargo, warehousing, and custom clearing."
-        name="description" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+      content="Liyana Logistics USA INC provides international freight forwarding and logistics services including sea/air export/import, project cargo, warehousing, and custom clearing."
+      name="description"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Italianno&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- <link rel="stylesheet" href="./style.css"> -->
     <style>
-        /* Global Styles */
-        :root {
-            --primary-blue: #1a3c6e;
-            --secondary-blue: #2a5ba0;
-            --accent-blue: #4a7fc8;
-            --light-blue: #e6f0ff;
-            --light-gray: #f5f7fa;
-            --medium-gray: #e1e5eb;
-            --dark-gray: #6c757d;
-            --white: #ffffff;
-            --text-dark: #333333;
-            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            --transition: all 0.3s ease;
+      /* Global Styles */
+      :root {
+        --primary-blue: #1a3c6e;
+        --secondary-blue: #2a5ba0;
+        --accent-blue: #4a7fc8;
+        --light-blue: #e6f0ff;
+        --light-gray: #f5f7fa;
+        --medium-gray: #e1e5eb;
+        --dark-gray: #6c757d;
+        --white: #ffffff;
+        --text-dark: #333333;
+        --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        --transition: all 0.3s ease;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: var(--text-dark);
+        background-color: var(--white);
+        overflow-x: hidden;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+      }
+
+      h1 {
+        font-size: 2.8rem;
+      }
+
+      h2 {
+        font-size: 2.2rem;
+        text-align: center;
+        margin-bottom: 3rem;
+        position: relative;
+      }
+
+      h2:after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background-color: var(--accent-blue);
+      }
+
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        margin-bottom: 1rem;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 12px 28px;
+        border-radius: 4px;
+        font-weight: 600;
+        text-align: center;
+        cursor: pointer;
+        transition: var(--transition);
+        border: none;
+        font-size: 1rem;
+      }
+
+      .slide-content .btn-primary {
+        background-color: var(--primary-blue);
+        color: white;
+      }
+
+      .btn-primary {
+        border: 2px solid var(--secondary-blue);
+        /* background-color: var(--primary-blue); */
+        color: var(--primary-blue);
+      }
+
+      .btn-primary:hover {
+        background-color: var(--secondary-blue);
+        transform: translateY(-3px);
+        box-shadow: var(--shadow);
+        color: white;
+      }
+
+      .btn-secondary {
+        background-color: var(--white);
+        color: var(--primary-blue);
+        border: 2px solid var(--primary-blue);
+      }
+
+      .btn-secondary:hover {
+        background-color: var(--primary-blue);
+        color: var(--white);
+        transform: translateY(-3px);
+        box-shadow: var(--shadow);
+      }
+
+      .btn-small {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+      }
+
+      section {
+        padding: 80px 0;
+      }
+
+      .section-light {
+        background-color: var(--white);
+      }
+
+      .section-gray {
+        background-color: var(--light-gray);
+      }
+
+      /* Header & Navigation */
+      header {
+        background-color: var(--white);
+        box-shadow: var(--shadow);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+      }
+
+      .logo-img {
+        height: 50px;
+        width: auto;
+        cursor: pointer;
+        transition: var(--transition);
+      }
+
+      .logo-img:hover {
+        transform: scale(1.05);
+      }
+
+      .logo h1 {
+        line-height: 0.8;
+        font-size: 1.5rem;
+        margin-bottom: 0;
+        color: var(--primary-blue);
+        margin-left: 10px;
+      }
+
+      .small-text {
+        font-weight: 600 !important;
+        font-size: 18px;
+        font-family: "Italianno", cursive;
+        color: unset !important;
+        color: black !important;
+      }
+
+      .logo span {
+        color: var(--accent-blue);
+      }
+
+      .nav-menu {
+        display: flex;
+        align-items: center;
+      }
+
+      .nav-menu li {
+        margin-left: 25px;
+        position: relative;
+      }
+
+      .nav-menu a {
+        font-weight: 600;
+        transition: var(--transition);
+        position: relative;
+      }
+
+      .nav-menu a:hover {
+        color: var(--accent-blue);
+      }
+
+      .nav-menu a.active {
+        color: var(--accent-blue);
+      }
+
+      .nav-menu a:after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--accent-blue);
+        transition: var(--transition);
+      }
+
+      .nav-menu a:hover:after,
+      .nav-menu a.active:after {
+        width: 100%;
+      }
+
+      /* Dropdown Menu */
+      .dropdown {
+        position: relative;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: var(--white);
+        width: 500px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        border-radius: 4px;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 15px;
+      }
+
+      .dropdown-content-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      .dropdown-column {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .dropdown-content a {
+        color: var(--text-dark);
+        padding: 10px 15px;
+        text-decoration: none;
+        display: block;
+        transition: var(--transition);
+        border-radius: 4px;
+      }
+
+      .dropdown-content a:hover {
+        background-color: var(--light-gray);
+        color: var(--accent-blue);
+        transform: translateX(5px);
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .hamburger {
+        display: none;
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: var(--primary-blue);
+      }
+
+      /* Hero Section */
+      .hero {
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      .hero-slider {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+      }
+
+      .slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .slide.active {
+        opacity: 1;
+      }
+
+      .slide::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          rgba(26, 60, 110, 0.7),
+          rgba(26, 60, 110, 0.5)
+        );
+      }
+
+      .slide-content {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        color: var(--white);
+        max-width: 800px;
+        padding: 0 20px;
+        animation: fadeInUp 1s ease;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .hero h1 {
+        font-size: 3.2rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        margin: 0 auto 2.5rem;
+      }
+
+      .hero-btns {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .hero-btns .btn {
+        min-width: 180px;
+      }
+
+      .slider-nav {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+        z-index: 2;
+      }
+
+      .slider-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+        transition: var(--transition);
+      }
+
+      .slider-dot.active {
+        background-color: var(--white);
+        transform: scale(1.2);
+      }
+
+      /* Services Overview */
+      .services-overview {
+        text-align: center;
+        padding: 60px 0;
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+      }
+
+      .service-tile {
+        padding: 25px 20px;
+        border-radius: 8px;
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        opacity: 0;
+        transform: translateY(50px);
+      }
+
+      .service-tile.white {
+        background-color: var(--white);
+        color: var(--text-dark);
+        transition: background-color 0.3s ease, color 0.3s ease !important;
+      }
+      .service-tile.white:hover {
+        background-color: var(--primary-blue);
+        color: var(--light-blue);
+      }
+
+      .service-tile.blue {
+        background-color: var(--primary-blue);
+        color: var(--white);
+      }
+
+      .service-tile.animated {
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+
+      .service-tile:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .service-icon {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        transition: var(--transition);
+        position: relative;
+        display: inline-block;
+        animation: breathe 3s infinite ease-in-out;
+      }
+
+      .service-tile.white .service-icon {
+        color: var(--primary-blue);
+      }
+
+      .service-tile.blue .service-icon {
+        color: var(--white);
+      }
+
+      @keyframes breathe {
+        0%,
+        100% {
+          transform: scale(1);
         }
 
-        html {
-            scroll-behavior: smooth;
+        50% {
+          transform: scale(1.05);
+        }
+      }
+
+      .service-tile:hover .service-icon {
+        animation: none;
+        transform: scale(1.2) rotate(10deg);
+      }
+
+      .service-tile.white:hover .service-icon {
+        color: var(--accent-blue);
+      }
+
+      .service-tile.blue:hover .service-icon {
+        color: var(--light-blue);
+      }
+
+      .read-more {
+        margin-top: auto;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        transition: var(--transition);
+        gap: 15px;
+      }
+
+      .service-tile.white .read-more {
+        color: var(--accent-blue);
+      }
+
+      .service-tile.white .read-more:hover {
+        color: white !important;
+      }
+
+      .read-more:hover {
+        transform: translateX(5px);
+      }
+
+      .service-tile.white .read-more:hover {
+        color: var(--primary-blue);
+      }
+
+      .service-tile.blue .read-more:hover {
+        color: var(--white);
+      }
+
+      /* About Section */
+      .about-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        align-items: center;
+      }
+
+      .about-text h2 {
+        text-align: left;
+      }
+
+      .about-text h2:after {
+        left: 0;
+        transform: none;
+      }
+
+      .about-highlights {
+        margin-top: 30px;
+      }
+
+      .highlight-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      .highlight-item.animated {
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+
+      .highlight-icon {
+        background-color: var(--light-gray);
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+        color: var(--primary-blue);
+        font-size: 1.5rem;
+        flex-shrink: 0;
+        transition: var(--transition);
+      }
+
+      .highlight-item:hover .highlight-icon {
+        background-color: var(--accent-blue);
+        color: var(--white);
+        transform: rotate(10deg);
+      }
+
+      /* Why Choose Us Section */
+      .why-choose-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        align-items: center;
+      }
+
+      .why-choose-list {
+        margin-top: 30px;
+      }
+
+      .why-choose-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 25px;
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      .why-choose-item.animated {
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+
+      .why-choose-icon {
+        background-color: var(--light-gray);
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+        color: var(--primary-blue);
+        font-size: 1.5rem;
+        flex-shrink: 0;
+        transition: var(--transition);
+      }
+
+      .why-choose-item:hover .why-choose-icon {
+        background-color: var(--accent-blue);
+        color: var(--white);
+        transform: rotate(10deg);
+      }
+
+      /* Industries Section */
+      .industries-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        margin-top: 40px;
+      }
+
+      .industry-card {
+        padding: 30px 20px;
+        border-radius: 8px;
+        box-shadow: var(--shadow);
+        text-align: center;
+        transition: var(--transition);
+        opacity: 0;
+        transform: translateY(50px);
+        position: relative;
+        overflow: hidden;
+        color: var(--white);
+        min-height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .industry-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          rgb(26 60 110 / 65%),
+          rgba(26, 60, 110, 0.9)
+        );
+        z-index: 1;
+      }
+
+      .industry-card-content {
+        position: relative;
+        z-index: 2;
+      }
+
+      .industry-card.animated {
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+
+      .industry-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .industry-icon {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        transition: var(--transition);
+      }
+
+      .industry-card:hover .industry-icon {
+        transform: scale(1.1);
+      }
+
+      /* Testimonials Section */
+      .testimonials-container {
+        max-width: 800px;
+        margin: 0 auto;
+        position: relative;
+      }
+
+      .testimonial-slider {
+        overflow: hidden;
+        position: relative;
+      }
+
+      .testimonial-slide {
+        display: none;
+        animation: fadeIn 1s ease;
+        text-align: center;
+        padding: 0 20px;
+      }
+
+      .testimonial-slide.active {
+        display: block;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
         }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            background-color: var(--white);
-            overflow-x: hidden;
+        to {
+          opacity: 1;
         }
+      }
 
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+      .testimonial-content {
+        background-color: var(--primary-blue);
+        padding: 40px;
+        border-radius: 8px;
+        margin-bottom: 30px;
+        position: relative;
+        color: var(--white);
+      }
 
-        h1,
-        h2,
-        h3,
-        h4 {
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 1rem;
-        }
+      .testimonial-content:after {
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-top: 15px solid var(--primary-blue);
+      }
 
+      .testimonial-text {
+        font-style: italic;
+        margin-bottom: 20px;
+        font-size: 1.1rem;
+      }
+
+      .testimonial-author {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .author-img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 15px;
+      }
+
+      .author-info h4 {
+        margin-bottom: 5px;
+        color: var(--primary-blue);
+      }
+
+      .author-info p {
+        color: var(--accent-blue);
+        margin-bottom: 0;
+      }
+
+      .testimonial-nav {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 30px;
+      }
+
+      .testimonial-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: var(--medium-gray);
+        cursor: pointer;
+        transition: var(--transition);
+      }
+
+      .testimonial-dot.active {
+        background-color: var(--accent-blue);
+        transform: scale(1.2);
+      }
+
+      /* CTA Section */
+      .cta-section {
+        background: linear-gradient(
+            rgba(26, 60, 110, 0.9),
+            rgba(26, 60, 110, 0.9)
+          ),
+          url("https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80");
+        background-size: cover;
+        background-position: center;
+        color: var(--white);
+        text-align: center;
+        padding: 100px 0;
+      }
+
+      .cta-btns .btn .btn-primary {
+        display: none !important;
+      }
+
+      .cta-content {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .cta-content h2 {
+        color: var(--white);
+      }
+
+      .cta-content h2:after {
+        background-color: var(--white);
+      }
+
+      .cta-content p {
+        font-size: 1.2rem;
+        margin-bottom: 40px;
+      }
+
+      .cta-btns {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .cta-btns .btn.btn-primary {
+        background-color: var(--primary-blue);
+        color: white !important;
+      }
+      .cta-btns .btn.btn-primary:hover {
+        background-color: var(--accent-blue);
+        color: white !important;
+      }
+
+      /* Footer */
+      footer {
+        background-color: var(--primary-blue);
+        color: var(--white);
+        padding: 60px 0 30px;
+      }
+
+      .footer-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 40px;
+        margin-bottom: 40px;
+      }
+
+      .footer-col h3 {
+        color: var(--white);
+        margin-bottom: 25px;
+        position: relative;
+        padding-bottom: 10px;
+      }
+
+      .footer-col h3:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 3px;
+        background-color: var(--accent-blue);
+      }
+
+      .footer-links li {
+        margin-bottom: 12px;
+      }
+
+      .footer-links a {
+        transition: var(--transition);
+      }
+
+      .footer-links a:hover {
+        color: var(--accent-blue);
+        padding-left: 5px;
+      }
+
+      .contact-link {
+        color: var(--white);
+        transition: var(--transition);
+        display: flex;
+        align-items: flex-start;
+      }
+
+      .contact-link:hover {
+        color: var(--accent-blue);
+      }
+
+      .contact-link i {
+        margin-right: 10px;
+        width: 20px;
+        margin-top: 3px;
+      }
+
+      .contact-details {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .social-links {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+      }
+
+      .social-links a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        transition: var(--transition);
+      }
+
+      .social-links a:hover {
+        background-color: var(--accent-blue);
+        transform: translateY(-3px);
+      }
+
+      .copyright {
+        text-align: center;
+        padding-top: 30px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 0.9rem;
+      }
+
+      /* Back to Top Button */
+      .back-to-top {
+        position: fixed;
+        bottom: 90px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        background-color: var(--primary-blue);
+        color: var(--white);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition);
+        z-index: 999;
+      }
+
+      .back-to-top.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .back-to-top:hover {
+        background-color: var(--secondary-blue);
+        transform: translateY(-5px);
+      }
+
+      /* WhatsApp Button */
+      .whatsapp-float {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 20px;
+        right: 20px;
+        background-color: #25d366;
+        color: #fff;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 2px 2px 3px #999;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: var(--transition);
+      }
+
+      .whatsapp-float:hover {
+        background-color: #128c7e;
+        transform: scale(1.1);
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 992px) {
         h1 {
-            font-size: 2.8rem;
+          font-size: 2.4rem;
         }
 
         h2 {
-            font-size: 2.2rem;
-            text-align: center;
-            margin-bottom: 3rem;
-            position: relative;
+          font-size: 2rem;
         }
 
-        h2:after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background-color: var(--accent-blue);
+        .about-content,
+        .why-choose-content {
+          grid-template-columns: 1fr;
+          gap: 40px;
         }
 
-        h3 {
-            font-size: 1.5rem;
-        }
-
-        p {
-            margin-bottom: 1rem;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 28px;
-            border-radius: 4px;
-            font-weight: 600;
-            text-align: center;
-            cursor: pointer;
-            transition: var(--transition);
-            border: none;
-            font-size: 1rem;
-        }
-
-        .slide-content .btn-primary {
-            background-color: var(--primary-blue);
-            color: white;
-        }
-
-        .btn-primary {
-            border: 2px solid var(--secondary-blue);
-            /* background-color: var(--primary-blue); */
-            color: var(--primary-blue);
-        }
-
-        .btn-primary:hover {
-            background-color: var(--secondary-blue);
-            transform: translateY(-3px);
-            box-shadow: var(--shadow);
-            color: white;
-        }
-
-        .btn-secondary {
-            background-color: var(--white);
-            color: var(--primary-blue);
-            border: 2px solid var(--primary-blue);
-        }
-
-        .btn-secondary:hover {
-            background-color: var(--primary-blue);
-            color: var(--white);
-            transform: translateY(-3px);
-            box-shadow: var(--shadow);
-        }
-
-        .btn-small {
-            padding: 8px 16px;
-            font-size: 0.9rem;
-        }
-
-        section {
-            padding: 80px 0;
-        }
-
-        .section-light {
-            background-color: var(--white);
-        }
-
-        .section-gray {
-            background-color: var(--light-gray);
-        }
-
-        /* Header & Navigation */
-        header {
-            background-color: var(--white);
-            box-shadow: var(--shadow);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-
-        .logo-img {
-            height: 50px;
-            width: auto;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .logo-img:hover {
-            transform: scale(1.05);
-        }
-
-        .logo h1 {
-            line-height: 0.8;
-            font-size: 1.5rem;
-            margin-bottom: 0;
-            color: var(--primary-blue);
-            margin-left: 10px;
-        }
-
-        .small-text {
-            font-weight: 600 !important;
-            font-size: 18px;
-            font-family: "Italianno", cursive;
-            color: unset !important;
-            color: black !important;
-        }
-
-        .logo span {
-            color: var(--accent-blue);
-        }
-
-        .nav-menu {
-            display: flex;
-            align-items: center;
-        }
-
-        .nav-menu li {
-            margin-left: 25px;
-            position: relative;
-        }
-
-        .nav-menu a {
-            font-weight: 600;
-            transition: var(--transition);
-            position: relative;
-        }
-
-        .nav-menu a:hover {
-            color: var(--accent-blue);
-        }
-
-        .nav-menu a.active {
-            color: var(--accent-blue);
-        }
-
-        .nav-menu a:after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--accent-blue);
-            transition: var(--transition);
-        }
-
-        .nav-menu a:hover:after,
-        .nav-menu a.active:after {
-            width: 100%;
-        }
-
-        /* Dropdown Menu */
-        .dropdown {
-            position: relative;
+        .industries-container {
+          grid-template-columns: repeat(2, 1fr);
         }
 
         .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: var(--white);
-            width: 500px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-            border-radius: 4px;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 15px;
+          width: 400px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .header-container {
+          padding: 15px;
         }
 
-        .dropdown-content-wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
+        .nav-menu {
+          position: fixed;
+          top: 70px;
+          right: -100%;
+          background-color: var(--white);
+          width: 80%;
+          height: calc(100vh - 70px);
+          flex-direction: column;
+          align-items: center;
+          padding-top: 50px;
+          transition: var(--transition);
+          box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+          overflow-y: auto;
         }
 
-        .dropdown-column {
-            display: flex;
-            flex-direction: column;
+        .nav-menu.active {
+          right: 0;
         }
 
-        .dropdown-content a {
-            color: var(--text-dark);
-            padding: 10px 15px;
-            text-decoration: none;
-            display: block;
-            transition: var(--transition);
-            border-radius: 4px;
+        .nav-menu li {
+          margin: 0 0 30px 0;
         }
 
-        .dropdown-content a:hover {
-            background-color: var(--light-gray);
-            color: var(--accent-blue);
-            transform: translateX(5px);
+        .dropdown-content {
+          position: static;
+          box-shadow: none;
+          display: none;
+          background-color: var(--light-gray);
+          margin-top: 10px;
+          border-radius: 4px;
+          width: 100%;
+          transform: none;
+          left: 0;
         }
 
-        .dropdown:hover .dropdown-content {
-            display: block;
+        .dropdown.active .dropdown-content {
+          display: block;
         }
 
         .hamburger {
-            display: none;
-            cursor: pointer;
-            font-size: 1.5rem;
-            color: var(--primary-blue);
-        }
-
-        /* Hero Section */
-        .hero {
-            position: relative;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        .hero-slider {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-        }
-
-        .slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .slide.active {
-            opacity: 1;
-        }
-
-        .slide::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(rgba(26, 60, 110, 0.7), rgba(26, 60, 110, 0.5));
-        }
-
-        .slide-content {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-            color: var(--white);
-            max-width: 800px;
-            padding: 0 20px;
-            animation: fadeInUp 1s ease;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+          display: block;
         }
 
         .hero h1 {
-            font-size: 3.2rem;
-            margin-bottom: 1.5rem;
+          font-size: 2.5rem;
+        }
+
+        section {
+          padding: 60px 0;
+        }
+
+        .industries-container {
+          grid-template-columns: 1fr;
+        }
+
+        .dropdown-content-wrapper {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .hero h1 {
+          font-size: 2rem;
         }
 
         .hero p {
-            font-size: 1.2rem;
-            margin: 0 auto 2.5rem;
+          font-size: 1rem;
         }
 
-        .hero-btns {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .hero-btns .btn {
-            min-width: 180px;
-        }
-
-        .slider-nav {
-            position: absolute;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 10px;
-            z-index: 2;
-        }
-
-        .slider-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.5);
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .slider-dot.active {
-            background-color: var(--white);
-            transform: scale(1.2);
-        }
-
-        /* Services Overview */
-        .services-overview {
-            text-align: center;
-            padding: 60px 0;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .service-tile {
-            padding: 25px 20px;
-            border-radius: 8px;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            opacity: 0;
-            transform: translateY(50px);
-        }
-
-        .service-tile.white {
-            background-color: var(--white);
-            color: var(--text-dark);
-        }
-
-        .service-tile.blue {
-            background-color: var(--primary-blue);
-            color: var(--white);
-        }
-
-        .service-tile.animated {
-            opacity: 1;
-            transform: translateY(0);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        .service-tile:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .service-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            transition: var(--transition);
-            position: relative;
-            display: inline-block;
-            animation: breathe 3s infinite ease-in-out;
-        }
-
-        .service-tile.white .service-icon {
-            color: var(--primary-blue);
-        }
-
-        .service-tile.blue .service-icon {
-            color: var(--white);
-        }
-
-        @keyframes breathe {
-
-            0%,
-            100% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.05);
-            }
-        }
-
-        .service-tile:hover .service-icon {
-            animation: none;
-            transform: scale(1.2) rotate(10deg);
-        }
-
-        .service-tile.white:hover .service-icon {
-            color: var(--accent-blue);
-        }
-
-        .service-tile.blue:hover .service-icon {
-            color: var(--light-blue);
-        }
-
-        .read-more {
-            margin-top: auto;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            transition: var(--transition);
-            gap: 15px;
-        }
-
-        .service-tile.white .read-more {
-            color: var(--accent-blue);
-        }
-
-        .service-tile.blue .read-more {
-            color: var(--light-blue);
-        }
-
-        .read-more:hover {
-            transform: translateX(5px);
-        }
-
-        .service-tile.white .read-more:hover {
-            color: var(--primary-blue);
-        }
-
-        .service-tile.blue .read-more:hover {
-            color: var(--white);
-        }
-
-        /* About Section */
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-
-        .about-text h2 {
-            text-align: left;
-        }
-
-        .about-text h2:after {
-            left: 0;
-            transform: none;
-        }
-
-        .about-highlights {
-            margin-top: 30px;
-        }
-
-        .highlight-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-            opacity: 0;
-            transform: translateY(30px);
-        }
-
-        .highlight-item.animated {
-            opacity: 1;
-            transform: translateY(0);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        .highlight-icon {
-            background-color: var(--light-gray);
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 20px;
-            color: var(--primary-blue);
-            font-size: 1.5rem;
-            flex-shrink: 0;
-            transition: var(--transition);
-        }
-
-        .highlight-item:hover .highlight-icon {
-            background-color: var(--accent-blue);
-            color: var(--white);
-            transform: rotate(10deg);
-        }
-
-        /* Why Choose Us Section */
-        .why-choose-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-
-        .why-choose-list {
-            margin-top: 30px;
-        }
-
-        .why-choose-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 25px;
-            opacity: 0;
-            transform: translateY(30px);
-        }
-
-        .why-choose-item.animated {
-            opacity: 1;
-            transform: translateY(0);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        .why-choose-icon {
-            background-color: var(--light-gray);
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 20px;
-            color: var(--primary-blue);
-            font-size: 1.5rem;
-            flex-shrink: 0;
-            transition: var(--transition);
-        }
-
-        .why-choose-item:hover .why-choose-icon {
-            background-color: var(--accent-blue);
-            color: var(--white);
-            transform: rotate(10deg);
-        }
-
-        /* Industries Section */
-        .industries-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .industry-card {
-            padding: 30px 20px;
-            border-radius: 8px;
-            box-shadow: var(--shadow);
-            text-align: center;
-            transition: var(--transition);
-            opacity: 0;
-            transform: translateY(50px);
-            position: relative;
-            overflow: hidden;
-            color: var(--white);
-            min-height: 200px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .industry-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(rgba(26, 60, 110, 0.8), rgba(26, 60, 110, 0.9));
-            z-index: 1;
-        }
-
-        .industry-card-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .industry-card.animated {
-            opacity: 1;
-            transform: translateY(0);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        .industry-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .industry-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            transition: var(--transition);
-        }
-
-        .industry-card:hover .industry-icon {
-            transform: scale(1.1);
-        }
-
-        /* Testimonials Section */
-        .testimonials-container {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        .testimonial-slider {
-            overflow: hidden;
-            position: relative;
-        }
-
-        .testimonial-slide {
-            display: none;
-            animation: fadeIn 1s ease;
-            text-align: center;
-            padding: 0 20px;
-        }
-
-        .testimonial-slide.active {
-            display: block;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-        .testimonial-content {
-            background-color: var(--primary-blue);
-            padding: 40px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            position: relative;
-            color: var(--white);
-        }
-
-        .testimonial-content:after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0;
-            height: 0;
-            border-left: 15px solid transparent;
-            border-right: 15px solid transparent;
-            border-top: 15px solid var(--primary-blue);
-        }
-
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 20px;
-            font-size: 1.1rem;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .author-img {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-right: 15px;
-        }
-
-        .author-info h4 {
-            margin-bottom: 5px;
-            color: var(--primary-blue);
-        }
-
-        .author-info p {
-            color: var(--accent-blue);
-            margin-bottom: 0;
-        }
-
-        .testimonial-nav {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 30px;
-        }
-
-        .testimonial-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: var(--medium-gray);
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .testimonial-dot.active {
-            background-color: var(--accent-blue);
-            transform: scale(1.2);
-        }
-
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(rgba(26, 60, 110, 0.9), rgba(26, 60, 110, 0.9)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
-            background-size: cover;
-            background-position: center;
-            color: var(--white);
-            text-align: center;
-            padding: 100px 0;
-        }
-
-        .cta-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .cta-content h2 {
-            color: var(--white);
-        }
-
-        .cta-content h2:after {
-            background-color: var(--white);
-        }
-
-        .cta-content p {
-            font-size: 1.2rem;
-            margin-bottom: 40px;
-        }
-
+        .hero-btns,
         .cta-btns {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
+          flex-direction: column;
+          align-items: center;
         }
 
-        /* Footer */
-        footer {
-            background-color: var(--primary-blue);
-            color: var(--white);
-            padding: 60px 0 30px;
+        .hero-btns .btn,
+        .cta-btns .btn {
+          width: 100%;
+          max-width: 250px;
         }
 
-        .footer-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-col h3 {
-            color: var(--white);
-            margin-bottom: 25px;
-            position: relative;
-            padding-bottom: 10px;
-        }
-
-        .footer-col h3:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 40px;
-            height: 3px;
-            background-color: var(--accent-blue);
-        }
-
-        .footer-links li {
-            margin-bottom: 12px;
-        }
-
-        .footer-links a {
-            transition: var(--transition);
-        }
-
-        .footer-links a:hover {
-            color: var(--accent-blue);
-            padding-left: 5px;
-        }
-
-        .contact-link {
-            color: var(--white);
-            transition: var(--transition);
-            display: flex;
-            align-items: flex-start;
-        }
-
-        .contact-link:hover {
-            color: var(--accent-blue);
-        }
-
-        .contact-link i {
-            margin-right: 10px;
-            width: 20px;
-            margin-top: 3px;
-        }
-
-        .contact-details {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .social-links a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            transition: var(--transition);
-        }
-
-        .social-links a:hover {
-            background-color: var(--accent-blue);
-            transform: translateY(-3px);
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 0.9rem;
-        }
-
-        /* Back to Top Button */
-        .back-to-top {
-            position: fixed;
-            bottom: 90px;
-            right: 30px;
-            width: 50px;
-            height: 50px;
-            background-color: var(--primary-blue);
-            color: var(--white);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            cursor: pointer;
-            opacity: 0;
-            visibility: hidden;
-            transition: var(--transition);
-            z-index: 999;
-        }
-
-        .back-to-top.active {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .back-to-top:hover {
-            background-color: var(--secondary-blue);
-            transform: translateY(-5px);
-        }
-
-        /* WhatsApp Button */
         .whatsapp-float {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25d366;
-            color: #FFF;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 2px 2px 3px #999;
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: var(--transition);
+          width: 50px;
+          height: 50px;
+          font-size: 24px;
         }
+      }
 
-        .whatsapp-float:hover {
-            background-color: #128C7E;
-            transform: scale(1.1);
-        }
+      /* --- Footer Alignment Fix (Matched to Original Layout) --- */
+      .footer-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 30px;
+        margin-bottom: 40px;
+      }
 
-        /* Responsive Styles */
-        @media (max-width: 992px) {
-            h1 {
-                font-size: 2.4rem;
-            }
+      .footer-col h3 {
+        margin-bottom: 20px;
+      }
 
-            h2 {
-                font-size: 2rem;
-            }
+      .footer-links li {
+        margin-bottom: 10px;
+      }
 
-            .about-content,
-            .why-choose-content {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
+      .footer-bottom,
+      .copyright {
+        text-align: center;
+        padding-top: 25px;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        font-size: 0.9rem;
+        line-height: 1.6;
+      }
 
-            .industries-container {
-                grid-template-columns: repeat(2, 1fr);
-            }
+      /* --- Footer Centered Content within Full Width Background --- */
+      .footer-inner.container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
 
-            .dropdown-content {
-                width: 400px;
-            }
-        }
+      /* === Footer Center Fix for Live Version === */
+      footer {
+        background-color: #001f3f !important;
+      }
 
-        @media (max-width: 768px) {
-            .header-container {
-                padding: 15px;
-            }
+      .footer-inner.container {
+        max-width: 1200px !important;
+        margin: 0 auto !important;
+        padding: 0 20px !important;
+      }
 
-            .nav-menu {
-                position: fixed;
-                top: 70px;
-                right: -100%;
-                background-color: var(--white);
-                width: 80%;
-                height: calc(100vh - 70px);
-                flex-direction: column;
-                align-items: center;
-                padding-top: 50px;
-                transition: var(--transition);
-                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-                overflow-y: auto;
-            }
+      .footer-container {
+        display: grid !important;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)) !important;
+        gap: 30px !important;
+        margin-bottom: 40px !important;
+        align-items: start !important;
+      }
 
-            .nav-menu.active {
-                right: 0;
-            }
-
-            .nav-menu li {
-                margin: 0 0 30px 0;
-            }
-
-            .dropdown-content {
-                position: static;
-                box-shadow: none;
-                display: none;
-                background-color: var(--light-gray);
-                margin-top: 10px;
-                border-radius: 4px;
-                width: 100%;
-                transform: none;
-                left: 0;
-            }
-
-            .dropdown.active .dropdown-content {
-                display: block;
-            }
-
-            .hamburger {
-                display: block;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            section {
-                padding: 60px 0;
-            }
-
-            .industries-container {
-                grid-template-columns: 1fr;
-            }
-
-            .dropdown-content-wrapper {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .hero-btns,
-            .cta-btns {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .hero-btns .btn,
-            .cta-btns .btn {
-                width: 100%;
-                max-width: 250px;
-            }
-
-            .whatsapp-float {
-                width: 50px;
-                height: 50px;
-                font-size: 24px;
-            }
-        }
-
-        /* --- Footer Alignment Fix (Matched to Original Layout) --- */
-        .footer-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-
-        .footer-col h3 {
-            margin-bottom: 20px;
-        }
-
-        .footer-links li {
-            margin-bottom: 10px;
-        }
-
-        .footer-bottom,
-        .copyright {
-            text-align: center;
-            padding-top: 25px;
-            border-top: 1px solid rgba(255, 255, 255, 0.15);
-            font-size: 0.9rem;
-            line-height: 1.6;
-        }
-
-        /* --- Footer Centered Content within Full Width Background --- */
-        .footer-inner.container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* === Footer Center Fix for Live Version === */
-        footer {
-            background-color: #001F3F !important;
-        }
-
-        .footer-inner.container {
-            max-width: 1200px !important;
-            margin: 0 auto !important;
-            padding: 0 20px !important;
-        }
-
-        .footer-container {
-            display: grid !important;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)) !important;
-            gap: 30px !important;
-            margin-bottom: 40px !important;
-            align-items: start !important;
-        }
-
-        .footer-bottom,
-        .copyright {
-            text-align: center !important;
-            padding-top: 25px !important;
-            border-top: 1px solid rgba(255, 255, 255, 0.15);
-            font-size: 0.9rem !important;
-            line-height: 1.6 !important;
-        }
+      .footer-bottom,
+      .copyright {
+        text-align: center !important;
+        padding-top: 25px !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        font-size: 0.9rem !important;
+        line-height: 1.6 !important;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- WhatsApp Button -->
     <a class="whatsapp-float" href="https://wa.me/19176519824" target="_blank">
-        <i class="fab fa-whatsapp"></i>
+      <i class="fab fa-whatsapp"></i>
     </a>
     <!-- Header & Navigation -->
     <header>
-        <div class="container header-container">
-            <div class="logo">
-                <!-- Logo - Clickable -->
-                <img alt="Liyana Logistics Logo" class="logo-img" onclick="window.location.href='/'"
-                    src="images/logo.png" />
-                <h1><a href="/">Liyana Logistics <span>USA INC.</span><br>
-                <span class="small-text">Your Ultimate Logistics Partner</span></a>
-                </h1>
-            </div>
-            <div class="hamburger">
-                <i class="fas fa-bars"></i>
-            </div>
-            <ul class="nav-menu">
-                <li><a class="nav-link active" href="/">Home</a></li>
-                <li><a class="nav-link" href="about.html">About</a></li>
-                <li class="dropdown">
-                    <a class="nav-link" href="services.html">Services <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown-content">
-                        <div class="dropdown-content-wrapper">
-                            <div class="dropdown-column">
-                                <a class="nav-link" href="export-sea-air.html">Export Sea / Air</a>
-                                <a class="nav-link" href="import-sea-air.html">Import Sea / Air</a>
-                                <a class="nav-link" href="project-cargo.html">Project Cargo</a>
-                                <a class="nav-link" href="dg-cargo-handling.html">DG Cargo Handling</a>
-                                <a class="nav-link" href="reefer-container.html">Reefer Container</a>
-                            </div>
-                            <div class="dropdown-column">
-                                <a class="nav-link" href="cross-trade.html">Cross Trade</a>
-                                <a class="nav-link" href="warehousing.html">Warehousing</a>
-                                <a class="nav-link" href="custom-clearing.html">Custom Clearing</a>
-                                <a class="nav-link" href="door-delivery.html">Door Delivery</a>
-                                <a class="nav-link" href="project-shipment.html">Project Shipment</a>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li><a class="nav-link" href="request-quote.html">Request Quote</a></li>
-                <li><a class="nav-link" href="contact.html">Contact</a></li>
-            </ul>
+      <div class="container header-container">
+        <div class="logo">
+          <!-- Logo - Clickable -->
+          <img
+            alt="Liyana Logistics Logo"
+            class="logo-img"
+            onclick="window.location.href='/'"
+            src="images/logo.png"
+          />
+          <h1>
+            <a href="/"
+              >Liyana Logistics <span>USA INC.</span><br />
+              <span class="small-text">Your Ultimate Logistics Partner</span></a
+            >
+          </h1>
         </div>
+        <div class="hamburger">
+          <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-menu">
+          <li><a class="nav-link active" href="/">Home</a></li>
+          <li><a class="nav-link" href="about.html">About</a></li>
+          <li class="dropdown">
+            <a class="nav-link" href="services.html"
+              >Services <i class="fas fa-chevron-down"></i
+            ></a>
+            <div class="dropdown-content">
+              <div class="dropdown-content-wrapper">
+                <div class="dropdown-column">
+                  <a class="nav-link" href="export-sea-air.html"
+                    >Export Sea / Air</a
+                  >
+                  <a class="nav-link" href="import-sea-air.html"
+                    >Import Sea / Air</a
+                  >
+                  <a class="nav-link" href="project-cargo.html"
+                    >Project Cargo</a
+                  >
+                  <a class="nav-link" href="dg-cargo-handling.html"
+                    >DG Cargo Handling</a
+                  >
+                  <a class="nav-link" href="reefer-container.html"
+                    >Reefer Container</a
+                  >
+                </div>
+                <div class="dropdown-column">
+                  <a class="nav-link" href="cross-trade.html">Cross Trade</a>
+                  <a class="nav-link" href="warehousing.html">Warehousing</a>
+                  <a class="nav-link" href="custom-clearing.html"
+                    >Custom Clearing</a
+                  >
+                  <a class="nav-link" href="door-delivery.html"
+                    >Door Delivery</a
+                  >
+                  <a class="nav-link" href="project-shipment.html"
+                    >Project Shipment</a
+                  >
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a class="nav-link" href="request-quote.html">Request Quote</a>
+          </li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </header>
     <!-- Home Page -->
     <div class="page active" id="home">
-        <!-- Hero Section with Slider -->
-        <section class="hero">
-            <div class="hero-slider">
-                <!-- Slide 1 -->
-                <div class="slide active"
-                    style="background-image: url('./images/slider-img-1.jpg');">
-                    <div class="slide-content">
-                        <h1>Your Trusted Global Logistics Partner</h1>
-                        <p>Providing comprehensive international freight forwarding and logistics solutions with
-                            reliability, efficiency, and global reach.</p>
-                        <div class="hero-btns">
-                            <a class="btn btn-primary main" href="request-quote.html">Request a Quote</a>
-                            <a class="btn btn-secondary" href="contact.html">Contact Us</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Slide 2 -->
-                <div class="slide"
-                    style="background-image: url('./images/slider-img-2.avif');">
-                    <div class="slide-content">
-                        <h1>Seamless Global Supply Chain Solutions</h1>
-                        <p>From sea and air freight to warehousing and customs clearance, we handle all your logistics
-                            needs with precision.</p>
-                        <div class="hero-btns">
-                            <a class="btn btn-primary" href="request-quote.html">Request a Quote</a>
-                            <a class="btn btn-secondary" href="contact.html">Contact Us</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Slide 3 -->
-                <div class="slide"
-                    style="background-image: url('./images/slider-img-3.avif');">
-                    <div class="slide-content">
-                        <h1>Innovative Logistics Technology</h1>
-                        <p>Leveraging cutting-edge technology to provide real-time tracking and efficient supply chain
-                            management.</p>
-                        <div class="hero-btns">
-                            <a class="btn btn-primary" href="request-quote.html">Request a Quote</a>
-                            <a class="btn btn-secondary" href="contact.html">Contact Us</a>
-                        </div>
-                    </div>
-                </div>
+      <!-- Hero Section with Slider -->
+      <section class="hero">
+        <div class="hero-slider">
+          <!-- Slide 1 -->
+          <div
+            class="slide active"
+            style="background-image: url('./images/slider-img-1.jpg')"
+          >
+            <div class="slide-content">
+              <h1>Your Trusted Global Logistics Partner</h1>
+              <p>
+                Providing comprehensive international freight forwarding and
+                logistics solutions with reliability, efficiency, and global
+                reach.
+              </p>
+              <div class="hero-btns">
+                <a class="btn btn-primary main" href="request-quote.html"
+                  >Request a Quote</a
+                >
+                <a class="btn btn-secondary" href="contact.html">Contact Us</a>
+              </div>
             </div>
-            <!-- Slider Navigation Dots -->
-            <div class="slider-nav">
-                <div class="slider-dot active" data-slide="0"></div>
-                <div class="slider-dot" data-slide="1"></div>
-                <div class="slider-dot" data-slide="2"></div>
+          </div>
+          <!-- Slide 2 -->
+          <div
+            class="slide"
+            style="background-image: url('./images/slider-img-2.avif')"
+          >
+            <div class="slide-content">
+              <h1>Seamless Global Supply Chain Solutions</h1>
+              <p>
+                From sea and air freight to warehousing and customs clearance,
+                we handle all your logistics needs with precision.
+              </p>
+              <div class="hero-btns">
+                <a class="btn btn-primary" href="request-quote.html"
+                  >Request a Quote</a
+                >
+                <a class="btn btn-secondary" href="contact.html">Contact Us</a>
+              </div>
             </div>
-        </section>
-        <!-- Services Overview -->
-        <section class="section-light services-overview">
-            <div class="container">
-                <h2>Our Logistics Services</h2>
-                <div class="services-grid">
-                    <div class="service-tile white">
-                        <div class="service-icon">
-                            <i class="fas fa-ship"></i>
-                        </div>
-                        <h3>Export Sea / Air</h3>
-                        <p>Efficient export solutions via sea and air freight to global destinations.</p>
-                        <a class="read-more" href="export-sea-air.html">
-                            Read More <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                    <div class="service-tile blue">
-                        <div class="service-icon">
-                            <i class="fas fa-plane-arrival"></i>
-                        </div>
-                        <h3>Import Sea / Air</h3>
-                        <p>Streamlined import services with customs clearance and door delivery.</p>
-                        <a class="read-more" href="import-sea-air.html">
-                            Read More <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                    <div class="service-tile blue">
-                        <div class="service-icon">
-                            <i class="fas fa-boxes"></i>
-                        </div>
-                        <h3>Project Cargo</h3>
-                        <p>Specialized handling for oversized and complex project shipments.</p>
-                        <a class="read-more" href="project-cargo.html">
-                            Read More <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                    <div class="service-tile white">
-                        <div class="service-icon">
-                            <i class="fas fa-warehouse"></i>
-                        </div>
-                        <h3>Warehousing</h3>
-                        <p>Secure storage solutions with inventory management and distribution.</p>
-                        <a class="read-more" href="warehousing.html">
-                            Read More <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div style="text-align: center; margin-top: 40px;">
-                    <a class="btn btn-primary" href="services.html">View All Services</a>
-                </div>
+          </div>
+          <!-- Slide 3 -->
+          <div
+            class="slide"
+            style="background-image: url('./images/slider-img-3.avif')"
+          >
+            <div class="slide-content">
+              <h1>Innovative Logistics Technology</h1>
+              <p>
+                Leveraging cutting-edge technology to provide real-time tracking
+                and efficient supply chain management.
+              </p>
+              <div class="hero-btns">
+                <a class="btn btn-primary" href="request-quote.html"
+                  >Request a Quote</a
+                >
+                <a class="btn btn-secondary" href="contact.html">Contact Us</a>
+              </div>
             </div>
-        </section>
-        <!-- About Preview -->
-        <section class="section-gray">
-            <div class="container">
-                <div class="about-content">
-                    <div class="about-text">
-                        <h2>About Liyana Logistics USA INC</h2>
-                        <p>With years of experience in international freight forwarding, Liyana Logistics USA INC has
-                            established itself as a trusted partner for businesses seeking reliable and efficient
-                            logistics solutions.</p>
-                        <p>Our mission is to simplify global trade by providing comprehensive logistics services
-                            tailored to our clients' unique needs.</p>
-                        <div class="about-highlights">
-                            <div class="highlight-item">
-                                <div class="highlight-icon">
-                                    <i class="fas fa-globe-americas"></i>
-                                </div>
-                                <div>
-                                    <h3>Global Reach</h3>
-                                    <p>Extensive network of partners across 6 continents</p>
-                                </div>
-                            </div>
-                            <div class="highlight-item">
-                                <div class="highlight-icon">
-                                    <i class="fas fa-award"></i>
-                                </div>
-                                <div>
-                                    <h3>Proven Reliability</h3>
-                                    <p>Years of experience delivering on our promises</p>
-                                </div>
-                            </div>
-                            <div class="highlight-item">
-                                <div class="highlight-icon">
-                                    <i class="fas fa-headset"></i>
-                                </div>
-                                <div>
-                                    <h3>24/7 Support</h3>
-                                    <p>Round-the-clock customer service and tracking</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="about-image">
-                        <img alt="Liyana Logistics Operations"
-                            src="https://plus.unsplash.com/premium_photo-1681487963628-1a9298789518?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170" />
-                    </div>
-                </div>
+          </div>
+        </div>
+        <!-- Slider Navigation Dots -->
+        <div class="slider-nav">
+          <div class="slider-dot active" data-slide="0"></div>
+          <div class="slider-dot" data-slide="1"></div>
+          <div class="slider-dot" data-slide="2"></div>
+        </div>
+      </section>
+      <!-- Services Overview -->
+      <section class="section-light services-overview">
+        <div class="container">
+          <h2>Our Logistics Services</h2>
+          <div class="services-grid">
+            <div class="service-tile white">
+              <div class="service-icon">
+                <i class="fas fa-ship"></i>
+              </div>
+              <h3>Export Sea / Air</h3>
+              <p>
+                Efficient export solutions via sea and air freight to global
+                destinations.
+              </p>
+              <a class="read-more" href="export-sea-air.html">
+                Read More <i class="fas fa-arrow-right"></i>
+              </a>
             </div>
-        </section>
-        <!-- Why Choose Us Section -->
-        <section class="section-light">
-            <div class="container">
-                <h2>Why Choose Liyana Logistics</h2>
-                <div class="why-choose-content">
-                    <div class="why-choose-text">
-                        <p>We stand out in the logistics industry through our commitment to excellence, innovative
-                            solutions, and customer-centric approach.</p>
-                        <div class="why-choose-list">
-                            <div class="why-choose-item">
-                                <div class="why-choose-icon">
-                                    <i class="fas fa-globe-americas"></i>
-                                </div>
-                                <div>
-                                    <h3>Global Network</h3>
-                                    <p>Extensive partner network across 6 continents for seamless global operations.</p>
-                                </div>
-                            </div>
-                            <div class="why-choose-item">
-                                <div class="why-choose-icon">
-                                    <i class="fas fa-shield-alt"></i>
-                                </div>
-                                <div>
-                                    <h3>Reliability &amp; Security</h3>
-                                    <p>Your cargo is safe with our comprehensive security protocols and insurance.</p>
-                                </div>
-                            </div>
-                            <div class="why-choose-item">
-                                <div class="why-choose-icon">
-                                    <i class="fas fa-clock"></i>
-                                </div>
-                                <div>
-                                    <h3>Timely Delivery</h3>
-                                    <p>We prioritize on-time delivery with real-time tracking and proactive
-                                        communication.</p>
-                                </div>
-                            </div>
-                            <div class="why-choose-item">
-                                <div class="why-choose-icon">
-                                    <i class="fas fa-headset"></i>
-                                </div>
-                                <div>
-                                    <h3>24/7 Support</h3>
-                                    <p>Round-the-clock customer service to address your queries and concerns.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="why-choose-image">
-                        <img alt="Why Choose Liyana Logistics"
-                            src="./images/why-choose-us.avif" />
-                    </div>
-                </div>
+            <div class="service-tile white">
+              <div class="service-icon">
+                <i class="fas fa-plane-arrival"></i>
+              </div>
+              <h3>Import Sea / Air</h3>
+              <p>
+                Streamlined import services with customs clearance and door
+                delivery.
+              </p>
+              <a class="read-more" href="import-sea-air.html">
+                Read More <i class="fas fa-arrow-right"></i>
+              </a>
             </div>
-        </section>
-        <!-- Industries We Serve -->
-        <section class="section-gray">
-            <div class="container">
-                <h2>Industries We Serve</h2>
-                <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">We provide specialized logistics
-                    solutions tailored to the unique requirements of various industries.</p>
-                <div class="industries-container">
-                    <div class="industry-card"
-                        style="background-image: url('./images/manufacturing.avif'); background-size: cover;">
-                        <div class="industry-card-content">
-                            <div class="industry-icon">
-                                <i class="fas fa-cogs"></i>
-                            </div>
-                            <h3>Manufacturing</h3>
-                            <p>Supply chain solutions for raw materials and finished products.</p>
-                        </div>
-                    </div>
-                    <div class="industry-card"
-                        style="background-image: url('./images/pharmaceutical.jpg');background-size: cover; object-fit: cover;">
-                        <div class="industry-card-content">
-                            <div class="industry-icon">
-                                <i class="fas fa-cogs"></i>
-                            </div>
-                            <h3>Pharmaceutical</h3>
-                            <p>Temperature-controlled logistics for sensitive medical supplies.</p>
-                        </div>
-                    </div>
-                    <!-- <div class="industry-card"
+            <div class="service-tile white">
+              <div class="service-icon">
+                <i class="fas fa-boxes"></i>
+              </div>
+              <h3>Project Cargo</h3>
+              <p>
+                Specialized handling for oversized and complex project
+                shipments.
+              </p>
+              <a class="read-more" href="project-cargo.html">
+                Read More <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+            <div class="service-tile white">
+              <div class="service-icon">
+                <i class="fas fa-warehouse"></i>
+              </div>
+              <h3>Warehousing</h3>
+              <p>
+                Secure storage solutions with inventory management and
+                distribution.
+              </p>
+              <a class="read-more" href="warehousing.html">
+                Read More <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+          <div style="text-align: center; margin-top: 40px">
+            <a class="btn btn-primary" href="services.html"
+              >View All Services</a
+            >
+          </div>
+        </div>
+      </section>
+      <!-- About Preview -->
+      <section class="section-gray">
+        <div class="container">
+          <div class="about-content">
+            <div class="about-text">
+              <h2>About Liyana Logistics USA INC</h2>
+              <p>
+                With years of experience in international freight forwarding,
+                Liyana Logistics USA INC has established itself as a trusted
+                partner for businesses seeking reliable and efficient logistics
+                solutions.
+              </p>
+              <p>
+                Our mission is to simplify global trade by providing
+                comprehensive logistics services tailored to our clients' unique
+                needs.
+              </p>
+              <div class="about-highlights">
+                <div class="highlight-item">
+                  <div class="highlight-icon">
+                    <i class="fas fa-globe-americas"></i>
+                  </div>
+                  <div>
+                    <h3>Global Reach</h3>
+                    <p>Extensive network of partners across 6 continents</p>
+                  </div>
+                </div>
+                <div class="highlight-item">
+                  <div class="highlight-icon">
+                    <i class="fas fa-award"></i>
+                  </div>
+                  <div>
+                    <h3>Proven Reliability</h3>
+                    <p>Years of experience delivering on our promises</p>
+                  </div>
+                </div>
+                <div class="highlight-item">
+                  <div class="highlight-icon">
+                    <i class="fas fa-headset"></i>
+                  </div>
+                  <div>
+                    <h3>24/7 Support</h3>
+                    <p>Round-the-clock customer service and tracking</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="about-image">
+              <img
+                alt="Liyana Logistics Operations"
+                src="https://plus.unsplash.com/premium_photo-1681487963628-1a9298789518?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Why Choose Us Section -->
+      <section class="section-light">
+        <div class="container">
+          <h2>Why Choose Liyana Logistics</h2>
+          <div class="why-choose-content">
+            <div class="why-choose-text">
+              <p>
+                We stand out in the logistics industry through our commitment to
+                excellence, innovative solutions, and customer-centric approach.
+              </p>
+              <div class="why-choose-list">
+                <div class="why-choose-item">
+                  <div class="why-choose-icon">
+                    <i class="fas fa-globe-americas"></i>
+                  </div>
+                  <div>
+                    <h3>Global Network</h3>
+                    <p>
+                      Extensive partner network across 6 continents for seamless
+                      global operations.
+                    </p>
+                  </div>
+                </div>
+                <div class="why-choose-item">
+                  <div class="why-choose-icon">
+                    <i class="fas fa-shield-alt"></i>
+                  </div>
+                  <div>
+                    <h3>Reliability &amp; Security</h3>
+                    <p>
+                      Your cargo is safe with our comprehensive security
+                      protocols and insurance.
+                    </p>
+                  </div>
+                </div>
+                <div class="why-choose-item">
+                  <div class="why-choose-icon">
+                    <i class="fas fa-clock"></i>
+                  </div>
+                  <div>
+                    <h3>Timely Delivery</h3>
+                    <p>
+                      We prioritize on-time delivery with real-time tracking and
+                      proactive communication.
+                    </p>
+                  </div>
+                </div>
+                <div class="why-choose-item">
+                  <div class="why-choose-icon">
+                    <i class="fas fa-headset"></i>
+                  </div>
+                  <div>
+                    <h3>24/7 Support</h3>
+                    <p>
+                      Round-the-clock customer service to address your queries
+                      and concerns.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="why-choose-image">
+              <img
+                alt="Why Choose Liyana Logistics"
+                src="./images/why-choose-us.avif"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Industries We Serve -->
+      <section class="section-gray">
+        <div class="container">
+          <h2>Industries We Serve</h2>
+          <p style="text-align: center; max-width: 800px; margin: 0 auto 40px">
+            We provide specialized logistics solutions tailored to the unique
+            requirements of various industries.
+          </p>
+          <div class="industries-container">
+            <div
+              class="industry-card"
+              style="
+                background-image: url('./images/manufacturing.avif');
+                background-size: cover;
+              "
+            >
+              <div class="industry-card-content">
+                <div class="industry-icon">
+                  <i class="fas fa-cogs"></i>
+                </div>
+                <h3>Manufacturing</h3>
+                <p>
+                  Supply chain solutions for raw materials and finished
+                  products.
+                </p>
+              </div>
+            </div>
+            <div
+              class="industry-card"
+              style="
+                background-image: url('./images/pharmaceutical.jpg');
+                background-size: cover;
+                object-fit: cover;
+              "
+            >
+              <div class="industry-card-content">
+                <div class="industry-icon">
+                  <i class="fas fa-cogs"></i>
+                </div>
+                <h3>Pharmaceutical</h3>
+                <p>
+                  Temperature-controlled logistics for sensitive medical
+                  supplies.
+                </p>
+              </div>
+            </div>
+            <!-- <div class="industry-card"
                         style="background-image: url('./images/pharmaceutical-card.jpg');">
                         <div class="industry-card-content">
                             <div class="industry-icon">
@@ -1472,411 +1610,755 @@
                             <p>Temperature-controlled logistics for sensitive medical supplies.</p>
                         </div>
                     </div> -->
-                    <div class="industry-card"
-                        style="background-image: url('./images/technology.jpg');">
-                        <div class="industry-card-content">
-                            <div class="industry-icon">
-                                <i class="fas fa-laptop"></i>
-                            </div>
-                            <h3>Technology</h3>
-                            <p>Secure handling of high-value electronics and components.</p>
-                        </div>
-                    </div>
-                    <div class="industry-card"
-                        style="background-image: url('./images/retail.webp'); background-size: cover;">
-                        <div class="industry-card-content">
-                            <div class="industry-icon">
-                                <i class="fas fa-tshirt"></i>
-                            </div>
-                            <h3>Retail</h3>
-                            <p>Efficient distribution for fashion and consumer goods.</p>
-                        </div>
-                    </div>
-                    <div class="industry-card"
-                        style="background-image: url('https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=80');">
-                        <div class="industry-card-content">
-                            <div class="industry-icon">
-                                <i class="fas fa-car"></i>
-                            </div>
-                            <h3>Automotive</h3>
-                            <p>Just-in-time delivery for automotive parts and components.</p>
-                        </div>
-                    </div>
-                    <div class="industry-card"
-                        style="background-image: url('./images/energy-card.jpg'); background-size: cover;">
-                        <div class="industry-card-content">
-                            <div class="industry-icon">
-                                <i class="fas fa-oil-well"></i>
-                            </div>
-                            <h3>Energy</h3>
-                            <p>Specialized handling for equipment and materials.</p>
-                        </div>
-                    </div>
+            <div
+              class="industry-card"
+              style="background-image: url('./images/technology.jpg')"
+            >
+              <div class="industry-card-content">
+                <div class="industry-icon">
+                  <i class="fas fa-laptop"></i>
                 </div>
+                <h3>Technology</h3>
+                <p>Secure handling of high-value electronics and components.</p>
+              </div>
             </div>
-        </section>
-        <!-- Testimonials Section -->
-        <section class="section-light">
-            <div class="container">
-                <h2>What Our Clients Say</h2>
-                <div class="testimonials-container">
-                    <div class="testimonial-slider">
-                        <!-- Testimonial 1 -->
-                        <div class="testimonial-slide active">
-                            <div class="testimonial-content">
-                                <p class="testimonial-text">"Liyana Logistics has been our trusted partner for over 5
-                                    years. Their attention to detail and commitment to on-time delivery has
-                                    significantly improved our supply chain efficiency."</p>
-                            </div>
-                            <div class="testimonial-author">
-                                <img alt="Michael Johnson" class="author-img"
-                                    src="https://randomuser.me/api/portraits/men/32.jpg" />
-                                <div class="author-info">
-                                    <h4>Michael Johnson</h4>
-                                    <p>Supply Chain Director, TechGlobal Inc.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Testimonial 2 -->
-                        <div class="testimonial-slide">
-                            <div class="testimonial-content">
-                                <p class="testimonial-text">"The team at Liyana Logistics handled our complex project
-                                    cargo with exceptional professionalism. Their expertise in oversized shipments saved
-                                    us time and resources."</p>
-                            </div>
-                            <div class="testimonial-author">
-                                <img alt="Sarah Williams" class="author-img"
-                                    src="https://randomuser.me/api/portraits/women/44.jpg" />
-                                <div class="author-info">
-                                    <h4>Sarah Williams</h4>
-                                    <p>Operations Manager, EnergySolutions Ltd.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Testimonial 3 -->
-                        <div class="testimonial-slide">
-                            <div class="testimonial-content">
-                                <p class="testimonial-text">"We've tried several logistics providers, but Liyana stands
-                                    out with their responsive customer service and innovative tracking solutions. Highly
-                                    recommended!"</p>
-                            </div>
-                            <div class="testimonial-author">
-                                <img alt="Robert Chen" class="author-img"
-                                    src="https://randomuser.me/api/portraits/men/67.jpg" />
-                                <div class="author-info">
-                                    <h4>Robert Chen</h4>
-                                    <p>CEO, Global Imports Co.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Testimonial Navigation Dots -->
-                    <div class="testimonial-nav">
-                        <div class="testimonial-dot active" data-testimonial="0"></div>
-                        <div class="testimonial-dot" data-testimonial="1"></div>
-                        <div class="testimonial-dot" data-testimonial="2"></div>
-                    </div>
+            <div
+              class="industry-card"
+              style="
+                background-image: url('./images/retail.webp');
+                background-size: cover;
+              "
+            >
+              <div class="industry-card-content">
+                <div class="industry-icon">
+                  <i class="fas fa-tshirt"></i>
                 </div>
+                <h3>Retail</h3>
+                <p>Efficient distribution for fashion and consumer goods.</p>
+              </div>
             </div>
-        </section>
-        <!-- CTA Section -->
-        <section class="cta-section">
-            <div class="container">
-                <div class="cta-content">
-                    <h2>Ready to Streamline Your Logistics?</h2>
-                    <p>Contact us today to discuss your logistics needs and discover how Liyana Logistics can optimize
-                        your supply chain.</p>
-                    <div class="cta-btns">
-                        <a class="btn btn-primary" href="request-quote.html">Request a Quote</a>
-                        <a class="btn btn-secondary" href="contact.html">Contact Us</a>
-                    </div>
+            <div
+              class="industry-card"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=80');
+              "
+            >
+              <div class="industry-card-content">
+                <div class="industry-icon">
+                  <i class="fas fa-car"></i>
                 </div>
+                <h3>Automotive</h3>
+                <p>
+                  Just-in-time delivery for automotive parts and components.
+                </p>
+              </div>
             </div>
-        </section>
+            <div
+              class="industry-card"
+              style="
+                background-image: url('./images/energy-card.jpg');
+                background-size: cover;
+              "
+            >
+              <div class="industry-card-content">
+                <div class="industry-icon">
+                  <i class="fas fa-oil-well"></i>
+                </div>
+                <h3>Energy</h3>
+                <p>Specialized handling for equipment and materials.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Testimonials Section -->
+      <section class="section-light">
+        <div class="container">
+          <h2>What Our Clients Say</h2>
+          <div class="testimonials-container">
+            <div class="testimonial-slider">
+              <!-- Testimonial 1 -->
+              <div class="testimonial-slide active">
+                <div class="testimonial-content">
+                  <p class="testimonial-text">
+                    "Liyana Logistics has been our trusted partner for over 5
+                    years. Their attention to detail and commitment to on-time
+                    delivery has significantly improved our supply chain
+                    efficiency."
+                  </p>
+                </div>
+                <div class="testimonial-author">
+                  <img
+                    alt="Michael Johnson"
+                    class="author-img"
+                    src="https://randomuser.me/api/portraits/men/32.jpg"
+                  />
+                  <div class="author-info">
+                    <h4>Michael Johnson</h4>
+                    <p>Supply Chain Director, TechGlobal Inc.</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Testimonial 2 -->
+              <div class="testimonial-slide">
+                <div class="testimonial-content">
+                  <p class="testimonial-text">
+                    "The team at Liyana Logistics handled our complex project
+                    cargo with exceptional professionalism. Their expertise in
+                    oversized shipments saved us time and resources."
+                  </p>
+                </div>
+                <div class="testimonial-author">
+                  <img
+                    alt="Sarah Williams"
+                    class="author-img"
+                    src="https://randomuser.me/api/portraits/women/44.jpg"
+                  />
+                  <div class="author-info">
+                    <h4>Sarah Williams</h4>
+                    <p>Operations Manager, EnergySolutions Ltd.</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Testimonial 3 -->
+              <div class="testimonial-slide">
+                <div class="testimonial-content">
+                  <p class="testimonial-text">
+                    "We've tried several logistics providers, but Liyana stands
+                    out with their responsive customer service and innovative
+                    tracking solutions. Highly recommended!"
+                  </p>
+                </div>
+                <div class="testimonial-author">
+                  <img
+                    alt="Robert Chen"
+                    class="author-img"
+                    src="https://randomuser.me/api/portraits/men/67.jpg"
+                  />
+                  <div class="author-info">
+                    <h4>Robert Chen</h4>
+                    <p>CEO, Global Imports Co.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Testimonial Navigation Dots -->
+            <div class="testimonial-nav">
+              <div class="testimonial-dot active" data-testimonial="0"></div>
+              <div class="testimonial-dot" data-testimonial="1"></div>
+              <div class="testimonial-dot" data-testimonial="2"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- CTA Section -->
+      <section class="cta-section">
+        <div class="container">
+          <div class="cta-content">
+            <h2>Ready to Streamline Your Logistics?</h2>
+            <p>
+              Contact us today to discuss your logistics needs and discover how
+              Liyana Logistics can optimize your supply chain.
+            </p>
+            <div class="cta-btns">
+              <a class="btn btn-primary" href="request-quote.html"
+                >Request a Quote</a
+              >
+              <a class="btn btn-secondary" href="contact.html">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
     <!-- Footer -->
-    <footer style="background-color:#002b6d !important;color:#fff;padding:50px 0 20px;width:100%;margin:0;border:none;">
-        <div style="max-width:1200px;margin:0 auto;padding:0 20px;">
-            <div
-                style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:30px;margin-bottom:30px;">
-                <div>
-                    <h3
-                        style="color:#fff;margin-bottom:15px;font-size:1.1rem;font-weight:600;padding-bottom:8px;border-bottom:2px solid #4a7fc8;width:fit-content;">
-                        Liyana Logistics USA INC</h3>
-                    <p style="font-size:0.9rem;line-height:1.5;">Your trusted partner for international freight
-                        forwarding and comprehensive logistics solutions.</p>
-                    <div style="display:flex;gap:15px;margin-top:20px;">
-                        <a href="#" onmouseout="this.style.color='#fff';this.style.transform='none';"
-                            onmouseover="this.style.color='#4a7fc8';this.style.transform='translateY(-3px)';"
-                            style="color:#fff;transition:all 0.3s ease;"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" onmouseout="this.style.color='#fff';this.style.transform='none';"
-                            onmouseover="this.style.color='#4a7fc8';this.style.transform='translateY(-3px)';"
-                            style="color:#fff;transition:all 0.3s ease;"><i class="fab fa-twitter"></i></a>
-                        <a href="#" onmouseout="this.style.color='#fff';this.style.transform='none';"
-                            onmouseover="this.style.color='#4a7fc8';this.style.transform='translateY(-3px)';"
-                            style="color:#fff;transition:all 0.3s ease;"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" onmouseout="this.style.color='#fff';this.style.transform='none';"
-                            onmouseover="this.style.color='#4a7fc8';this.style.transform='translateY(-3px)';"
-                            style="color:#fff;transition:all 0.3s ease;"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div>
-                    <h3
-                        style="color:#fff;margin-bottom:15px;font-size:1.1rem;font-weight:600;padding-bottom:8px;border-bottom:2px solid #4a7fc8;width:fit-content;">
-                        Quick Links</h3>
-                    <ul style="list-style:none;padding:0;margin:0;">
-                        <li><a href="/" onmouseout="this.style.color='#fff';" onmouseover="this.style.color='#4a7fc8';"
-                                style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:8px;">Home</a>
-                        </li>
-                        <li><a href="about.html" onmouseout="this.style.color='#fff';"
-                                onmouseover="this.style.color='#4a7fc8';"
-                                style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:8px;">About
-                                Us</a></li>
-                        <li><a href="services.html" onmouseout="this.style.color='#fff';"
-                                onmouseover="this.style.color='#4a7fc8';"
-                                style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:8px;">Services</a>
-                        </li>
-                        <li><a href="request-quote.html" onmouseout="this.style.color='#fff';"
-                                onmouseover="this.style.color='#4a7fc8';"
-                                style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:8px;">Request
-                                Quote</a></li>
-                        <li><a href="contact.html" onmouseout="this.style.color='#fff';"
-                                onmouseover="this.style.color='#4a7fc8';"
-                                style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:8px;">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h3
-                        style="color:#fff;margin-bottom:15px;font-size:1.1rem;font-weight:600;padding-bottom:8px;border-bottom:2px solid #4a7fc8;width:fit-content;">
-                        Our Services</h3>
-                    <ul style="list-style:none;padding:0;margin:0;">
-                        <li><a href="export-sea-air.html" onmouseout="this.style.color='#fff';"
-                                onmouseover="this.style.color='#4a7fc8';"
-                                style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:8px;">Export
-                                Sea / Air</a></li>
-                        <li><a href="import-sea-air.html" onmouseout="this.style.color='#fff';"
-                                onmouseover="this.style.color='#4a7fc8';"
-                                style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:8px;">Import
-                                Sea / Air</a></li>
-                        <li><a href="project-cargo.html" onmouseout="this.style.color='#fff';"
-                                onmouseover="this.style.color='#4a7fc8';"
-                                style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:8px;">Project
-                                Cargo</a></li>
-                        <li><a href="warehousing.html" onmouseout="this.style.color='#fff';"
-                                onmouseover="this.style.color='#4a7fc8';"
-                                style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:8px;">Warehousing</a>
-                        </li>
-                        <li><a href="custom-clearing.html" onmouseout="this.style.color='#fff';"
-                                onmouseover="this.style.color='#4a7fc8';"
-                                style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:8px;">Custom
-                                Clearing</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3
-                        style="color:#fff;margin-bottom:15px;font-size:1.1rem;font-weight:600;padding-bottom:8px;border-bottom:2px solid #4a7fc8;width:fit-content;">
-                        Contact Info</h3>
-                    <ul style="list-style:none;padding:0;margin:0;">
-                        <li style="margin-bottom:12px;display:flex;align-items:flex-start;gap:10px;">
-                            <i class="fas fa-map-marker-alt" style="min-width:20px;margin-top:4px;"></i>
-                            <div style="font-size:0.9rem;">
-                                600 Hillside Ave, New Hyde Park,<br />
-                                <span style="display:inline-block;padding-left:2px;">NY 11040</span>
-                            </div>
-                        </li>
-                        <li style="margin-bottom:12px;display:flex;align-items:flex-start;gap:10px;">
-                            <i class="fas fa-phone-alt" style="min-width:20px;margin-top:4px;"></i>
-                            <div>
-                                <a href="tel:+19176519824" onmouseout="this.style.color='#fff';"
-                                    onmouseover="this.style.color='#4a7fc8';"
-                                    style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:4px;">+1
-                                    (917) 651 9824</a>
-                                <a href="tel:+15166541145" onmouseout="this.style.color='#fff';"
-                                    onmouseover="this.style.color='#4a7fc8';"
-                                    style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;">+1
-                                    (516) 654 1145</a>
-                            </div>
-                        </li>
-                        <li style="margin-bottom:12px;display:flex;align-items:flex-start;gap:10px;">
-                            <i class="fas fa-envelope" style="min-width:20px;margin-top:4px;"></i>
-                            <div>
-                                <a href="mailto:info@liyanausa.com" onmouseout="this.style.color='#fff';"
-                                    onmouseover="this.style.color='#4a7fc8';"
-                                    style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:4px;">info@liyanausa.com</a>
-                                <a href="mailto:llus@liyanalogistics.com" onmouseout="this.style.color='#fff';"
-                                    onmouseover="this.style.color='#4a7fc8';"
-                                    style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;">llus@liyanalogistics.com</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+    <footer
+      style="
+        background-color: #002b6d !important;
+        color: #fff;
+        padding: 50px 0 20px;
+        width: 100%;
+        margin: 0;
+        border: none;
+      "
+    >
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px">
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+          "
+        >
+          <div>
+            <h3
+              style="
+                color: #fff;
+                margin-bottom: 15px;
+                font-size: 1.1rem;
+                font-weight: 600;
+                padding-bottom: 8px;
+                border-bottom: 2px solid #4a7fc8;
+                width: fit-content;
+              "
+            >
+              Liyana Logistics USA INC
+            </h3>
+            <p style="font-size: 0.9rem; line-height: 1.5">
+              Your trusted partner for international freight forwarding and
+              comprehensive logistics solutions.
+            </p>
+            <div style="display: flex; gap: 15px; margin-top: 20px">
+              <a
+                href="#"
+                onmouseout="this.style.color='#fff';this.style.transform='none';"
+                onmouseover="this.style.color='#4a7fc8';this.style.transform='translateY(-3px)';"
+                style="color: #fff; transition: all 0.3s ease"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="#"
+                onmouseout="this.style.color='#fff';this.style.transform='none';"
+                onmouseover="this.style.color='#4a7fc8';this.style.transform='translateY(-3px)';"
+                style="color: #fff; transition: all 0.3s ease"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                href="#"
+                onmouseout="this.style.color='#fff';this.style.transform='none';"
+                onmouseover="this.style.color='#4a7fc8';this.style.transform='translateY(-3px)';"
+                style="color: #fff; transition: all 0.3s ease"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a
+                href="#"
+                onmouseout="this.style.color='#fff';this.style.transform='none';"
+                onmouseover="this.style.color='#4a7fc8';this.style.transform='translateY(-3px)';"
+                style="color: #fff; transition: all 0.3s ease"
+                ><i class="fab fa-instagram"></i
+              ></a>
             </div>
-            <div
-                style="display:flex;justify-content:space-between;align-items:center;padding-top:20px;border-top:1px solid rgba(255,255,255,0.15);font-size:0.85rem;line-height:1.6;flex-wrap:wrap;gap:10px;">
-                <div style="color:#fff;">
-                    © 2025 Liyana Logistics USA INC. All Rights Reserved.
+          </div>
+          <div>
+            <h3
+              style="
+                color: #fff;
+                margin-bottom: 15px;
+                font-size: 1.1rem;
+                font-weight: 600;
+                padding-bottom: 8px;
+                border-bottom: 2px solid #4a7fc8;
+                width: fit-content;
+              "
+            >
+              Quick Links
+            </h3>
+            <ul style="list-style: none; padding: 0; margin: 0">
+              <li>
+                <a
+                  href="/"
+                  onmouseout="this.style.color='#fff';"
+                  onmouseover="this.style.color='#4a7fc8';"
+                  style="
+                    color: #fff;
+                    text-decoration: none;
+                    transition: color 0.3s;
+                    font-size: 0.9rem;
+                    display: block;
+                    margin-bottom: 8px;
+                  "
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  onmouseout="this.style.color='#fff';"
+                  onmouseover="this.style.color='#4a7fc8';"
+                  style="
+                    color: #fff;
+                    text-decoration: none;
+                    transition: color 0.3s;
+                    font-size: 0.9rem;
+                    display: block;
+                    margin-bottom: 8px;
+                  "
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  onmouseout="this.style.color='#fff';"
+                  onmouseover="this.style.color='#4a7fc8';"
+                  style="
+                    color: #fff;
+                    text-decoration: none;
+                    transition: color 0.3s;
+                    font-size: 0.9rem;
+                    display: block;
+                    margin-bottom: 8px;
+                  "
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="request-quote.html"
+                  onmouseout="this.style.color='#fff';"
+                  onmouseover="this.style.color='#4a7fc8';"
+                  style="
+                    color: #fff;
+                    text-decoration: none;
+                    transition: color 0.3s;
+                    font-size: 0.9rem;
+                    display: block;
+                    margin-bottom: 8px;
+                  "
+                  >Request Quote</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  onmouseout="this.style.color='#fff';"
+                  onmouseover="this.style.color='#4a7fc8';"
+                  style="
+                    color: #fff;
+                    text-decoration: none;
+                    transition: color 0.3s;
+                    font-size: 0.9rem;
+                    display: block;
+                    margin-bottom: 8px;
+                  "
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3
+              style="
+                color: #fff;
+                margin-bottom: 15px;
+                font-size: 1.1rem;
+                font-weight: 600;
+                padding-bottom: 8px;
+                border-bottom: 2px solid #4a7fc8;
+                width: fit-content;
+              "
+            >
+              Our Services
+            </h3>
+            <ul style="list-style: none; padding: 0; margin: 0">
+              <li>
+                <a
+                  href="export-sea-air.html"
+                  onmouseout="this.style.color='#fff';"
+                  onmouseover="this.style.color='#4a7fc8';"
+                  style="
+                    color: #fff;
+                    text-decoration: none;
+                    transition: color 0.3s;
+                    font-size: 0.9rem;
+                    display: block;
+                    margin-bottom: 8px;
+                  "
+                  >Export Sea / Air</a
+                >
+              </li>
+              <li>
+                <a
+                  href="import-sea-air.html"
+                  onmouseout="this.style.color='#fff';"
+                  onmouseover="this.style.color='#4a7fc8';"
+                  style="
+                    color: #fff;
+                    text-decoration: none;
+                    transition: color 0.3s;
+                    font-size: 0.9rem;
+                    display: block;
+                    margin-bottom: 8px;
+                  "
+                  >Import Sea / Air</a
+                >
+              </li>
+              <li>
+                <a
+                  href="project-cargo.html"
+                  onmouseout="this.style.color='#fff';"
+                  onmouseover="this.style.color='#4a7fc8';"
+                  style="
+                    color: #fff;
+                    text-decoration: none;
+                    transition: color 0.3s;
+                    font-size: 0.9rem;
+                    display: block;
+                    margin-bottom: 8px;
+                  "
+                  >Project Cargo</a
+                >
+              </li>
+              <li>
+                <a
+                  href="warehousing.html"
+                  onmouseout="this.style.color='#fff';"
+                  onmouseover="this.style.color='#4a7fc8';"
+                  style="
+                    color: #fff;
+                    text-decoration: none;
+                    transition: color 0.3s;
+                    font-size: 0.9rem;
+                    display: block;
+                    margin-bottom: 8px;
+                  "
+                  >Warehousing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="custom-clearing.html"
+                  onmouseout="this.style.color='#fff';"
+                  onmouseover="this.style.color='#4a7fc8';"
+                  style="
+                    color: #fff;
+                    text-decoration: none;
+                    transition: color 0.3s;
+                    font-size: 0.9rem;
+                    display: block;
+                    margin-bottom: 8px;
+                  "
+                  >Custom Clearing</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3
+              style="
+                color: #fff;
+                margin-bottom: 15px;
+                font-size: 1.1rem;
+                font-weight: 600;
+                padding-bottom: 8px;
+                border-bottom: 2px solid #4a7fc8;
+                width: fit-content;
+              "
+            >
+              Contact Info
+            </h3>
+            <ul style="list-style: none; padding: 0; margin: 0">
+              <li
+                style="
+                  margin-bottom: 12px;
+                  display: flex;
+                  align-items: flex-start;
+                  gap: 10px;
+                "
+              >
+                <i
+                  class="fas fa-map-marker-alt"
+                  style="min-width: 20px; margin-top: 4px"
+                ></i>
+                <div style="font-size: 0.9rem">
+                  600 Hillside Ave, New Hyde Park,<br />
+                  <span style="display: inline-block; padding-left: 2px"
+                    >NY 11040</span
+                  >
                 </div>
-                <div style="color:#fff;">
-                    <a href="privacy-policy.html" onmouseout="this.style.color='#fff';"
-                        onmouseover="this.style.color='#4a7fc8';"
-                        style="color:#fff;text-decoration:underline;transition:color 0.3s;">Privacy Policy</a> |
-                    <a href="terms-and-conditions.html" onmouseout="this.style.color='#fff';"
-                        onmouseover="this.style.color='#4a7fc8';"
-                        style="color:#fff;text-decoration:underline;transition:color 0.3s;">Terms &amp; Conditions</a> |
-                    Made with <span style="color:#e25555;">❤</span> by
-                    <a href="https://www.wazeefa.in/" rel="noopener" onmouseout="this.style.color='#fff';"
-                        onmouseover="this.style.color='#4a7fc8';"
-                        style="color:#fff;text-decoration:underline;font-weight:600;transition:color 0.3s;"
-                        target="_blank">Wazeefa</a>
+              </li>
+              <li
+                style="
+                  margin-bottom: 12px;
+                  display: flex;
+                  align-items: flex-start;
+                  gap: 10px;
+                "
+              >
+                <i
+                  class="fas fa-phone-alt"
+                  style="min-width: 20px; margin-top: 4px"
+                ></i>
+                <div>
+                  <a
+                    href="tel:+19176519824"
+                    onmouseout="this.style.color='#fff';"
+                    onmouseover="this.style.color='#4a7fc8';"
+                    style="
+                      color: #fff;
+                      text-decoration: none;
+                      transition: color 0.3s;
+                      font-size: 0.9rem;
+                      display: block;
+                      margin-bottom: 4px;
+                    "
+                    >+1 (917) 651 9824</a
+                  >
+                  <a
+                    href="tel:+15166541145"
+                    onmouseout="this.style.color='#fff';"
+                    onmouseover="this.style.color='#4a7fc8';"
+                    style="
+                      color: #fff;
+                      text-decoration: none;
+                      transition: color 0.3s;
+                      font-size: 0.9rem;
+                    "
+                    >+1 (516) 654 1145</a
+                  >
                 </div>
-            </div>
+              </li>
+              <li
+                style="
+                  margin-bottom: 12px;
+                  display: flex;
+                  align-items: flex-start;
+                  gap: 10px;
+                "
+              >
+                <i
+                  class="fas fa-envelope"
+                  style="min-width: 20px; margin-top: 4px"
+                ></i>
+                <div>
+                  <a
+                    href="mailto:info@liyanausa.com"
+                    onmouseout="this.style.color='#fff';"
+                    onmouseover="this.style.color='#4a7fc8';"
+                    style="
+                      color: #fff;
+                      text-decoration: none;
+                      transition: color 0.3s;
+                      font-size: 0.9rem;
+                      display: block;
+                      margin-bottom: 4px;
+                    "
+                    >info@liyanausa.com</a
+                  >
+                  <a
+                    href="mailto:llus@liyanalogistics.com"
+                    onmouseout="this.style.color='#fff';"
+                    onmouseover="this.style.color='#4a7fc8';"
+                    style="
+                      color: #fff;
+                      text-decoration: none;
+                      transition: color 0.3s;
+                      font-size: 0.9rem;
+                    "
+                    >llus@liyanalogistics.com</a
+                  >
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            font-size: 0.85rem;
+            line-height: 1.6;
+            flex-wrap: wrap;
+            gap: 10px;
+          "
+        >
+          <div style="color: #fff">
+            © 2025 Liyana Logistics USA INC. All Rights Reserved.
+          </div>
+          <div style="color: #fff">
+            <a
+              href="privacy-policy.html"
+              onmouseout="this.style.color='#fff';"
+              onmouseover="this.style.color='#4a7fc8';"
+              style="
+                color: #fff;
+                text-decoration: underline;
+                transition: color 0.3s;
+              "
+              >Privacy Policy</a
+            >
+            |
+            <a
+              href="terms-and-conditions.html"
+              onmouseout="this.style.color='#fff';"
+              onmouseover="this.style.color='#4a7fc8';"
+              style="
+                color: #fff;
+                text-decoration: underline;
+                transition: color 0.3s;
+              "
+              >Terms &amp; Conditions</a
+            >
+            | Made with <span style="color: #e25555">❤</span> by
+            <a
+              href="https://www.wazeefa.in/"
+              rel="noopener"
+              onmouseout="this.style.color='#fff';"
+              onmouseover="this.style.color='#4a7fc8';"
+              style="
+                color: #fff;
+                text-decoration: underline;
+                font-weight: 600;
+                transition: color 0.3s;
+              "
+              target="_blank"
+              >Wazeefa</a
+            >
+          </div>
+        </div>
+      </div>
     </footer>
     <!-- Back to Top Button -->
     <div class="back-to-top">
-        <i class="fas fa-arrow-up"></i>
+      <i class="fas fa-arrow-up"></i>
     </div>
     <script>
-        // Page Navigation System
-        document.addEventListener('DOMContentLoaded', function () {
-            // Initialize scroll animations
-            initScrollAnimations();
+      // Page Navigation System
+      document.addEventListener("DOMContentLoaded", function () {
+        // Initialize scroll animations
+        initScrollAnimations();
+      });
+
+      // Mobile Navigation Toggle
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+
+      hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+        hamburger.innerHTML = navMenu.classList.contains("active")
+          ? '<i class="fas fa-times"></i>'
+          : '<i class="fas fa-bars"></i>';
+      });
+
+      // Hero Slider
+      let currentSlide = 0;
+      const slides = document.querySelectorAll(".slide");
+      const dots = document.querySelectorAll(".slider-dot");
+      const slideCount = slides.length;
+
+      function showSlide(index) {
+        // Hide all slides
+        slides.forEach((slide) => {
+          slide.classList.remove("active");
         });
 
-        // Mobile Navigation Toggle
-        const hamburger = document.querySelector('.hamburger');
-        const navMenu = document.querySelector('.nav-menu');
-
-        hamburger.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            hamburger.innerHTML = navMenu.classList.contains('active')
-                ? '<i class="fas fa-times"></i>'
-                : '<i class="fas fa-bars"></i>';
+        // Remove active class from all dots
+        dots.forEach((dot) => {
+          dot.classList.remove("active");
         });
 
-        // Hero Slider
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.slide');
-        const dots = document.querySelectorAll('.slider-dot');
-        const slideCount = slides.length;
+        // Show selected slide
+        slides[index].classList.add("active");
+        dots[index].classList.add("active");
 
-        function showSlide(index) {
-            // Hide all slides
-            slides.forEach(slide => {
-                slide.classList.remove('active');
-            });
+        currentSlide = index;
+      }
 
-            // Remove active class from all dots
-            dots.forEach(dot => {
-                dot.classList.remove('active');
-            });
-
-            // Show selected slide
-            slides[index].classList.add('active');
-            dots[index].classList.add('active');
-
-            currentSlide = index;
-        }
-
-        // Set up dot navigation
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                showSlide(index);
-                resetAutoSlide(); // Reset timer when manually changing slide
-            });
+      // Set up dot navigation
+      dots.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+          showSlide(index);
+          resetAutoSlide(); // Reset timer when manually changing slide
         });
+      });
 
-        // Auto slide functionality
-        let slideInterval;
+      // Auto slide functionality
+      let slideInterval;
 
-        function startAutoSlide() {
-            slideInterval = setInterval(() => {
-                let nextSlide = (currentSlide + 1) % slideCount;
-                showSlide(nextSlide);
-            }, 5000); // Change slide every 5 seconds
-        }
+      function startAutoSlide() {
+        slideInterval = setInterval(() => {
+          let nextSlide = (currentSlide + 1) % slideCount;
+          showSlide(nextSlide);
+        }, 5000); // Change slide every 5 seconds
+      }
 
-        function resetAutoSlide() {
-            clearInterval(slideInterval);
-            startAutoSlide();
-        }
-
-        // Initialize auto slide
+      function resetAutoSlide() {
+        clearInterval(slideInterval);
         startAutoSlide();
+      }
 
-        // Testimonial Slider
-        let currentTestimonial = 0;
-        const testimonials = document.querySelectorAll('.testimonial-slide');
-        const testimonialDots = document.querySelectorAll('.testimonial-dot');
-        const testimonialCount = testimonials.length;
+      // Initialize auto slide
+      startAutoSlide();
 
-        function showTestimonial(index) {
-            // Hide all testimonials
-            testimonials.forEach(testimonial => {
-                testimonial.classList.remove('active');
-            });
+      // Testimonial Slider
+      let currentTestimonial = 0;
+      const testimonials = document.querySelectorAll(".testimonial-slide");
+      const testimonialDots = document.querySelectorAll(".testimonial-dot");
+      const testimonialCount = testimonials.length;
 
-            // Remove active class from all dots
-            testimonialDots.forEach(dot => {
-                dot.classList.remove('active');
-            });
+      function showTestimonial(index) {
+        // Hide all testimonials
+        testimonials.forEach((testimonial) => {
+          testimonial.classList.remove("active");
+        });
 
-            // Show selected testimonial
-            testimonials[index].classList.add('active');
-            testimonialDots[index].classList.add('active');
+        // Remove active class from all dots
+        testimonialDots.forEach((dot) => {
+          dot.classList.remove("active");
+        });
 
-            currentTestimonial = index;
+        // Show selected testimonial
+        testimonials[index].classList.add("active");
+        testimonialDots[index].classList.add("active");
+
+        currentTestimonial = index;
+      }
+
+      // Set up testimonial dot navigation
+      testimonialDots.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+          showTestimonial(index);
+        });
+      });
+
+      // Auto testimonial rotation
+      setInterval(() => {
+        let nextTestimonial = (currentTestimonial + 1) % testimonialCount;
+        showTestimonial(nextTestimonial);
+      }, 7000); // Change testimonial every 7 seconds
+
+      // Back to Top Button
+      const backToTopButton = document.querySelector(".back-to-top");
+
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 300) {
+          backToTopButton.classList.add("active");
+        } else {
+          backToTopButton.classList.remove("active");
         }
+      });
 
-        // Set up testimonial dot navigation
-        testimonialDots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                showTestimonial(index);
-            });
+      backToTopButton.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
         });
+      });
 
-        // Auto testimonial rotation
-        setInterval(() => {
-            let nextTestimonial = (currentTestimonial + 1) % testimonialCount;
-            showTestimonial(nextTestimonial);
-        }, 7000); // Change testimonial every 7 seconds
+      // Scroll Animations
+      function initScrollAnimations() {
+        const animatedElements = document.querySelectorAll(
+          ".service-tile, .highlight-item, .why-choose-item, .industry-card"
+        );
 
-        // Back to Top Button
-        const backToTopButton = document.querySelector('.back-to-top');
-
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopButton.classList.add('active');
-            } else {
-                backToTopButton.classList.remove('active');
-            }
-        });
-
-        backToTopButton.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("animated");
+              }
             });
+          },
+          { threshold: 0.1 }
+        );
+
+        animatedElements.forEach((el) => {
+          observer.observe(el);
         });
-
-        // Scroll Animations
-        function initScrollAnimations() {
-            const animatedElements = document.querySelectorAll('.service-tile, .highlight-item, .why-choose-item, .industry-card');
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('animated');
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            animatedElements.forEach(el => {
-                observer.observe(el);
-            });
-        }
+      }
     </script>
-</body>
-
+  </body>
 </html>

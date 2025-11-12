@@ -1,1725 +1,2380 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Export Sea & Air Services | Liyana Logistics USA INC</title>
-    <meta name="description" content="Professional export sea and air freight services. Reliable global shipping solutions for your business needs with Liyana Logistics USA INC.">
-    <meta name="keywords" content="export sea freight, export air freight, logistics, shipping, international freight">
-    <meta name="author" content="Liyana Logistics USA INC">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta
+      name="description"
+      content="Professional export sea and air freight services. Reliable global shipping solutions for your business needs with Liyana Logistics USA INC."
+    />
+    <meta
+      name="keywords"
+      content="export sea freight, export air freight, logistics, shipping, international freight"
+    />
+    <meta name="author" content="Liyana Logistics USA INC" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <style>
-        /* Global Styles */
-        :root {
-            --primary-blue: #1a3c6e;
-            --secondary-blue: #2a5ba0;
-            --accent-blue: #4a7fc8;
-            --light-blue: #e6f0ff;
-            --light-gray: #f5f7fa;
-            --medium-gray: #e1e5eb;
-            --dark-gray: #6c757d;
-            --white: #ffffff;
-            --text-dark: #333333;
-            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            --transition: all 0.3s ease;
-            --card-bg: #fff;
-            --card-border: #e6e9ee;
-            --accent: #2b6cb0;
-            --text: #1f2937;
-            --muted: #6b7280;
-            --gap: 18px;
+      /* Global Styles */
+      :root {
+        --primary-blue: #1a3c6e;
+        --secondary-blue: #2a5ba0;
+        --accent-blue: #4a7fc8;
+        --light-blue: #e6f0ff;
+        --light-gray: #f5f7fa;
+        --medium-gray: #e1e5eb;
+        --dark-gray: #6c757d;
+        --white: #ffffff;
+        --text-dark: #333333;
+        --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        --transition: all 0.3s ease;
+        --card-bg: #fff;
+        --card-border: #e6e9ee;
+        --accent: #2b6cb0;
+        --text: #1f2937;
+        --muted: #6b7280;
+        --gap: 18px;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: var(--text-dark);
+        background-color: var(--white);
+        overflow-x: hidden;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+      }
+
+      h1 {
+        font-size: 2.8rem;
+      }
+
+      h2 {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+        position: relative;
+      }
+
+      h2.center-heading {
+        text-align: center;
+      }
+
+      h2.center-heading:after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background-color: var(--accent-blue);
+      }
+
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        margin-bottom: 1rem;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 12px 28px;
+        border-radius: 4px;
+        font-weight: 600;
+        text-align: center;
+        cursor: pointer;
+        transition: var(--transition);
+        border: none;
+        font-size: 1rem;
+      }
+
+      .btn-primary {
+        /* background-color: var(--primary-blue); */
+        color: var(--primary-blue);
+        border: 2px solid var(--primary-blue);
+      }
+
+      .btn-primary:hover {
+        background-color: var(--secondary-blue);
+        transform: translateY(-3px);
+        box-shadow: var(--shadow);
+        color: white;
+        border: transparent;
+      }
+
+      .btn-secondary {
+        background-color: var(--white);
+        color: var(--primary-blue);
+        border: 2px solid var(--primary-blue);
+      }
+
+      .btn-secondary:hover {
+        background-color: var(--primary-blue);
+        color: var(--white);
+        transform: translateY(-3px);
+        box-shadow: var(--shadow);
+      }
+
+      section {
+        padding: 80px 0;
+      }
+
+      .section-light {
+        background-color: var(--white);
+      }
+
+      .section-gray {
+        background-color: var(--light-gray);
+      }
+
+      /* Header & Navigation */
+      header {
+        background-color: var(--white);
+        box-shadow: var(--shadow);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+      }
+
+      .logo-img {
+        height: 50px;
+        width: auto;
+        cursor: pointer;
+        transition: var(--transition);
+      }
+
+      .logo-img:hover {
+        transform: scale(1.05);
+      }
+
+      .logo h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0;
+        color: var(--primary-blue);
+        margin-left: 10px;
+      }
+
+      .logo span {
+        color: var(--accent-blue);
+      }
+
+      .nav-menu {
+        display: flex;
+        align-items: center;
+      }
+
+      .nav-menu li {
+        margin-left: 25px;
+        position: relative;
+      }
+
+      .nav-menu a {
+        font-weight: 600;
+        transition: var(--transition);
+        position: relative;
+      }
+
+      .nav-menu a:hover {
+        color: var(--accent-blue);
+      }
+
+      .nav-menu a.active {
+        color: var(--accent-blue);
+      }
+
+      .nav-menu a:after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--accent-blue);
+        transition: var(--transition);
+      }
+
+      .nav-menu a:hover:after,
+      .nav-menu a.active:after {
+        width: 100%;
+      }
+
+      /* Dropdown Menu */
+      .dropdown {
+        position: relative;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: var(--white);
+        width: 500px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        border-radius: 4px;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 15px;
+      }
+
+      .dropdown-content-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      .dropdown-column {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .dropdown-content a {
+        color: var(--text-dark);
+        padding: 10px 15px;
+        text-decoration: none;
+        display: block;
+        transition: var(--transition);
+        border-radius: 4px;
+      }
+
+      .dropdown-content a:hover {
+        background-color: var(--light-gray);
+        color: var(--accent-blue);
+        transform: translateX(5px);
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .hamburger {
+        display: none;
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: var(--primary-blue);
+      }
+
+      /* Hero Section */
+      .service-hero {
+        background: linear-gradient(
+            rgba(26, 60, 110, 0.8),
+            rgba(26, 60, 110, 0.8)
+          ),
+          url("./images/export-sea.avif");
+        background-size: cover;
+        background-position: center;
+        color: var(--white);
+        padding: 120px 0 80px;
+        text-align: center;
+        margin-top: 70px;
+      }
+
+      .service-hero h1 {
+        font-size: 3.2rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .service-hero p {
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin: 0 auto 2.5rem;
+      }
+
+      /* Service Overview */
+      .service-overview {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        align-items: center;
+      }
+
+      .service-image {
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+      }
+
+      .service-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* Service Features */
+      .features-grid {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        margin-top: 40px;
+        z-index: 0;
+      }
+
+      .feature-card {
+        position: relative;
+        z-index: 100 !important;
+        background-color: var(--white);
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+      }
+      .feature-card::before {
+        position: absolute;
+        content: "";
+        top: -10px;
+        left: -10px;
+        height: 200px;
+        width: 100%;
+        border: 1px solid red;
+        z-index: -1 !important;
+      }
+
+      .feature-card.blue-card {
+        background-color: var(--primary-blue);
+        color: var(--white);
+      }
+
+      .feature-card:hover {
+        background-color: var(--primary-blue);
+        transform: translateY(-5px);
+        color: white;
+      }
+
+      .feature-icon {
+        font-size: 2.5rem;
+        color: var(--primary-blue);
+        margin-bottom: 20px;
+      }
+
+      .feature-card:hover .feature-icon {
+        color: white;
+      }
+
+      .feature-card.blue-card .feature-icon {
+        color: var(--white);
+      }
+
+      /* Service Options */
+      .service-options {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+      }
+
+      .option-card {
+        background-color: var(--white);
+        border-radius: 8px;
+        border: 2px solid #1a3c6e;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+      }
+
+      .option-card:hover {
+        transform: translateY(-10px);
+      }
+
+      .option-header {
+        background-color: var(--primary-blue);
+        color: var(--white);
+        padding: 20px;
+        text-align: center;
+      }
+
+      .option-content {
+        padding: 25px;
+      }
+
+      .option-features {
+        margin: 20px 0;
+      }
+
+      .option-features li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        color: var(--dark-gray);
+      }
+
+      .option-features i {
+        color: var(--accent-blue);
+        margin-right: 10px;
+      }
+
+      /* Process Section */
+      .process-steps {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 30px;
+        margin-top: 40px;
+      }
+
+      .process-step {
+        text-align: center;
+        padding: 30px 20px;
+      }
+
+      .step-number {
+        width: 60px;
+        height: 60px;
+        background-color: var(--primary-blue);
+        color: var(--white);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 0 auto 20px;
+      }
+
+      /* Contact Form */
+      .contact-form {
+        background-color: var(--white);
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: var(--shadow);
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 12px 15px;
+        border: 1px solid var(--medium-gray);
+        border-radius: 4px;
+        font-family: inherit;
+        font-size: 1rem;
+        transition: var(--transition);
+      }
+
+      input:focus,
+      select:focus,
+      textarea:focus {
+        outline: none;
+        border-color: var(--accent-blue);
+        box-shadow: 0 0 0 2px rgba(74, 127, 200, 0.2);
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 120px;
+      }
+
+      /* CTA Section */
+      .service-cta {
+        background: linear-gradient(
+            rgba(26, 60, 110, 0.9),
+            rgba(26, 60, 110, 0.9)
+          ),
+          url("https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80");
+        background-size: cover;
+        background-position: center;
+        color: var(--white);
+        text-align: center;
+      }
+
+      .service-cta h2 {
+        color: var(--white);
+      }
+
+      .service-cta h2:after {
+        background-color: var(--white);
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .service-cta p {
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin: 0 auto 40px;
+      }
+
+      /* Breadcrumb */
+      .breadcrumb {
+        background-color: var(--light-gray);
+        padding: 15px 0;
+        margin-bottom: 0;
+      }
+
+      .breadcrumb-links {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.9rem;
+      }
+
+      .breadcrumb-links a {
+        color: var(--dark-gray);
+        transition: var(--transition);
+      }
+
+      .breadcrumb-links a:hover {
+        color: var(--accent-blue);
+      }
+
+      .breadcrumb-links i {
+        font-size: 0.8rem;
+        color: var(--dark-gray);
+      }
+
+      /* Footer */
+      footer {
+        background-color: var(--primary-blue);
+        color: var(--white);
+        padding: 60px 0 30px;
+      }
+
+      .footer-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 40px;
+        margin-bottom: 40px;
+      }
+
+      .footer-col h3 {
+        color: var(--white);
+        margin-bottom: 25px;
+        position: relative;
+        padding-bottom: 10px;
+      }
+
+      .footer-col h3:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 3px;
+        background-color: var(--accent-blue);
+      }
+
+      .footer-links li {
+        margin-bottom: 12px;
+      }
+
+      .footer-links a {
+        transition: var(--transition);
+      }
+
+      .footer-links a:hover {
+        color: var(--accent-blue);
+        padding-left: 5px;
+      }
+
+      .contact-link {
+        color: var(--white);
+        transition: var(--transition);
+        display: flex;
+        align-items: flex-start;
+      }
+
+      .contact-link:hover {
+        color: var(--accent-blue);
+      }
+
+      .contact-link i {
+        margin-right: 10px;
+        width: 20px;
+        margin-top: 3px;
+      }
+
+      .contact-details {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .footer-social-links {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+      }
+
+      .footer-social-links a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        transition: var(--transition);
+      }
+
+      .footer-social-links a:hover {
+        background-color: var(--accent-blue);
+        transform: translateY(-3px);
+      }
+
+      .copyright {
+        text-align: center;
+        padding-top: 30px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 0.9rem;
+      }
+
+      /* Back to Top Button */
+      .back-to-top {
+        position: fixed;
+        bottom: 90px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        background-color: var(--primary-blue);
+        color: var(--white);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition);
+        z-index: 999;
+      }
+
+      .back-to-top.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .back-to-top:hover {
+        background-color: var(--secondary-blue);
+        transform: translateY(-5px);
+      }
+
+      /* WhatsApp Button */
+      .whatsapp-float {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 20px;
+        right: 20px;
+        background-color: #25d366;
+        color: #fff;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 2px 2px 3px #999;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: var(--transition);
+      }
+
+      .whatsapp-float:hover {
+        background-color: #128c7e;
+        transform: scale(1.1);
+      }
+
+      /* Service Tabs */
+      .service-tabs {
+        margin-top: 40px;
+        background: linear-gradient(
+            rgba(255, 255, 255, 0.9),
+            rgba(255, 255, 255, 0.9)
+          ),
+          url("https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80");
+        background-size: cover;
+        background-position: center;
+        padding: 40px;
+        border-radius: 8px;
+      }
+
+      .tab-buttons {
+        display: flex;
+        border-bottom: 1px solid var(--medium-gray);
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+      }
+
+      .tab-button {
+        padding: 15px 25px;
+        background: none;
+        border: none;
+        font-weight: 600;
+        cursor: pointer;
+        transition: var(--transition);
+        border-bottom: 3px solid transparent;
+      }
+
+      .tab-button.active {
+        color: var(--accent-blue);
+        border-bottom: 3px solid var(--accent-blue);
+      }
+
+      .tab-content {
+        display: none;
+      }
+
+      .tab-content.active {
+        display: block;
+        animation: fadeIn 0.5s ease;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* Coverage Map */
+      .coverage-map {
+        background-color: var(--light-gray);
+        padding: 30px;
+        border-radius: 8px;
+        text-align: center;
+        margin-top: 40px;
+      }
+
+      .map-placeholder {
+        background-color: var(--white);
+        height: 300px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        box-shadow: var(--shadow);
+        background: url(./images/global-export.jpg) no-repeat center / cover;
+      }
+
+      .map-placeholder i {
+        font-size: 4rem;
+        color: white;
+      }
+
+      /* Process Section - Fixed */
+      .export-process-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--gap);
+        align-items: start;
+      }
+
+      .process-card {
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        border-radius: 12px;
+        padding: 18px;
+        box-shadow: 0 2px 6px rgba(16, 24, 40, 0.04);
+        min-height: 160px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: var(--transition);
+      }
+
+      .process-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      .process-header {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 12px;
+      }
+
+      .process-icon {
+        width: 44px;
+        height: 44px;
+        flex: 0 0 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        background: linear-gradient(
+          180deg,
+          rgba(43, 108, 176, 0.12),
+          rgba(43, 108, 176, 0.06)
+        );
+        color: var(--primary-blue);
+        font-size: 1.2rem;
+      }
+
+      .process-title h3 {
+        color: var(--primary-blue);
+        margin-bottom: 0;
+        font-size: 1.2rem;
+        line-height: 1.3;
+      }
+
+      .process-body {
+        padding-left: 4px;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .process-features {
+        list-style: none;
+        padding: 0;
+        margin: 10px 0 0 0;
+      }
+
+      .process-features li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 6px;
+        color: var(--text-dark);
+        font-size: 0.9rem;
+        padding: 2px 0;
+      }
+
+      .process-features i {
+        color: var(--accent-blue);
+        margin-right: 8px;
+        font-size: 0.8rem;
+        width: 14px;
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 1200px) {
+        .features-grid {
+          grid-template-columns: repeat(2, 1fr);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        .process-steps {
+          grid-template-columns: repeat(3, 1fr);
         }
 
-        html {
-            scroll-behavior: smooth;
+        .export-process-grid {
+          grid-template-columns: repeat(2, 1fr);
         }
+      }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            background-color: var(--white);
-            overflow-x: hidden;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        h1, h2, h3, h4 {
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 1rem;
-        }
-
+      @media (max-width: 992px) {
         h1 {
-            font-size: 2.8rem;
+          font-size: 2.4rem;
         }
 
         h2 {
-            font-size: 2.2rem;
-            margin-bottom: 2rem;
-            position: relative;
+          font-size: 2rem;
         }
 
-        h2.center-heading {
-            text-align: center;
-        }
-
-        h2.center-heading:after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background-color: var(--accent-blue);
-        }
-
-        h3 {
-            font-size: 1.5rem;
-        }
-
-        p {
-            margin-bottom: 1rem;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 28px;
-            border-radius: 4px;
-            font-weight: 600;
-            text-align: center;
-            cursor: pointer;
-            transition: var(--transition);
-            border: none;
-            font-size: 1rem;
-        }
-
-        .btn-primary {
-            background-color: var(--primary-blue);
-            color: var(--white);
-        }
-
-        .btn-primary:hover {
-            background-color: var(--secondary-blue);
-            transform: translateY(-3px);
-            box-shadow: var(--shadow);
-        }
-
-        .btn-secondary {
-            background-color: var(--white);
-            color: var(--primary-blue);
-            border: 2px solid var(--primary-blue);
-        }
-
-        .btn-secondary:hover {
-            background-color: var(--primary-blue);
-            color: var(--white);
-            transform: translateY(-3px);
-            box-shadow: var(--shadow);
-        }
-
-        section {
-            padding: 80px 0;
-        }
-
-        .section-light {
-            background-color: var(--white);
-        }
-
-        .section-gray {
-            background-color: var(--light-gray);
-        }
-
-        /* Header & Navigation */
-        header {
-            background-color: var(--white);
-            box-shadow: var(--shadow);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-
-        .logo-img {
-            height: 50px;
-            width: auto;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .logo-img:hover {
-            transform: scale(1.05);
-        }
-
-        .logo h1 {
-            font-size: 1.5rem;
-            margin-bottom: 0;
-            color: var(--primary-blue);
-            margin-left: 10px;
-        }
-
-        .logo span {
-            color: var(--accent-blue);
-        }
-
-        .nav-menu {
-            display: flex;
-            align-items: center;
-        }
-
-        .nav-menu li {
-            margin-left: 25px;
-            position: relative;
-        }
-
-        .nav-menu a {
-            font-weight: 600;
-            transition: var(--transition);
-            position: relative;
-        }
-
-        .nav-menu a:hover {
-            color: var(--accent-blue);
-        }
-
-        .nav-menu a.active {
-            color: var(--accent-blue);
-        }
-
-        .nav-menu a:after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--accent-blue);
-            transition: var(--transition);
-        }
-
-        .nav-menu a:hover:after, .nav-menu a.active:after {
-            width: 100%;
-        }
-
-        /* Dropdown Menu */
-        .dropdown {
-            position: relative;
+        .service-overview {
+          grid-template-columns: 1fr;
+          gap: 40px;
         }
 
         .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: var(--white);
-            width: 500px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-            border-radius: 4px;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 15px;
+          width: 400px;
         }
 
-        .dropdown-content-wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
+        .service-options {
+          grid-template-columns: 1fr;
         }
 
-        .dropdown-column {
-            display: flex;
-            flex-direction: column;
+        .process-steps {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .header-container {
+          padding: 15px;
         }
 
-        .dropdown-content a {
-            color: var(--text-dark);
-            padding: 10px 15px;
-            text-decoration: none;
-            display: block;
-            transition: var(--transition);
-            border-radius: 4px;
+        .nav-menu {
+          position: fixed;
+          top: 70px;
+          right: -100%;
+          background-color: var(--white);
+          width: 80%;
+          height: calc(100vh - 70px);
+          flex-direction: column;
+          align-items: center;
+          padding-top: 50px;
+          transition: var(--transition);
+          box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+          overflow-y: auto;
         }
 
-        .dropdown-content a:hover {
-            background-color: var(--light-gray);
-            color: var(--accent-blue);
-            transform: translateX(5px);
+        .nav-menu.active {
+          right: 0;
         }
 
-        .dropdown:hover .dropdown-content {
-            display: block;
+        .nav-menu li {
+          margin: 0 0 30px 0;
+        }
+
+        .dropdown-content {
+          position: static;
+          box-shadow: none;
+          display: none;
+          background-color: var(--light-gray);
+          margin-top: 10px;
+          border-radius: 4px;
+          width: 100%;
+          transform: none;
+          left: 0;
+        }
+
+        .dropdown.active .dropdown-content {
+          display: block;
         }
 
         .hamburger {
-            display: none;
-            cursor: pointer;
-            font-size: 1.5rem;
-            color: var(--primary-blue);
-        }
-
-        /* Hero Section */
-        .service-hero {
-            background: linear-gradient(rgba(26, 60, 110, 0.8), rgba(26, 60, 110, 0.8)), url('./images/export-sea.avif');
-            background-size: cover;
-            background-position: center;
-            color: var(--white);
-            padding: 120px 0 80px;
-            text-align: center;
-            margin-top: 70px;
+          display: block;
         }
 
         .service-hero h1 {
-            font-size: 3.2rem;
-            margin-bottom: 1.5rem;
+          font-size: 2.5rem;
         }
 
-        .service-hero p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 2.5rem;
-        }
-
-        /* Service Overview */
-        .service-overview {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-
-        .service-image {
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-        }
-
-        .service-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        /* Service Features */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .feature-card {
-            background-color: var(--white);
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-        }
-
-        .feature-card.blue-card {
-            background-color: var(--primary-blue);
-            color: var(--white);
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .feature-icon {
-            font-size: 2.5rem;
-            color: var(--primary-blue);
-            margin-bottom: 20px;
-        }
-
-        .feature-card.blue-card .feature-icon {
-            color: var(--white);
-        }
-
-        /* Service Options */
-        .service-options {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .option-card {
-            background-color: var(--white);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-        }
-
-        .option-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .option-header {
-            background-color: var(--primary-blue);
-            color: var(--white);
-            padding: 20px;
-            text-align: center;
-        }
-
-        .option-content {
-            padding: 25px;
-        }
-
-        .option-features {
-            margin: 20px 0;
-        }
-
-        .option-features li {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-            color: var(--dark-gray);
-        }
-
-        .option-features i {
-            color: var(--accent-blue);
-            margin-right: 10px;
-        }
-
-        /* Process Section */
-        .process-steps {
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .process-step {
-            text-align: center;
-            padding: 30px 20px;
-        }
-
-        .step-number {
-            width: 60px;
-            height: 60px;
-            background-color: var(--primary-blue);
-            color: var(--white);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin: 0 auto 20px;
-        }
-
-        /* Contact Form */
-        .contact-form {
-            background-color: var(--white);
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: var(--shadow);
-        }
-
-        .form-group {
-            margin-bottom: 20px;
+        section {
+          padding: 60px 0;
         }
 
         .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
+          grid-template-columns: 1fr;
         }
 
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-
-        input, select, textarea {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid var(--medium-gray);
-            border-radius: 4px;
-            font-family: inherit;
-            font-size: 1rem;
-            transition: var(--transition);
-        }
-
-        input:focus, select:focus, textarea:focus {
-            outline: none;
-            border-color: var(--accent-blue);
-            box-shadow: 0 0 0 2px rgba(74, 127, 200, 0.2);
-        }
-
-        textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        /* CTA Section */
-        .service-cta {
-            background: linear-gradient(rgba(26, 60, 110, 0.9), rgba(26, 60, 110, 0.9)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
-            background-size: cover;
-            background-position: center;
-            color: var(--white);
-            text-align: center;
-        }
-
-        .service-cta h2 {
-            color: var(--white);
-        }
-
-        .service-cta h2:after {
-            background-color: var(--white);
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .service-cta p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 40px;
-        }
-
-        /* Breadcrumb */
-        .breadcrumb {
-            background-color: var(--light-gray);
-            padding: 15px 0;
-            margin-bottom: 0;
-        }
-
-        .breadcrumb-links {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 0.9rem;
-        }
-
-        .breadcrumb-links a {
-            color: var(--dark-gray);
-            transition: var(--transition);
-        }
-
-        .breadcrumb-links a:hover {
-            color: var(--accent-blue);
-        }
-
-        .breadcrumb-links i {
-            font-size: 0.8rem;
-            color: var(--dark-gray);
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--primary-blue);
-            color: var(--white);
-            padding: 60px 0 30px;
-        }
-
-        .footer-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-col h3 {
-            color: var(--white);
-            margin-bottom: 25px;
-            position: relative;
-            padding-bottom: 10px;
-        }
-
-        .footer-col h3:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 40px;
-            height: 3px;
-            background-color: var(--accent-blue);
-        }
-
-        .footer-links li {
-            margin-bottom: 12px;
-        }
-
-        .footer-links a {
-            transition: var(--transition);
-        }
-
-        .footer-links a:hover {
-            color: var(--accent-blue);
-            padding-left: 5px;
-        }
-
-        .contact-link {
-            color: var(--white);
-            transition: var(--transition);
-            display: flex;
-            align-items: flex-start;
-        }
-
-        .contact-link:hover {
-            color: var(--accent-blue);
-        }
-
-        .contact-link i {
-            margin-right: 10px;
-            width: 20px;
-            margin-top: 3px;
-        }
-
-        .contact-details {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .footer-social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .footer-social-links a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            transition: var(--transition);
-        }
-
-        .footer-social-links a:hover {
-            background-color: var(--accent-blue);
-            transform: translateY(-3px);
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 0.9rem;
-        }
-
-        /* Back to Top Button */
-        .back-to-top {
-            position: fixed;
-            bottom: 90px;
-            right: 30px;
-            width: 50px;
-            height: 50px;
-            background-color: var(--primary-blue);
-            color: var(--white);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            cursor: pointer;
-            opacity: 0;
-            visibility: hidden;
-            transition: var(--transition);
-            z-index: 999;
-        }
-
-        .back-to-top.active {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .back-to-top:hover {
-            background-color: var(--secondary-blue);
-            transform: translateY(-5px);
-        }
-
-        /* WhatsApp Button */
-        .whatsapp-float {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25d366;
-            color: #FFF;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 2px 2px 3px #999;
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: var(--transition);
-        }
-
-        .whatsapp-float:hover {
-            background-color: #128C7E;
-            transform: scale(1.1);
-        }
-
-        /* Service Tabs */
-        .service-tabs {
-            margin-top: 40px;
-            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
-            background-size: cover;
-            background-position: center;
-            padding: 40px;
-            border-radius: 8px;
+        .dropdown-content-wrapper {
+          grid-template-columns: 1fr;
         }
 
         .tab-buttons {
-            display: flex;
-            border-bottom: 1px solid var(--medium-gray);
-            margin-bottom: 30px;
-            flex-wrap: wrap;
+          flex-direction: column;
         }
 
         .tab-button {
-            padding: 15px 25px;
-            background: none;
-            border: none;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-            border-bottom: 3px solid transparent;
+          width: 100%;
+          text-align: left;
         }
 
-        .tab-button.active {
-            color: var(--accent-blue);
-            border-bottom: 3px solid var(--accent-blue);
+        .features-grid {
+          grid-template-columns: 1fr;
         }
 
-        .tab-content {
-            display: none;
+        .process-steps {
+          grid-template-columns: 1fr;
         }
 
-        .tab-content.active {
-            display: block;
-            animation: fadeIn 0.5s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        /* Coverage Map */
-        .coverage-map {
-            background-color: var(--light-gray);
-            padding: 30px;
-            border-radius: 8px;
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        .map-placeholder {
-            background-color: var(--white);
-            height: 300px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-            box-shadow: var(--shadow);
-        }
-
-        .map-placeholder i {
-            font-size: 4rem;
-            color: var(--primary-blue);
-        }
-
-        /* Process Section - Fixed */
         .export-process-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: var(--gap);
-            align-items: start;
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .service-hero h1 {
+          font-size: 2rem;
+        }
+
+        .service-hero p {
+          font-size: 1rem;
+        }
+
+        .whatsapp-float {
+          width: 50px;
+          height: 50px;
+          font-size: 24px;
+        }
+
+        .contact-form {
+          padding: 20px;
+        }
+
+        .feature-card,
+        .option-card {
+          padding: 20px;
+        }
+
+        .service-tabs {
+          padding: 20px;
         }
 
         .process-card {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 12px;
-            padding: 18px;
-            box-shadow: 0 2px 6px rgba(16,24,40,0.04);
-            min-height: 160px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: var(--transition);
+          padding: 15px;
         }
-
-        .process-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-        }
-
-        .process-header {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            margin-bottom: 12px;
-        }
-
-        .process-icon {
-            width: 44px;
-            height: 44px;
-            flex: 0 0 44px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 8px;
-            background: linear-gradient(180deg, rgba(43,108,176,0.12), rgba(43,108,176,0.06));
-            color: var(--primary-blue);
-            font-size: 1.2rem;
-        }
-
-        .process-title h3 {
-            color: var(--primary-blue);
-            margin-bottom: 0;
-            font-size: 1.2rem;
-            line-height: 1.3;
-        }
-
-        .process-body {
-            padding-left: 4px;
-            color: var(--muted);
-            font-size: 0.95rem;
-        }
-
-        .process-features {
-            list-style: none;
-            padding: 0;
-            margin: 10px 0 0 0;
-        }
-
-        .process-features li {
-            display: flex;
-            align-items: center;
-            margin-bottom: 6px;
-            color: var(--text-dark);
-            font-size: 0.9rem;
-            padding: 2px 0;
-        }
-
-        .process-features i {
-            color: var(--accent-blue);
-            margin-right: 8px;
-            font-size: 0.8rem;
-            width: 14px;
-        }
-
-        /* Responsive Styles */
-        @media (max-width: 1200px) {
-            .features-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .process-steps {
-                grid-template-columns: repeat(3, 1fr);
-            }
-            
-            .export-process-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 992px) {
-            h1 {
-                font-size: 2.4rem;
-            }
-            
-            h2 {
-                font-size: 2rem;
-            }
-            
-            .service-overview {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-            
-            .dropdown-content {
-                width: 400px;
-            }
-            
-            .service-options {
-                grid-template-columns: 1fr;
-            }
-            
-            .process-steps {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .header-container {
-                padding: 15px;
-            }
-            
-            .nav-menu {
-                position: fixed;
-                top: 70px;
-                right: -100%;
-                background-color: var(--white);
-                width: 80%;
-                height: calc(100vh - 70px);
-                flex-direction: column;
-                align-items: center;
-                padding-top: 50px;
-                transition: var(--transition);
-                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-                overflow-y: auto;
-            }
-            
-            .nav-menu.active {
-                right: 0;
-            }
-            
-            .nav-menu li {
-                margin: 0 0 30px 0;
-            }
-            
-            .dropdown-content {
-                position: static;
-                box-shadow: none;
-                display: none;
-                background-color: var(--light-gray);
-                margin-top: 10px;
-                border-radius: 4px;
-                width: 100%;
-                transform: none;
-                left: 0;
-            }
-            
-            .dropdown.active .dropdown-content {
-                display: block;
-            }
-            
-            .hamburger {
-                display: block;
-            }
-            
-            .service-hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            section {
-                padding: 60px 0;
-            }
-            
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-            
-            .dropdown-content-wrapper {
-                grid-template-columns: 1fr;
-            }
-            
-            .tab-buttons {
-                flex-direction: column;
-            }
-            
-            .tab-button {
-                width: 100%;
-                text-align: left;
-            }
-            
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .process-steps {
-                grid-template-columns: 1fr;
-            }
-            
-            .export-process-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .service-hero h1 {
-                font-size: 2rem;
-            }
-            
-            .service-hero p {
-                font-size: 1rem;
-            }
-            
-            .whatsapp-float {
-                width: 50px;
-                height: 50px;
-                font-size: 24px;
-            }
-            
-            .contact-form {
-                padding: 20px;
-            }
-            
-            .feature-card, .option-card {
-                padding: 20px;
-            }
-            
-            .service-tabs {
-                padding: 20px;
-            }
-            
-            .process-card {
-                padding: 15px;
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- WhatsApp Button -->
-    <a href="https://wa.me/19176519824" class="whatsapp-float" target="_blank" aria-label="Contact us on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
+    <a
+      href="https://wa.me/19176519824"
+      class="whatsapp-float"
+      target="_blank"
+      aria-label="Contact us on WhatsApp"
+    >
+      <i class="fab fa-whatsapp"></i>
     </a>
 
     <!-- Header & Navigation -->
     <header>
-        <div class="container header-container">
+      <div class="container header-container">
         <div class="logo">
-                <!-- Logo - Clickable -->
-                <img src="images/logo.png" 
-                     alt="Liyana Logistics Logo" class="logo-img" onclick="window.location.href='/'">
-                <h1><a href="/">Liyana Logistics <span>USA INC.</span></a> </h1>
-            </div>
-            <div class="hamburger" aria-label="Toggle navigation menu">
-                <i class="fas fa-bars"></i>
-            </div>
-            <nav>
-                <ul class="nav-menu">
-                    <li><a href="/" class="nav-link">Home</a></li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
-                    <li class="dropdown">
-                        <a href="services.html" class="nav-link active">Services <i class="fas fa-chevron-down"></i></a>
-                        <div class="dropdown-content">
-                            <div class="dropdown-content-wrapper">
-                                <div class="dropdown-column">
-                                    <a href="export-sea-air.html" class="nav-link">Export Sea / Air</a>
-                                    <a href="import-sea-air.html" class="nav-link">Import Sea / Air</a>
-                                    <a href="project-cargo.html" class="nav-link">Project Cargo</a>
-                                    <a href="dg-cargo-handling.html" class="nav-link">DG Cargo Handling</a>
-                                    <a href="reefer-container.html" class="nav-link">Reefer Container</a>
-                                </div>
-                                <div class="dropdown-column">
-                                    <a href="cross-trade.html" class="nav-link">Cross Trade</a>
-                                    <a href="warehousing.html" class="nav-link">Warehousing</a>
-                                    <a href="custom-clearing.html" class="nav-link">Custom Clearing</a>
-                                    <a href="door-delivery.html" class="nav-link">Door Delivery</a>
-                                    <a href="project-shipment.html" class="nav-link">Project Shipment</a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li><a href="request-quote.html" class="nav-link">Request Quote</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
+          <!-- Logo - Clickable -->
+          <img
+            alt="Liyana Logistics Logo"
+            class="logo-img"
+            onclick="window.location.href='/'"
+            src="images/logo.png"
+          />
+          <h1>
+            <a href="/"
+              >Liyana Logistics <span>USA INC.</span><br />
+              <span class="small-text">Your Ultimate Logistics Partner</span></a
+            >
+          </h1>
         </div>
+        <div class="hamburger">
+          <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-menu">
+          <li><a class="nav-link active" href="/">Home</a></li>
+          <li><a class="nav-link" href="about.html">About</a></li>
+          <li class="dropdown">
+            <a class="nav-link" href="services.html"
+              >Services <i class="fas fa-chevron-down"></i
+            ></a>
+            <div class="dropdown-content">
+              <div class="dropdown-content-wrapper">
+                <div class="dropdown-column">
+                  <a class="nav-link" href="export-sea-air.html"
+                    >Export Sea / Air</a
+                  >
+                  <a class="nav-link" href="import-sea-air.html"
+                    >Import Sea / Air</a
+                  >
+                  <a class="nav-link" href="project-cargo.html"
+                    >Project Cargo</a
+                  >
+                  <a class="nav-link" href="dg-cargo-handling.html"
+                    >DG Cargo Handling</a
+                  >
+                  <a class="nav-link" href="reefer-container.html"
+                    >Reefer Container</a
+                  >
+                </div>
+                <div class="dropdown-column">
+                  <a class="nav-link" href="cross-trade.html">Cross Trade</a>
+                  <a class="nav-link" href="warehousing.html">Warehousing</a>
+                  <a class="nav-link" href="custom-clearing.html"
+                    >Custom Clearing</a
+                  >
+                  <a class="nav-link" href="door-delivery.html"
+                    >Door Delivery</a
+                  >
+                  <a class="nav-link" href="project-shipment.html"
+                    >Project Shipment</a
+                  >
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a class="nav-link" href="request-quote.html">Request Quote</a>
+          </li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </header>
 
     <!-- Export Sea / Air Service Page -->
     <main id="service-export">
-        <!-- Hero Section -->
-        <section class="service-hero">
-            <div class="container">
-                <h1>Export Sea & Air Services</h1>
-                <p>Comprehensive export solutions via sea and air freight to global destinations with competitive pricing, reliable schedules, and end-to-end logistics management.</p>
-                <a href="#inquiry" class="btn btn-primary">Get Export Quote</a>
-            </div>
-        </section>
+      <!-- Hero Section -->
+      <section class="service-hero">
+        <div class="container">
+          <h1>Export Sea & Air Services</h1>
+          <p>
+            Comprehensive export solutions via sea and air freight to global
+            destinations with competitive pricing, reliable schedules, and
+            end-to-end logistics management.
+          </p>
+          <a href="#inquiry" class="btn btn-primary">Get Export Quote</a>
+        </div>
+      </section>
 
-        <!-- Service Overview -->
-        <section class="section-light">
-            <div class="container">
-                <div class="service-overview">
-                    <div class="service-content">
-                        <h2>Global Export Solutions</h2>
-                        <p>At Liyana Logistics, we specialize in providing comprehensive export services via both sea and air freight. With our extensive global network and industry expertise, we ensure your goods reach international markets efficiently, reliably, and cost-effectively.</p>
-                        <p>Whether you're shipping consumer goods, industrial equipment, or specialized cargo, our team manages every aspect of the export process - from documentation and compliance to transportation and final delivery.</p>
-                        <div style="display: flex; gap: 15px; margin-top: 30px; flex-wrap: wrap;">
-                            <div style="display: flex; align-items: center;">
-                                <i class="fas fa-check" style="color: var(--accent-blue); margin-right: 10px;"></i>
-                                <span>Global Coverage to 150+ Countries</span>
-                            </div>
-                            <div style="display: flex; align-items: center;">
-                                <i class="fas fa-check" style="color: var(--accent-blue); margin-right: 10px;"></i>
-                                <span>Competitive Freight Rates</span>
-                            </div>
-                            <div style="display: flex; align-items: center;">
-                                <i class="fas fa-check" style="color: var(--accent-blue); margin-right: 10px;"></i>
-                                <span>Real-time Shipment Tracking</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service-image">
-                        <img src="./images/air-services.avif" alt="Export Logistics - Shipping containers at port">
-                    </div>.html
+      <!-- Service Overview -->
+      <section class="section-light">
+        <div class="container">
+          <div class="service-overview">
+            <div class="service-content">
+              <h2>Global Export Solutions</h2>
+              <p>
+                At Liyana Logistics, we specialize in providing comprehensive
+                export services via both sea and air freight. With our extensive
+                global network and industry expertise, we ensure your goods
+                reach international markets efficiently, reliably, and
+                cost-effectively.
+              </p>
+              <p>
+                Whether you're shipping consumer goods, industrial equipment, or
+                specialized cargo, our team manages every aspect of the export
+                process - from documentation and compliance to transportation
+                and final delivery.
+              </p>
+              <div
+                style="
+                  display: flex;
+                  gap: 15px;
+                  margin-top: 30px;
+                  flex-wrap: wrap;
+                "
+              >
+                <div style="display: flex; align-items: center">
+                  <i
+                    class="fas fa-check"
+                    style="color: var(--accent-blue); margin-right: 10px"
+                  ></i>
+                  <span>Global Coverage to 150+ Countries</span>
                 </div>
-            </div>
-        </section>
-
-        <!-- Service Features -->
-        <section class="section-gray">
-            <div class="container">
-                <h2 class="center-heading">Why Choose Our Export Services</h2>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-globe-americas"></i>
-                        </div>
-                        <h3>Global Network</h3>
-                        <p>Access to 200+ global partners and agents ensuring seamless operations across all major trade routes and destinations worldwide.</p>
-                    </div>
-                    <div class="feature-card blue-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <h3>Time-Definite Services</h3>
-                        <p>Guaranteed transit times with premium air freight options and reliable sea freight schedules to meet your delivery commitments.</p>
-                    </div>
-                    <div class="feature-card blue-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-file-contract"></i>
-                        </div>
-                        <h3>Documentation Expertise</h3>
-                        <p>Comprehensive handling of all export documentation including bills of lading, certificates of origin, and customs declarations.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h3>Cargo Security</h3>
-                        <p>Advanced security protocols and cargo insurance options to protect your shipments throughout the export journey.</p>
-                    </div>
+                <div style="display: flex; align-items: center">
+                  <i
+                    class="fas fa-check"
+                    style="color: var(--accent-blue); margin-right: 10px"
+                  ></i>
+                  <span>Competitive Freight Rates</span>
                 </div>
-            </div>
-        </section>
-
-        <!-- Service Options -->
-        <section class="section-light">
-            <div class="container">
-                <h2 class="center-heading">Our Export Solutions</h2>
-                <div class="service-options">
-                    <!-- Sea Freight Option -->
-                    <div class="option-card">
-                        <div class="option-header">
-                            <h3>Sea Freight Export</h3>
-                        </div>
-                        <div class="option-content">
-                            <p>Cost-effective container shipping solutions for large volume exports with flexible scheduling and global port coverage.</p>
-                            <ul class="option-features">
-                                <li><i class="fas fa-check"></i> FCL (Full Container Load)</li>
-                                <li><i class="fas fa-check"></i> LCL (Less than Container Load)</li>
-                                <li><i class="fas fa-check"></i> Dry, Reefer & Special Containers</li>
-                                <li><i class="fas fa-check"></i> Port-to-Port & Door-to-Door</li>
-                                <li><i class="fas fa-check"></i> Cargo Insurance Available</li>
-                            </ul>
-                            <div style="text-align: center; margin-top: 20px;">
-                                <a href="#inquiry" class="btn btn-primary" style="width: 100%;">Get Sea Freight Quote</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Air Freight Option -->
-                    <div class="option-card">
-                        <div class="option-header">
-                            <h3>Air Freight Export</h3>
-                        </div>
-                        <div class="option-content">
-                            <p>Express air cargo solutions for time-sensitive shipments with priority handling and expedited customs clearance.</p>
-                            <ul class="option-features">
-                                <li><i class="fas fa-check"></i> Standard & Express Air Freight</li>
-                                <li><i class="fas fa-check"></i> Charter Services Available</li>
-                                <li><i class="fas fa-check"></i> Door-to-Airport & Door-to-Door</li>
-                                <li><i class="fas fa-check"></i> Temperature-Controlled Options</li>
-                                <li><i class="fas fa-check"></i> Real-time Flight Tracking</li>
-                            </ul>
-                            <div style="text-align: center; margin-top: 20px;">
-                                <a href="#inquiry" class="btn btn-primary" style="width: 100%;">Get Air Freight Quote</a>
-                            </div>
-                        </div>
-                    </div>
+                <div style="display: flex; align-items: center">
+                  <i
+                    class="fas fa-check"
+                    style="color: var(--accent-blue); margin-right: 10px"
+                  ></i>
+                  <span>Real-time Shipment Tracking</span>
                 </div>
+              </div>
             </div>
-        </section>
-
-        <!-- Service Tabs -->
-        <section class="section-gray">
-            <div class="container">
-                <h2 class="center-heading">Export Service Details</h2>
-                <div class="service-tabs">
-                    <div class="tab-buttons">
-                        <button class="tab-button active" data-tab="documentation">Documentation</button>
-                        <button class="tab-button" data-tab="compliance">Compliance</button>
-                        <button class="tab-button" data-tab="packaging">Packaging</button>
-                        <button class="tab-button" data-tab="insurance">Insurance</button>
-                    </div>
-                    
-                    <div class="tab-content active" id="documentation">
-                        <h3>Export Documentation Services</h3>
-                        <p>We handle all necessary export documentation to ensure your shipments comply with international trade regulations:</p>
-                        <ul class="option-features">
-                            <li><i class="fas fa-check"></i> Commercial Invoice Preparation</li>
-                            <li><i class="fas fa-check"></i> Packing List Creation</li>
-                            <li><i class="fas fa-check"></i> Certificate of Origin</li>
-                            <li><i class="fas fa-check"></i> Bill of Lading/Air Waybill</li>
-                            <li><i class="fas fa-check"></i> Export Declaration Forms</li>
-                            <li><i class="fas fa-check"></i> Insurance Certificates</li>
-                            <li><i class="fas fa-check"></i> Export License Applications</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="tab-content" id="compliance">
-                        <h3>Regulatory Compliance</h3>
-                        <p>Our compliance experts ensure your exports meet all international regulations and requirements:</p>
-                        <ul class="option-features">
-                            <li><i class="fas fa-check"></i> Customs Compliance Verification</li>
-                            <li><i class="fas fa-check"></i> Export Control Classification</li>
-                            <li><i class="fas fa-check"></i> Restricted Party Screening</li>
-                            <li><i class="fas fa-check"></i> Trade Agreement Optimization</li>
-                            <li><i class="fas fa-check"></i> Sanctions Compliance</li>
-                            <li><i class="fas fa-check"></i> Export License Management</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="tab-content" id="packaging">
-                        <h3>Packaging & Labeling</h3>
-                        <p>Proper packaging and labeling services to ensure your goods arrive safely and comply with destination requirements:</p>
-                        <ul class="option-features">
-                            <li><i class="fas fa-check"></i> Export-Strength Packaging</li>
-                            <li><i class="fas fa-check"></i> Hazardous Materials Packaging</li>
-                            <li><i class="fas fa-check"></i> Climate-Controlled Packaging</li>
-                            <li><i class="fas fa-check"></i> International Labeling Standards</li>
-                            <li><i class="fas fa-check"></i> Palletizing & Unitizing</li>
-                            <li><i class="fas fa-check"></i> Marking & Symbol Application</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="tab-content" id="insurance">
-                        <h3>Cargo Insurance</h3>
-                        <p>Comprehensive insurance options to protect your shipments against loss or damage during transit:</p>
-                        <ul class="option-features">
-                            <li><i class="fas fa-check"></i> All-Risk Cargo Insurance</li>
-                            <li><i class="fas fa-check"></i> Marine Cargo Insurance</li>
-                            <li><i class="fas fa-check"></i> Air Cargo Insurance</li>
-                            <li><i class="fas fa-check"></i> Specialized Coverage Options</li>
-                            <li><i class="fas fa-check"></i> Claims Management Support</li>
-                            <li><i class="fas fa-check"></i> Certificate of Insurance Issuance</li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="service-image">
+              <img
+                src="./images/air-services.avif"
+                alt="Export Logistics - Shipping containers at port"
+              />
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- Process Section -->
-        <section class="section-light">
-            <div class="container">
-                <h2 class="center-heading">Our Export Process</h2>
-                <p style="text-align: center; max-width: 800px; margin: 0 auto 50px;">We follow a streamlined, transparent process to ensure your exports reach their destination efficiently and reliably.</p>
-                
-                <div class="export-process-grid">
-                    <!-- Card 1 -->
-                    <div class="process-card">
-                        <div>
-                            <div class="process-header">
-                                <div class="process-icon">
-                                    <i class="fas fa-clipboard-list"></i>
-                                </div>
-                                <div class="process-title">
-                                    <h3>Consultation & Planning</h3>
-                                </div>
-                            </div>
-                            <div class="process-body">
-                                <p>We analyze your requirements and design the optimal export strategy for your cargo.</p>
-                                <ul class="process-features">
-                                    <li><i class="fas fa-check"></i> Needs assessment</li>
-                                    <li><i class="fas fa-check"></i> Route optimization</li>
-                                    <li><i class="fas fa-check"></i> Cost analysis</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 2 -->
-                    <div class="process-card">
-                        <div>
-                            <div class="process-header">
-                                <div class="process-icon">
-                                    <i class="fas fa-file-contract"></i>
-                                </div>
-                                <div class="process-title">
-                                    <h3>Documentation & Compliance</h3>
-                                </div>
-                            </div>
-                            <div class="process-body">
-                                <p>Our experts handle all export documentation and ensure regulatory compliance.</p>
-                                <ul class="process-features">
-                                    <li><i class="fas fa-check"></i> Customs documentation</li>
-                                    <li><i class="fas fa-check"></i> Export declarations</li>
-                                    <li><i class="fas fa-check"></i> Compliance verification</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 3 -->
-                    <div class="process-card">
-                        <div>
-                            <div class="process-header">
-                                <div class="process-icon">
-                                    <i class="fas fa-box-open"></i>
-                                </div>
-                                <div class="process-title">
-                                    <h3>Collection & Packaging</h3>
-                                </div>
-                            </div>
-                            <div class="process-body">
-                                <p>We arrange cargo collection and ensure proper packaging for safe transit.</p>
-                                <ul class="process-features">
-                                    <li><i class="fas fa-check"></i> Cargo collection</li>
-                                    <li><i class="fas fa-check"></i> Export packaging</li>
-                                    <li><i class="fas fa-check"></i> Labeling & marking</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 4 -->
-                    <div class="process-card">
-                        <div>
-                            <div class="process-header">
-                                <div class="process-icon">
-                                    <i class="fas fa-shipping-fast"></i>
-                                </div>
-                                <div class="process-title">
-                                    <h3>Transportation & Tracking</h3>
-                                </div>
-                            </div>
-                            <div class="process-body">
-                                <p>Your shipment is transported with real-time tracking and constant monitoring.</p>
-                                <ul class="process-features">
-                                    <li><i class="fas fa-check"></i> Real-time tracking</li>
-                                    <li><i class="fas fa-check"></i> 24/7 monitoring</li>
-                                    <li><i class="fas fa-check"></i> Status updates</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 5 -->
-                    <div class="process-card">
-                        <div>
-                            <div class="process-header">
-                                <div class="process-icon">
-                                    <i class="fas fa-passport"></i>
-                                </div>
-                                <div class="process-title">
-                                    <h3>Customs Clearance</h3>
-                                </div>
-                            </div>
-                            <div class="process-body">
-                                <p>We manage export customs clearance and handle all formalities.</p>
-                                <ul class="process-features">
-                                    <li><i class="fas fa-check"></i> Customs brokerage</li>
-                                    <li><i class="fas fa-check"></i> Duty optimization</li>
-                                    <li><i class="fas fa-check"></i> Regulatory compliance</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 6 -->
-                    <div class="process-card">
-                        <div>
-                            <div class="process-header">
-                                <div class="process-icon">
-                                    <i class="fas fa-flag-checkered"></i>
-                                </div>
-                                <div class="process-title">
-                                    <h3>Delivery & Confirmation</h3>
-                                </div>
-                            </div>
-                            <div class="process-body">
-                                <p>Final delivery with proof of delivery and shipment confirmation.</p>
-                                <ul class="process-features">
-                                    <li><i class="fas fa-check"></i> Final delivery</li>
-                                    <li><i class="fas fa-check"></i> Proof of delivery</li>
-                                    <li><i class="fas fa-check"></i> Documentation archive</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div style="text-align: center; margin-top: 50px;">
-                    <a href="#inquiry" class="btn btn-primary">Start Your Export Process</a>
-                </div>
+      <!-- Service Features -->
+      <section class="section-gray">
+        <div class="container">
+          <h2 class="center-heading">Why Choose Our Export Services</h2>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-globe-americas"></i>
+              </div>
+              <h3>Global Network</h3>
+              <p>
+                Access to 200+ global partners and agents ensuring seamless
+                operations across all major trade routes and destinations
+                worldwide.
+              </p>
             </div>
-        </section>
-
-        <!-- Global Coverage -->
-        <section class="section-gray">
-            <div class="container">
-                <h2 class="center-heading">Global Export Coverage</h2>
-                <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">We provide export services to major global destinations with established partnerships and local expertise in each region.</p>
-                
-                <div class="coverage-map">
-                    <div class="map-placeholder">
-                        <i class="fas fa-globe-americas"></i>
-                    </div>
-                    <h3>Our Global Network</h3>
-                    <p>With partners in over 150 countries, we ensure seamless export operations worldwide.</p>
-                    
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 30px;">
-                        <div>
-                            <h4>Americas</h4>
-                            <ul class="option-features">
-                                <li><i class="fas fa-check"></i> United States</li>
-                                <li><i class="fas fa-check"></i> Canada</li>
-                                <li><i class="fas fa-check"></i> Mexico</li>
-                                <li><i class="fas fa-check"></i> Brazil</li>
-                                <li><i class="fas fa-check"></i> Chile</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4>Europe</h4>
-                            <ul class="option-features">
-                                <li><i class="fas fa-check"></i> United Kingdom</li>
-                                <li><i class="fas fa-check"></i> Germany</li>
-                                <li><i class="fas fa-check"></i> France</li>
-                                <li><i class="fas fa-check"></i> Netherlands</li>
-                                <li><i class="fas fa-check"></i> Spain</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4>Asia Pacific</h4>
-                            <ul class="option-features">
-                                <li><i class="fas fa-check"></i> China</li>
-                                <li><i class="fas fa-check"></i> Japan</li>
-                                <li><i class="fas fa-check"></i> South Korea</li>
-                                <li><i class="fas fa-check"></i> Australia</li>
-                                <li><i class="fas fa-check"></i> Singapore</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4>Middle East & Africa</h4>
-                            <ul class="option-features">
-                                <li><i class="fas fa-check"></i> UAE</li>
-                                <li><i class="fas fa-check"></i> Saudi Arabia</li>
-                                <li><i class="fas fa-check"></i> South Africa</li>
-                                <li><i class="fas fa-check"></i> Egypt</li>
-                                <li><i class="fas fa-check"></i> Nigeria</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <h3>Time-Definite Services</h3>
+              <p>
+                Guaranteed transit times with premium air freight options and
+                reliable sea freight schedules to meet your delivery
+                commitments.
+              </p>
             </div>
-        </section>
-
-        <!-- Inquiry Section -->
-        <section id="inquiry" class="section-light">
-            <div class="container">
-                <div style="max-width: 800px; margin: 0 auto;">
-                    <h2 class="center-heading">Request Export Quote</h2>
-                    <p style="text-align: center; margin-bottom: 40px;">Fill out the form below and our export specialists will provide you with a competitive quote tailored to your specific requirements.</p>
-                    
-                    <div class="contact-form">
-                        <form id="exportQuoteForm">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="name">Full Name *</label>
-                                    <input type="text" id="name" name="name" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="company">Company</label>
-                                    <input type="text" id="company" name="company">
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="email">Email Address *</label>
-                                    <input type="email" id="email" name="email" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="phone">Phone Number *</label>
-                                    <input type="tel" id="phone" name="phone" required>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="service-type">Service Type *</label>
-                                    <select id="service-type" name="service-type" required>
-                                        <option value="">Select Service Type</option>
-                                        <option value="sea-freight">Sea Freight Export</option>
-                                        <option value="air-freight">Air Freight Export</option>
-                                        <option value="both">Both Sea & Air</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="cargo-type">Cargo Type *</label>
-                                    <select id="cargo-type" name="cargo-type" required>
-                                        <option value="">Select Cargo Type</option>
-                                        <option value="general">General Cargo</option>
-                                        <option value="hazardous">Hazardous Materials</option>
-                                        <option value="perishable">Perishable Goods</option>
-                                        <option value="oversized">Oversized Cargo</option>
-                                        <option value="high-value">High Value Cargo</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="origin">Origin *</label>
-                                    <input type="text" id="origin" name="origin" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="destination">Destination *</label>
-                                    <input type="text" id="destination" name="destination" required>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="weight">Approx. Weight (kg)</label>
-                                    <input type="number" id="weight" name="weight" min="0">
-                                </div>
-                                <div class="form-group">
-                                    <label for="volume">Approx. Volume (m³)</label>
-                                    <input type="number" id="volume" name="volume" min="0" step="0.1">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="description">Cargo Description *</label>
-                                <textarea id="description" name="description" required></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label for="requirements">Special Requirements</label>
-                                <textarea id="requirements" name="requirements"></textarea>
-                            </div>
-                            <div style="text-align: center;">
-                                <button type="submit" class="btn btn-primary" style="padding: 15px 40px; font-size: 1.1rem;">Submit Quote Request</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-file-contract"></i>
+              </div>
+              <h3>Documentation Expertise</h3>
+              <p>
+                Comprehensive handling of all export documentation including
+                bills of lading, certificates of origin, and customs
+                declarations.
+              </p>
             </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section class="service-cta">
-            <div class="container">
-                <h2 class="center-heading">Ready to Export Your Goods?</h2>
-                <p>Contact our export specialists today for personalized logistics solutions and competitive pricing.</p>
-                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                    <a href="tel:+19176519824" class="btn btn-primary">
-                        <i class="fas fa-phone-alt"></i> Call Us Now
-                    </a>
-                    <a href="mailto:info@liyanalogistics.com" class="btn btn-secondary">
-                        <i class="fas fa-envelope"></i> Email Us
-                    </a>
-                </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h3>Cargo Security</h3>
+              <p>
+                Advanced security protocols and cargo insurance options to
+                protect your shipments throughout the export journey.
+              </p>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
+
+      <!-- Service Options -->
+      <section class="section-light">
+        <div class="container">
+          <h2 class="center-heading">Our Export Solutions</h2>
+          <div class="service-options">
+            <!-- Sea Freight Option -->
+            <div class="option-card">
+              <div class="option-header">
+                <h3>Sea Freight Export</h3>
+              </div>
+              <div class="option-content">
+                <p>
+                  Cost-effective container shipping solutions for large volume
+                  exports with flexible scheduling and global port coverage.
+                </p>
+                <ul class="option-features">
+                  <li>
+                    <i class="fas fa-check"></i> FCL (Full Container Load)
+                  </li>
+                  <li>
+                    <i class="fas fa-check"></i> LCL (Less than Container Load)
+                  </li>
+                  <li>
+                    <i class="fas fa-check"></i> Dry, Reefer & Special
+                    Containers
+                  </li>
+                  <li>
+                    <i class="fas fa-check"></i> Port-to-Port & Door-to-Door
+                  </li>
+                  <li>
+                    <i class="fas fa-check"></i> Cargo Insurance Available
+                  </li>
+                </ul>
+                <div style="text-align: center; margin-top: 20px">
+                  <a href="#inquiry" class="btn btn-primary" style="width: 100%"
+                    >Get Sea Freight Quote</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Air Freight Option -->
+            <div class="option-card">
+              <div class="option-header">
+                <h3>Air Freight Export</h3>
+              </div>
+              <div class="option-content">
+                <p>
+                  Express air cargo solutions for time-sensitive shipments with
+                  priority handling and expedited customs clearance.
+                </p>
+                <ul class="option-features">
+                  <li>
+                    <i class="fas fa-check"></i> Standard & Express Air Freight
+                  </li>
+                  <li>
+                    <i class="fas fa-check"></i> Charter Services Available
+                  </li>
+                  <li>
+                    <i class="fas fa-check"></i> Door-to-Airport & Door-to-Door
+                  </li>
+                  <li>
+                    <i class="fas fa-check"></i> Temperature-Controlled Options
+                  </li>
+                  <li>
+                    <i class="fas fa-check"></i> Real-time Flight Tracking
+                  </li>
+                </ul>
+                <div style="text-align: center; margin-top: 20px">
+                  <a href="#inquiry" class="btn btn-primary" style="width: 100%"
+                    >Get Air Freight Quote</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Service Tabs -->
+      <section class="section-gray">
+        <div class="container">
+          <h2 class="center-heading">Export Service Details</h2>
+          <div class="service-tabs">
+            <div class="tab-buttons">
+              <button class="tab-button active" data-tab="documentation">
+                Documentation
+              </button>
+              <button class="tab-button" data-tab="compliance">
+                Compliance
+              </button>
+              <button class="tab-button" data-tab="packaging">Packaging</button>
+              <button class="tab-button" data-tab="insurance">Insurance</button>
+            </div>
+
+            <div class="tab-content active" id="documentation">
+              <h3>Export Documentation Services</h3>
+              <p>
+                We handle all necessary export documentation to ensure your
+                shipments comply with international trade regulations:
+              </p>
+              <ul class="option-features">
+                <li>
+                  <i class="fas fa-check"></i> Commercial Invoice Preparation
+                </li>
+                <li><i class="fas fa-check"></i> Packing List Creation</li>
+                <li><i class="fas fa-check"></i> Certificate of Origin</li>
+                <li><i class="fas fa-check"></i> Bill of Lading/Air Waybill</li>
+                <li><i class="fas fa-check"></i> Export Declaration Forms</li>
+                <li><i class="fas fa-check"></i> Insurance Certificates</li>
+                <li>
+                  <i class="fas fa-check"></i> Export License Applications
+                </li>
+              </ul>
+            </div>
+
+            <div class="tab-content" id="compliance">
+              <h3>Regulatory Compliance</h3>
+              <p>
+                Our compliance experts ensure your exports meet all
+                international regulations and requirements:
+              </p>
+              <ul class="option-features">
+                <li>
+                  <i class="fas fa-check"></i> Customs Compliance Verification
+                </li>
+                <li>
+                  <i class="fas fa-check"></i> Export Control Classification
+                </li>
+                <li><i class="fas fa-check"></i> Restricted Party Screening</li>
+                <li>
+                  <i class="fas fa-check"></i> Trade Agreement Optimization
+                </li>
+                <li><i class="fas fa-check"></i> Sanctions Compliance</li>
+                <li><i class="fas fa-check"></i> Export License Management</li>
+              </ul>
+            </div>
+
+            <div class="tab-content" id="packaging">
+              <h3>Packaging & Labeling</h3>
+              <p>
+                Proper packaging and labeling services to ensure your goods
+                arrive safely and comply with destination requirements:
+              </p>
+              <ul class="option-features">
+                <li><i class="fas fa-check"></i> Export-Strength Packaging</li>
+                <li>
+                  <i class="fas fa-check"></i> Hazardous Materials Packaging
+                </li>
+                <li>
+                  <i class="fas fa-check"></i> Climate-Controlled Packaging
+                </li>
+                <li>
+                  <i class="fas fa-check"></i> International Labeling Standards
+                </li>
+                <li><i class="fas fa-check"></i> Palletizing & Unitizing</li>
+                <li>
+                  <i class="fas fa-check"></i> Marking & Symbol Application
+                </li>
+              </ul>
+            </div>
+
+            <div class="tab-content" id="insurance">
+              <h3>Cargo Insurance</h3>
+              <p>
+                Comprehensive insurance options to protect your shipments
+                against loss or damage during transit:
+              </p>
+              <ul class="option-features">
+                <li><i class="fas fa-check"></i> All-Risk Cargo Insurance</li>
+                <li><i class="fas fa-check"></i> Marine Cargo Insurance</li>
+                <li><i class="fas fa-check"></i> Air Cargo Insurance</li>
+                <li>
+                  <i class="fas fa-check"></i> Specialized Coverage Options
+                </li>
+                <li><i class="fas fa-check"></i> Claims Management Support</li>
+                <li>
+                  <i class="fas fa-check"></i> Certificate of Insurance Issuance
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process Section -->
+      <section class="section-light">
+        <div class="container">
+          <h2 class="center-heading">Our Export Process</h2>
+          <p style="text-align: center; max-width: 800px; margin: 0 auto 50px">
+            We follow a streamlined, transparent process to ensure your exports
+            reach their destination efficiently and reliably.
+          </p>
+
+          <div class="export-process-grid">
+            <!-- Card 1 -->
+            <div class="process-card">
+              <div>
+                <div class="process-header">
+                  <div class="process-icon">
+                    <i class="fas fa-clipboard-list"></i>
+                  </div>
+                  <div class="process-title">
+                    <h3>Consultation & Planning</h3>
+                  </div>
+                </div>
+                <div class="process-body">
+                  <p>
+                    We analyze your requirements and design the optimal export
+                    strategy for your cargo.
+                  </p>
+                  <ul class="process-features">
+                    <li><i class="fas fa-check"></i> Needs assessment</li>
+                    <li><i class="fas fa-check"></i> Route optimization</li>
+                    <li><i class="fas fa-check"></i> Cost analysis</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="process-card">
+              <div>
+                <div class="process-header">
+                  <div class="process-icon">
+                    <i class="fas fa-file-contract"></i>
+                  </div>
+                  <div class="process-title">
+                    <h3>Documentation & Compliance</h3>
+                  </div>
+                </div>
+                <div class="process-body">
+                  <p>
+                    Our experts handle all export documentation and ensure
+                    regulatory compliance.
+                  </p>
+                  <ul class="process-features">
+                    <li><i class="fas fa-check"></i> Customs documentation</li>
+                    <li><i class="fas fa-check"></i> Export declarations</li>
+                    <li>
+                      <i class="fas fa-check"></i> Compliance verification
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="process-card">
+              <div>
+                <div class="process-header">
+                  <div class="process-icon">
+                    <i class="fas fa-box-open"></i>
+                  </div>
+                  <div class="process-title">
+                    <h3>Collection & Packaging</h3>
+                  </div>
+                </div>
+                <div class="process-body">
+                  <p>
+                    We arrange cargo collection and ensure proper packaging for
+                    safe transit.
+                  </p>
+                  <ul class="process-features">
+                    <li><i class="fas fa-check"></i> Cargo collection</li>
+                    <li><i class="fas fa-check"></i> Export packaging</li>
+                    <li><i class="fas fa-check"></i> Labeling & marking</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="process-card">
+              <div>
+                <div class="process-header">
+                  <div class="process-icon">
+                    <i class="fas fa-shipping-fast"></i>
+                  </div>
+                  <div class="process-title">
+                    <h3>Transportation & Tracking</h3>
+                  </div>
+                </div>
+                <div class="process-body">
+                  <p>
+                    Your shipment is transported with real-time tracking and
+                    constant monitoring.
+                  </p>
+                  <ul class="process-features">
+                    <li><i class="fas fa-check"></i> Real-time tracking</li>
+                    <li><i class="fas fa-check"></i> 24/7 monitoring</li>
+                    <li><i class="fas fa-check"></i> Status updates</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="process-card">
+              <div>
+                <div class="process-header">
+                  <div class="process-icon">
+                    <i class="fas fa-passport"></i>
+                  </div>
+                  <div class="process-title">
+                    <h3>Customs Clearance</h3>
+                  </div>
+                </div>
+                <div class="process-body">
+                  <p>
+                    We manage export customs clearance and handle all
+                    formalities.
+                  </p>
+                  <ul class="process-features">
+                    <li><i class="fas fa-check"></i> Customs brokerage</li>
+                    <li><i class="fas fa-check"></i> Duty optimization</li>
+                    <li><i class="fas fa-check"></i> Regulatory compliance</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="process-card">
+              <div>
+                <div class="process-header">
+                  <div class="process-icon">
+                    <i class="fas fa-flag-checkered"></i>
+                  </div>
+                  <div class="process-title">
+                    <h3>Delivery & Confirmation</h3>
+                  </div>
+                </div>
+                <div class="process-body">
+                  <p>
+                    Final delivery with proof of delivery and shipment
+                    confirmation.
+                  </p>
+                  <ul class="process-features">
+                    <li><i class="fas fa-check"></i> Final delivery</li>
+                    <li><i class="fas fa-check"></i> Proof of delivery</li>
+                    <li><i class="fas fa-check"></i> Documentation archive</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="text-align: center; margin-top: 50px">
+            <a href="#inquiry" class="btn btn-primary"
+              >Start Your Export Process</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Global Coverage -->
+      <section class="section-gray">
+        <div class="container">
+          <h2 class="center-heading">Global Export Coverage</h2>
+          <p style="text-align: center; max-width: 800px; margin: 0 auto 40px">
+            We provide export services to major global destinations with
+            established partnerships and local expertise in each region.
+          </p>
+
+          <div class="coverage-map">
+            <div class="map-placeholder">
+              <i class="fas fa-globe-americas"></i>
+            </div>
+            <h3>Our Global Network</h3>
+            <p>
+              With partners in over 150 countries, we ensure seamless export
+              operations worldwide.
+            </p>
+
+            <div
+              style="
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 20px;
+                margin-top: 30px;
+              "
+            >
+              <div>
+                <h4>Americas</h4>
+                <ul class="option-features">
+                  <li><i class="fas fa-check"></i> United States</li>
+                  <li><i class="fas fa-check"></i> Canada</li>
+                  <li><i class="fas fa-check"></i> Mexico</li>
+                  <li><i class="fas fa-check"></i> Brazil</li>
+                  <li><i class="fas fa-check"></i> Chile</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Europe</h4>
+                <ul class="option-features">
+                  <li><i class="fas fa-check"></i> United Kingdom</li>
+                  <li><i class="fas fa-check"></i> Germany</li>
+                  <li><i class="fas fa-check"></i> France</li>
+                  <li><i class="fas fa-check"></i> Netherlands</li>
+                  <li><i class="fas fa-check"></i> Spain</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Asia Pacific</h4>
+                <ul class="option-features">
+                  <li><i class="fas fa-check"></i> China</li>
+                  <li><i class="fas fa-check"></i> Japan</li>
+                  <li><i class="fas fa-check"></i> South Korea</li>
+                  <li><i class="fas fa-check"></i> Australia</li>
+                  <li><i class="fas fa-check"></i> Singapore</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Middle East & Africa</h4>
+                <ul class="option-features">
+                  <li><i class="fas fa-check"></i> UAE</li>
+                  <li><i class="fas fa-check"></i> Saudi Arabia</li>
+                  <li><i class="fas fa-check"></i> South Africa</li>
+                  <li><i class="fas fa-check"></i> Egypt</li>
+                  <li><i class="fas fa-check"></i> Nigeria</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Inquiry Section -->
+      <section id="inquiry" class="section-light">
+        <div class="container">
+          <div style="max-width: 800px; margin: 0 auto">
+            <h2 class="center-heading">Request Export Quote</h2>
+            <p style="text-align: center; margin-bottom: 40px">
+              Fill out the form below and our export specialists will provide
+              you with a competitive quote tailored to your specific
+              requirements.
+            </p>
+
+            <div class="contact-form">
+              <form id="exportQuoteForm">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="company">Company</label>
+                    <input type="text" id="company" name="company" />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="service-type">Service Type *</label>
+                    <select id="service-type" name="service-type" required>
+                      <option value="">Select Service Type</option>
+                      <option value="sea-freight">Sea Freight Export</option>
+                      <option value="air-freight">Air Freight Export</option>
+                      <option value="both">Both Sea & Air</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="cargo-type">Cargo Type *</label>
+                    <select id="cargo-type" name="cargo-type" required>
+                      <option value="">Select Cargo Type</option>
+                      <option value="general">General Cargo</option>
+                      <option value="hazardous">Hazardous Materials</option>
+                      <option value="perishable">Perishable Goods</option>
+                      <option value="oversized">Oversized Cargo</option>
+                      <option value="high-value">High Value Cargo</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="origin">Origin *</label>
+                    <input type="text" id="origin" name="origin" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="destination">Destination *</label>
+                    <input
+                      type="text"
+                      id="destination"
+                      name="destination"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="weight">Approx. Weight (kg)</label>
+                    <input type="number" id="weight" name="weight" min="0" />
+                  </div>
+                  <div class="form-group">
+                    <label for="volume">Approx. Volume (m³)</label>
+                    <input
+                      type="number"
+                      id="volume"
+                      name="volume"
+                      min="0"
+                      step="0.1"
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="description">Cargo Description *</label>
+                  <textarea
+                    id="description"
+                    name="description"
+                    required
+                  ></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="requirements">Special Requirements</label>
+                  <textarea id="requirements" name="requirements"></textarea>
+                </div>
+                <div style="text-align: center">
+                  <button
+                    type="submit"
+                    class="btn btn-primary"
+                    style="padding: 15px 40px; font-size: 1.1rem"
+                  >
+                    Submit Quote Request
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="service-cta">
+        <div class="container">
+          <h2 class="center-heading">Ready to Export Your Goods?</h2>
+          <p>
+            Contact our export specialists today for personalized logistics
+            solutions and competitive pricing.
+          </p>
+          <div
+            style="
+              display: flex;
+              gap: 20px;
+              justify-content: center;
+              flex-wrap: wrap;
+            "
+          >
+            <a href="tel:+19176519824" class="btn btn-primary">
+              <i class="fas fa-phone-alt"></i> Call Us Now
+            </a>
+            <a href="mailto:info@liyanalogistics.com" class="btn btn-secondary">
+              <i class="fas fa-envelope"></i> Email Us
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
 
-<!-- Footer -->
-<footer style="background-color:#002b6d !important;color:#fff;padding:50px 0 20px;width:100%;margin:0;border:none;">
-<div style="max-width:1200px;margin:0 auto;padding:0 20px;">
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:30px;margin-bottom:30px;">
-<div>
-<h3 style="color:#fff;margin-bottom:15px;font-size:1.1rem;font-weight:600;padding-bottom:8px;border-bottom:2px solid #4a7fc8;width:fit-content;">Liyana Logistics USA INC</h3>
-<p style="font-size:0.9rem;line-height:1.5;">Your trusted partner for international freight forwarding and comprehensive logistics solutions.</p>
-<div style="display:flex;gap:15px;margin-top:20px;">
-<a href="#" onmouseout="this.style.color='#fff';this.style.transform='none';" onmouseover="this.style.color='#4a7fc8';this.style.transform='translateY(-3px)';" style="color:#fff;transition:all 0.3s ease;"><i class="fab fa-facebook-f"></i></a>
-<a href="#" onmouseout="this.style.color='#fff';this.style.transform='none';" onmouseover="this.style.color='#4a7fc8';this.style.transform='translateY(-3px)';" style="color:#fff;transition:all 0.3s ease;"><i class="fab fa-twitter"></i></a>
-<a href="#" onmouseout="this.style.color='#fff';this.style.transform='none';" onmouseover="this.style.color='#4a7fc8';this.style.transform='translateY(-3px)';" style="color:#fff;transition:all 0.3s ease;"><i class="fab fa-linkedin-in"></i></a>
-<a href="#" onmouseout="this.style.color='#fff';this.style.transform='none';" onmouseover="this.style.color='#4a7fc8';this.style.transform='translateY(-3px)';" style="color:#fff;transition:all 0.3s ease;"><i class="fab fa-instagram"></i></a>
-</div>
-</div>
-<div>
-<h3 style="color:#fff;margin-bottom:15px;font-size:1.1rem;font-weight:600;padding-bottom:8px;border-bottom:2px solid #4a7fc8;width:fit-content;">Quick Links</h3>
-<ul style="list-style:none;padding:0;margin:0;">
-<li><a href="/" onmouseout="this.style.color='#fff';" onmouseover="this.style.color='#4a7fc8';" style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:8px;">Home</a></li>
-<li><a href="about.html" onmouseout="this.style.color='#fff';" onmouseover="this.style.color='#4a7fc8';" style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:8px;">About Us</a></li>
-<li><a href="services.html" onmouseout="this.style.color='#fff';" onmouseover="this.style.color='#4a7fc8';" style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:8px;">Services</a></li>
-<li><a href="request-quote.html" onmouseout="this.style.color='#fff';" onmouseover="this.style.color='#4a7fc8';" style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:8px;">Request Quote</a></li>
-<li><a href="contact.html" onmouseout="this.style.color='#fff';" onmouseover="this.style.color='#4a7fc8';" style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:8px;">Contact</a></li>
-</ul>
-</div>
-<div>
-<h3 style="color:#fff;margin-bottom:15px;font-size:1.1rem;font-weight:600;padding-bottom:8px;border-bottom:2px solid #4a7fc8;width:fit-content;">Our Services</h3>
-<ul style="list-style:none;padding:0;margin:0;">
-<li><a href="export-sea-air.html" onmouseout="this.style.color='#fff';" onmouseover="this.style.color='#4a7fc8';" style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:8px;">Export Sea / Air</a></li>
-<li><a href="import-sea-air.html" onmouseout="this.style.color='#fff';" onmouseover="this.style.color='#4a7fc8';" style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:8px;">Import Sea / Air</a></li>
-<li><a href="project-cargo.html" onmouseout="this.style.color='#fff';" onmouseover="this.style.color='#4a7fc8';" style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:8px;">Project Cargo</a></li>
-<li><a href="warehousing.html" onmouseout="this.style.color='#fff';" onmouseover="this.style.color='#4a7fc8';" style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:8px;">Warehousing</a></li>
-<li><a href="custom-clearing.html" onmouseout="this.style.color='#fff';" onmouseover="this.style.color='#4a7fc8';" style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:8px;">Custom Clearing</a></li>
-</ul>
-</div>
-<div>
-<h3 style="color:#fff;margin-bottom:15px;font-size:1.1rem;font-weight:600;padding-bottom:8px;border-bottom:2px solid #4a7fc8;width:fit-content;">Contact Info</h3>
-<ul style="list-style:none;padding:0;margin:0;">
-<li style="margin-bottom:12px;display:flex;align-items:flex-start;gap:10px;">
-<i class="fas fa-map-marker-alt" style="min-width:20px;margin-top:4px;"></i>
-<div style="font-size:0.9rem;">
-              600 Hillside Ave, New Hyde Park,<br/>
-<span style="display:inline-block;padding-left:2px;">NY 11040</span>
-</div>
-</li>
-<li style="margin-bottom:12px;display:flex;align-items:flex-start;gap:10px;">
-<i class="fas fa-phone-alt" style="min-width:20px;margin-top:4px;"></i>
-<div>
-<a href="tel:+19176519824" onmouseout="this.style.color='#fff';" onmouseover="this.style.color='#4a7fc8';" style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:4px;">+1 (917) 651 9824</a>
-<a href="tel:+15166541145" onmouseout="this.style.color='#fff';" onmouseover="this.style.color='#4a7fc8';" style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;">+1 (516) 654 1145</a>
-</div>
-</li>
-<li style="margin-bottom:12px;display:flex;align-items:flex-start;gap:10px;">
-<i class="fas fa-envelope" style="min-width:20px;margin-top:4px;"></i>
-<div>
-<a href="mailto:info@liyanausa.com" onmouseout="this.style.color='#fff';" onmouseover="this.style.color='#4a7fc8';" style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:4px;">info@liyanausa.com</a>
-<a href="mailto:llus@liyanalogistics.com" onmouseout="this.style.color='#fff';" onmouseover="this.style.color='#4a7fc8';" style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;">llus@liyanalogistics.com</a>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div style="display:flex;justify-content:space-between;align-items:center;padding-top:20px;border-top:1px solid rgba(255,255,255,0.15);font-size:0.85rem;line-height:1.6;flex-wrap:wrap;gap:10px;">
-<div style="color:#fff;">
-© 2025 Liyana Logistics USA INC. All Rights Reserved.
-</div>
-<div style="color:#fff;">
-<a href="privacy-policy" onmouseout="this.style.color='#fff';" onmouseover="this.style.color='#4a7fc8';" style="color:#fff;text-decoration:underline;transition:color 0.3s;">Privacy Policy</a> |
-        <a href="terms-and-conditions" onmouseout="this.style.color='#fff';" onmouseover="this.style.color='#4a7fc8';" style="color:#fff;text-decoration:underline;transition:color 0.3s;">Terms &amp; Conditions</a> |
-        Made with <span style="color:#e25555;">❤</span> by 
-        <a href="https://www.wazeefa.in/" rel="noopener" onmouseout="this.style.color='#fff';" onmouseover="this.style.color='#4a7fc8';" style="color:#fff;text-decoration:underline;font-weight:600;transition:color 0.3s;" target="_blank">Wazeefa</a>
-</div>
-</div>
-</div>
-</footer>
+    <!-- Footer -->
+    <footer
+      style="
+        background-color: #002b6d !important;
+        color: #fff;
+        padding: 50px 0 20px;
+        width: 100%;
+        margin: 0;
+        border: none;
+      "
+    >
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px">
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+          "
+        >
+          <div>
+            <h3
+              style="
+                color: #fff;
+                margin-bottom: 15px;
+                font-size: 1.1rem;
+                font-weight: 600;
+                padding-bottom: 8px;
+                border-bottom: 2px solid #4a7fc8;
+                width: fit-content;
+              "
+            >
+              Liyana Logistics USA INC
+            </h3>
+            <p style="font-size: 0.9rem; line-height: 1.5">
+              Your trusted partner for international freight forwarding and
+              comprehensive logistics solutions.
+            </p>
+            <div style="display: flex; gap: 15px; margin-top: 20px">
+              <a
+                href="#"
+                onmouseout="this.style.color='#fff';this.style.transform='none';"
+                onmouseover="this.style.color='#4a7fc8';this.style.transform='translateY(-3px)';"
+                style="color: #fff; transition: all 0.3s ease"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="#"
+                onmouseout="this.style.color='#fff';this.style.transform='none';"
+                onmouseover="this.style.color='#4a7fc8';this.style.transform='translateY(-3px)';"
+                style="color: #fff; transition: all 0.3s ease"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                href="#"
+                onmouseout="this.style.color='#fff';this.style.transform='none';"
+                onmouseover="this.style.color='#4a7fc8';this.style.transform='translateY(-3px)';"
+                style="color: #fff; transition: all 0.3s ease"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a
+                href="#"
+                onmouseout="this.style.color='#fff';this.style.transform='none';"
+                onmouseover="this.style.color='#4a7fc8';this.style.transform='translateY(-3px)';"
+                style="color: #fff; transition: all 0.3s ease"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+          <div>
+            <h3
+              style="
+                color: #fff;
+                margin-bottom: 15px;
+                font-size: 1.1rem;
+                font-weight: 600;
+                padding-bottom: 8px;
+                border-bottom: 2px solid #4a7fc8;
+                width: fit-content;
+              "
+            >
+              Quick Links
+            </h3>
+            <ul style="list-style: none; padding: 0; margin: 0">
+              <li>
+                <a
+                  href="/"
+                  onmouseout="this.style.color='#fff';"
+                  onmouseover="this.style.color='#4a7fc8';"
+                  style="
+                    color: #fff;
+                    text-decoration: none;
+                    transition: color 0.3s;
+                    font-size: 0.9rem;
+                    display: block;
+                    margin-bottom: 8px;
+                  "
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  onmouseout="this.style.color='#fff';"
+                  onmouseover="this.style.color='#4a7fc8';"
+                  style="
+                    color: #fff;
+                    text-decoration: none;
+                    transition: color 0.3s;
+                    font-size: 0.9rem;
+                    display: block;
+                    margin-bottom: 8px;
+                  "
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  onmouseout="this.style.color='#fff';"
+                  onmouseover="this.style.color='#4a7fc8';"
+                  style="
+                    color: #fff;
+                    text-decoration: none;
+                    transition: color 0.3s;
+                    font-size: 0.9rem;
+                    display: block;
+                    margin-bottom: 8px;
+                  "
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="request-quote.html"
+                  onmouseout="this.style.color='#fff';"
+                  onmouseover="this.style.color='#4a7fc8';"
+                  style="
+                    color: #fff;
+                    text-decoration: none;
+                    transition: color 0.3s;
+                    font-size: 0.9rem;
+                    display: block;
+                    margin-bottom: 8px;
+                  "
+                  >Request Quote</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  onmouseout="this.style.color='#fff';"
+                  onmouseover="this.style.color='#4a7fc8';"
+                  style="
+                    color: #fff;
+                    text-decoration: none;
+                    transition: color 0.3s;
+                    font-size: 0.9rem;
+                    display: block;
+                    margin-bottom: 8px;
+                  "
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3
+              style="
+                color: #fff;
+                margin-bottom: 15px;
+                font-size: 1.1rem;
+                font-weight: 600;
+                padding-bottom: 8px;
+                border-bottom: 2px solid #4a7fc8;
+                width: fit-content;
+              "
+            >
+              Our Services
+            </h3>
+            <ul style="list-style: none; padding: 0; margin: 0">
+              <li>
+                <a
+                  href="export-sea-air.html"
+                  onmouseout="this.style.color='#fff';"
+                  onmouseover="this.style.color='#4a7fc8';"
+                  style="
+                    color: #fff;
+                    text-decoration: none;
+                    transition: color 0.3s;
+                    font-size: 0.9rem;
+                    display: block;
+                    margin-bottom: 8px;
+                  "
+                  >Export Sea / Air</a
+                >
+              </li>
+              <li>
+                <a
+                  href="import-sea-air.html"
+                  onmouseout="this.style.color='#fff';"
+                  onmouseover="this.style.color='#4a7fc8';"
+                  style="
+                    color: #fff;
+                    text-decoration: none;
+                    transition: color 0.3s;
+                    font-size: 0.9rem;
+                    display: block;
+                    margin-bottom: 8px;
+                  "
+                  >Import Sea / Air</a
+                >
+              </li>
+              <li>
+                <a
+                  href="project-cargo.html"
+                  onmouseout="this.style.color='#fff';"
+                  onmouseover="this.style.color='#4a7fc8';"
+                  style="
+                    color: #fff;
+                    text-decoration: none;
+                    transition: color 0.3s;
+                    font-size: 0.9rem;
+                    display: block;
+                    margin-bottom: 8px;
+                  "
+                  >Project Cargo</a
+                >
+              </li>
+              <li>
+                <a
+                  href="warehousing.html"
+                  onmouseout="this.style.color='#fff';"
+                  onmouseover="this.style.color='#4a7fc8';"
+                  style="
+                    color: #fff;
+                    text-decoration: none;
+                    transition: color 0.3s;
+                    font-size: 0.9rem;
+                    display: block;
+                    margin-bottom: 8px;
+                  "
+                  >Warehousing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="custom-clearing.html"
+                  onmouseout="this.style.color='#fff';"
+                  onmouseover="this.style.color='#4a7fc8';"
+                  style="
+                    color: #fff;
+                    text-decoration: none;
+                    transition: color 0.3s;
+                    font-size: 0.9rem;
+                    display: block;
+                    margin-bottom: 8px;
+                  "
+                  >Custom Clearing</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3
+              style="
+                color: #fff;
+                margin-bottom: 15px;
+                font-size: 1.1rem;
+                font-weight: 600;
+                padding-bottom: 8px;
+                border-bottom: 2px solid #4a7fc8;
+                width: fit-content;
+              "
+            >
+              Contact Info
+            </h3>
+            <ul style="list-style: none; padding: 0; margin: 0">
+              <li
+                style="
+                  margin-bottom: 12px;
+                  display: flex;
+                  align-items: flex-start;
+                  gap: 10px;
+                "
+              >
+                <i
+                  class="fas fa-map-marker-alt"
+                  style="min-width: 20px; margin-top: 4px"
+                ></i>
+                <div style="font-size: 0.9rem">
+                  600 Hillside Ave, New Hyde Park,<br />
+                  <span style="display: inline-block; padding-left: 2px"
+                    >NY 11040</span
+                  >
+                </div>
+              </li>
+              <li
+                style="
+                  margin-bottom: 12px;
+                  display: flex;
+                  align-items: flex-start;
+                  gap: 10px;
+                "
+              >
+                <i
+                  class="fas fa-phone-alt"
+                  style="min-width: 20px; margin-top: 4px"
+                ></i>
+                <div>
+                  <a
+                    href="tel:+19176519824"
+                    onmouseout="this.style.color='#fff';"
+                    onmouseover="this.style.color='#4a7fc8';"
+                    style="
+                      color: #fff;
+                      text-decoration: none;
+                      transition: color 0.3s;
+                      font-size: 0.9rem;
+                      display: block;
+                      margin-bottom: 4px;
+                    "
+                    >+1 (917) 651 9824</a
+                  >
+                  <a
+                    href="tel:+15166541145"
+                    onmouseout="this.style.color='#fff';"
+                    onmouseover="this.style.color='#4a7fc8';"
+                    style="
+                      color: #fff;
+                      text-decoration: none;
+                      transition: color 0.3s;
+                      font-size: 0.9rem;
+                    "
+                    >+1 (516) 654 1145</a
+                  >
+                </div>
+              </li>
+              <li
+                style="
+                  margin-bottom: 12px;
+                  display: flex;
+                  align-items: flex-start;
+                  gap: 10px;
+                "
+              >
+                <i
+                  class="fas fa-envelope"
+                  style="min-width: 20px; margin-top: 4px"
+                ></i>
+                <div>
+                  <a
+                    href="mailto:info@liyanausa.com"
+                    onmouseout="this.style.color='#fff';"
+                    onmouseover="this.style.color='#4a7fc8';"
+                    style="
+                      color: #fff;
+                      text-decoration: none;
+                      transition: color 0.3s;
+                      font-size: 0.9rem;
+                      display: block;
+                      margin-bottom: 4px;
+                    "
+                    >info@liyanausa.com</a
+                  >
+                  <a
+                    href="mailto:llus@liyanalogistics.com"
+                    onmouseout="this.style.color='#fff';"
+                    onmouseover="this.style.color='#4a7fc8';"
+                    style="
+                      color: #fff;
+                      text-decoration: none;
+                      transition: color 0.3s;
+                      font-size: 0.9rem;
+                    "
+                    >llus@liyanalogistics.com</a
+                  >
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            font-size: 0.85rem;
+            line-height: 1.6;
+            flex-wrap: wrap;
+            gap: 10px;
+          "
+        >
+          <div style="color: #fff">
+            © 2025 Liyana Logistics USA INC. All Rights Reserved.
+          </div>
+          <div style="color: #fff">
+            <a
+              href="privacy-policy"
+              onmouseout="this.style.color='#fff';"
+              onmouseover="this.style.color='#4a7fc8';"
+              style="
+                color: #fff;
+                text-decoration: underline;
+                transition: color 0.3s;
+              "
+              >Privacy Policy</a
+            >
+            |
+            <a
+              href="terms-and-conditions"
+              onmouseout="this.style.color='#fff';"
+              onmouseover="this.style.color='#4a7fc8';"
+              style="
+                color: #fff;
+                text-decoration: underline;
+                transition: color 0.3s;
+              "
+              >Terms &amp; Conditions</a
+            >
+            | Made with <span style="color: #e25555">❤</span> by
+            <a
+              href="https://www.wazeefa.in/"
+              rel="noopener"
+              onmouseout="this.style.color='#fff';"
+              onmouseover="this.style.color='#4a7fc8';"
+              style="
+                color: #fff;
+                text-decoration: underline;
+                font-weight: 600;
+                transition: color 0.3s;
+              "
+              target="_blank"
+              >Wazeefa</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <!-- Back to Top Button -->
     <div class="back-to-top" aria-label="Back to top">
-        <i class="fas fa-chevron-up"></i>
+      <i class="fas fa-chevron-up"></i>
     </div>
 
     <script>
-        // Mobile Navigation Toggle
-        const hamburger = document.querySelector('.hamburger');
-        const navMenu = document.querySelector('.nav-menu');
+      // Mobile Navigation Toggle
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
 
-        hamburger.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            hamburger.innerHTML = navMenu.classList.contains('active') 
-                ? '<i class="fas fa-times"></i>' 
-                : '<i class="fas fa-bars"></i>';
-        });
+      hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+        hamburger.innerHTML = navMenu.classList.contains("active")
+          ? '<i class="fas fa-times"></i>'
+          : '<i class="fas fa-bars"></i>';
+      });
 
-        // Back to Top Button
-        const backToTopButton = document.querySelector('.back-to-top');
+      // Back to Top Button
+      const backToTopButton = document.querySelector(".back-to-top");
 
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopButton.classList.add('active');
-            } else {
-                backToTopButton.classList.remove('active');
-            }
-        });
-
-        backToTopButton.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-
-        // Service Tabs Functionality
-        const tabButtons = document.querySelectorAll('.tab-button');
-        const tabContents = document.querySelectorAll('.tab-content');
-
-        tabButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Remove active class from all buttons and contents
-                tabButtons.forEach(btn => btn.classList.remove('active'));
-                tabContents.forEach(content => content.classList.remove('active'));
-                
-                // Add active class to clicked button
-                button.classList.add('active');
-                
-                // Show corresponding content
-                const tabId = button.getAttribute('data-tab');
-                document.getElementById(tabId).classList.add('active');
-            });
-        });
-
-        // Form Submission
-        const quoteForm = document.getElementById('exportQuoteForm');
-
-        if (quoteForm) {
-            quoteForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                alert('Thank you for your export quote request! Our specialists will contact you shortly.');
-                quoteForm.reset();
-            });
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 300) {
+          backToTopButton.classList.add("active");
+        } else {
+          backToTopButton.classList.remove("active");
         }
+      });
 
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 100,
-                        behavior: 'smooth'
-                    });
-                }
-            });
+      backToTopButton.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
         });
+      });
+
+      // Service Tabs Functionality
+      const tabButtons = document.querySelectorAll(".tab-button");
+      const tabContents = document.querySelectorAll(".tab-content");
+
+      tabButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          // Remove active class from all buttons and contents
+          tabButtons.forEach((btn) => btn.classList.remove("active"));
+          tabContents.forEach((content) => content.classList.remove("active"));
+
+          // Add active class to clicked button
+          button.classList.add("active");
+
+          // Show corresponding content
+          const tabId = button.getAttribute("data-tab");
+          document.getElementById(tabId).classList.add("active");
+        });
+      });
+
+      // Form Submission
+      const quoteForm = document.getElementById("exportQuoteForm");
+
+      if (quoteForm) {
+        quoteForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+          alert(
+            "Thank you for your export quote request! Our specialists will contact you shortly."
+          );
+          quoteForm.reset();
+        });
+      }
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href");
+          if (targetId === "#") return;
+
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 100,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
     </script>
-</body>
+  </body>
 </html>
