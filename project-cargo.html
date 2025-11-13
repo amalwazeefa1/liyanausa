@@ -17,6 +17,38 @@
 <link rel="stylesheet" href="./style.css">
     <style>
         /* Global Styles */
+        .progress-circle.active {
+  opacity: 1;
+  visibility: visible;
+}
+.progress-wrapper {
+  transition: 1s all ease;
+  visibility: hidden;
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.progress-circle {
+  transform: rotate(-90deg);
+}
+
+circle {
+  fill: none;
+  stroke-width: 5;
+}
+
+circle:first-child {
+  stroke: #ccc;
+}
+
+.progress {
+  stroke: #1125a8;
+  stroke-dasharray: 157; /* 2πr for r=25 */
+  stroke-dashoffset: 157;
+  transition: stroke-dashoffset 0.2s ease-out;
+}
         :root {
             --primary-blue: #1a3c6e;
             --secondary-blue: #2a5ba0;
@@ -1911,7 +1943,13 @@
     <div class="back-to-top" aria-label="Back to top">
         <i class="fas fa-chevron-up"></i>
     </div>
-
+<div class="progress-wrapper">
+      <svg class="progress-circle" width="60" height="60">
+        <circle cx="30" cy="30" r="25" />
+        <circle class="progress" cx="30" cy="30" r="25" />
+      </svg>
+    </div>
+    <script src="./script.js" ></script>
     <script>
         // Mobile Navigation Toggle
         const hamburger = document.querySelector('.hamburger');

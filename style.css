@@ -387,6 +387,39 @@ header {
   transform: translateY(-5px);
 }
 /* common styles */
+.progress-circle.active {
+  opacity: 1;
+  visibility: visible;
+}
+.progress-wrapper {
+  transition: 1s all ease;
+  visibility: hidden;
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.progress-circle {
+  transform: rotate(-90deg);
+}
+
+circle {
+  fill: none;
+  stroke-width: 5;
+}
+
+circle:first-child {
+  stroke: #ccc;
+}
+
+.progress {
+  stroke: #1125a8;
+  stroke-dasharray: 157; /* 2πr for r=25 */
+  stroke-dashoffset: 157;
+  transition: stroke-dashoffset 0.2s ease-out;
+}
+
 
 /* Home Page Styles */
 #home .hero {

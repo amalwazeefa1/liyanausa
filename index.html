@@ -21,7 +21,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
     <!-- <style>
       /* Global Styles */
       :root {
@@ -2212,10 +2212,29 @@
       </div>
     </footer>
     <!-- Back to Top Button -->
-    <div class="back-to-top">
+    <!-- <div class="back-to-top">
       <i class="fas fa-arrow-up"></i>
+    </div> -->
+
+    <div class="progress-wrapper">
+      <svg class="progress-circle" width="60" height="60">
+        <circle cx="30" cy="30" r="25" />
+        <circle class="progress" cx="30" cy="30" r="25" />
+      </svg>
     </div>
+    <script src="./script.js" ></script>
     <script>
+      //prgress circle
+      window.addEventListener("scroll", () => {
+        const scrollTop = window.scrollY;
+        const docHeight =
+          document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPercent = scrollTop / docHeight;
+        const offset = 157 - 157 * scrollPercent; // 157 = 2πr
+
+        document.querySelector(".progress").style.strokeDashoffset = offset;
+      });
+
       // Page Navigation System
       document.addEventListener("DOMContentLoaded", function () {
         // Initialize scroll animations
@@ -2321,7 +2340,7 @@
       }, 7000); // Change testimonial every 7 seconds
 
       // Back to Top Button
-      const backToTopButton = document.querySelector(".back-to-top");
+      const backToTopButton = document.querySelector(".progress-circle");
 
       window.addEventListener("scroll", () => {
         if (window.pageYOffset > 300) {
