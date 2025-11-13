@@ -11,6 +11,10 @@
         content="customs clearance, import customs, export customs, customs brokerage, customs documentation, customs compliance">
     <meta name="author" content="Liyana Logistics USA INC">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chilanka&family=Italianno&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
     <style>
         /* Global Styles - Same as export page */
         :root {
@@ -197,11 +201,20 @@
         }
 
         .logo h1 {
+            line-height: 0.8;
             font-size: 1.5rem;
             margin-bottom: 0;
             color: var(--primary-blue);
             margin-left: 10px;
         }
+
+        .small-text {
+        font-weight: 600 !important;
+        font-size: 18px;
+        font-family: "Italianno", cursive;
+        color: unset !important;
+        color: black !important;
+      }
 
         .logo span {
             color: var(--accent-blue);
@@ -354,31 +367,48 @@
         }
 
         .feature-card {
-            background-color: var(--white);
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-        }
+        position: relative;
+        z-index: 100 !important;
+        background-color: var(--white);
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+      }
+      .feature-card::before {
+        position: absolute;
+        content: "";
+        top: -10px;
+        left: -10px;
+        height: 100%;
+        width: 100%;
+        border-radius: 8px;
+        /* border: 1px solid #1a3c6e; */
+        border: 1px solid transparent;
+        z-index: -1 !important;
+      }
 
-        .feature-card.blue-card {
-            background-color: var(--primary-blue);
-            color: var(--white);
-        }
+      .feature-card:hover::before {
+        border-color: var(--primary-blue);
+        transition: 0.5s all ease;
+        transition-delay: 0.3s;
+      }
 
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
+      .feature-card:hover {
+        background-color: var(--primary-blue);
+        transform: translateY(-5px);
+        color: white;
+      }
 
-        .feature-icon {
-            font-size: 2.5rem;
-            color: var(--primary-blue);
-            margin-bottom: 20px;
-        }
+      .feature-icon {
+        font-size: 2.5rem;
+        color: var(--primary-blue);
+        margin-bottom: 20px;
+      }
 
-        .feature-card.blue-card .feature-icon {
-            color: var(--white);
-        }
+      .feature-card:hover .feature-icon {
+        color: white;
+      }
 
         /* Service Options */
         .service-options {

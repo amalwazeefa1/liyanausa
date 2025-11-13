@@ -17,7 +17,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chilanka&family=Italianno&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+    <!-- <style>
       /* Global Styles */
       :root {
         --primary-blue: #1a3c6e;
@@ -206,10 +210,19 @@
       }
 
       .logo h1 {
+        line-height: 0.8;
         font-size: 1.5rem;
         margin-bottom: 0;
         color: var(--primary-blue);
         margin-left: 10px;
+      }
+
+      .small-text {
+        font-weight: 600 !important;
+        font-size: 18px;
+        font-family: "Italianno", cursive;
+        color: unset !important;
+        color: black !important;
       }
 
       .logo span {
@@ -382,15 +395,18 @@
         content: "";
         top: -10px;
         left: -10px;
-        height: 200px;
+        height: 100%;
         width: 100%;
-        border: 1px solid red;
+        border-radius: 8px;
+        /* border: 1px solid #1a3c6e; */
+        border: 1px solid transparent;
         z-index: -1 !important;
       }
 
-      .feature-card.blue-card {
-        background-color: var(--primary-blue);
-        color: var(--white);
+      .feature-card:hover::before {
+        border-color: var(--primary-blue);
+        transition: 0.5s all ease;
+        transition-delay: 0.3s;
       }
 
       .feature-card:hover {
@@ -407,10 +423,6 @@
 
       .feature-card:hover .feature-icon {
         color: white;
-      }
-
-      .feature-card.blue-card .feature-icon {
-        color: var(--white);
       }
 
       /* Service Options */
@@ -1070,7 +1082,7 @@
           padding: 15px;
         }
       }
-    </style>
+    </style> -->
   </head>
   <body>
     <!-- WhatsApp Button -->
