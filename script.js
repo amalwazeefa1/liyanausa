@@ -1,47 +1,54 @@
 //prgress circle
 window.addEventListener("scroll", () => {
+  const progressEl = document.querySelector(".progress");
+  if (!progressEl) return;
   const scrollTop = window.scrollY;
   const docHeight = document.documentElement.scrollHeight - window.innerHeight;
   const scrollPercent = scrollTop / docHeight;
   const offset = 157 - 157 * scrollPercent; // 157 = 2πr
 
-  document.querySelector(".progress").style.strokeDashoffset = offset;
+  progressEl.style.strokeDashoffset = offset;
 });
 
 // Back to Top Button
 const backToTopButton = document.querySelector(".back-to-top");
-
-window.addEventListener("scroll", () => {
-  if (window.pageYOffset > 300) {
-    backToTopButton.classList.add("active");
-  } else {
-    backToTopButton.classList.remove("active");
-  }
-});
-
-backToTopButton.addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
+if (backToTopButton) {
+  window.addEventListener("scroll", () => {
+    if (window.pageYOffset > 300) {
+      backToTopButton.classList.add("active");
+    } else {
+      backToTopButton.classList.remove("active");
+    }
   });
-});
+
+  backToTopButton.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+}
 
 // Page Navigation System
 document.addEventListener("DOMContentLoaded", function () {
   // Initialize scroll animations
   initScrollAnimations();
+  // set active nav and interactions
+  if (typeof setActiveNav === 'function') setActiveNav();
+  if (typeof initNavInteractions === 'function') initNavInteractions();
 });
 
 // Mobile Navigation Toggle
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
-
-hamburger.addEventListener("click", () => {
-  navMenu.classList.toggle("active");
-  hamburger.innerHTML = navMenu.classList.contains("active")
-    ? '<i class="fas fa-times"></i>'
-    : '<i class="fas fa-bars"></i>';
-});
+if (hamburger && navMenu) {
+  hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+    hamburger.innerHTML = navMenu.classList.contains("active")
+      ? '<i class="fas fa-times"></i>'
+      : '<i class="fas fa-bars"></i>';
+  });
+}
 
 // Hero Slider
 let currentSlide = 0;
@@ -291,4 +298,66 @@ document.addEventListener("keydown", (event) => {
     });
   }
 });
+
+
+
+// --- Active link helpers (mark nav links active based on current page and clicks) ---
+function setActiveNav() {
+  const links = Array.from(document.querySelectorAll('a.nav-link'));
+  if (!links.length) return;
+
+  // get current file name
+  let path = window.location.pathname || window.location.href;
+  let current = path.split('/').pop();
+  if (!current || current === '') current = 'index.html';
+
+  links.forEach(link => link.classList.remove('active'));
+
+  links.forEach(link => {
+    const href = link.getAttribute('href');
+    if (!href) return;
+    if (/^https?:\/\//.test(href) || href.startsWith('mailto:') || href.startsWith('tel:')) return;
+
+    const cleanHref = href.split('?')[0].split('#')[0].replace(/^\/+/, '').replace(/^\.\//, '');
+    const hrefName = (cleanHref === '' || cleanHref === '/') ? 'index.html' : cleanHref;
+
+    if (hrefName === current) {
+      link.classList.add('active');
+      const dropdown = link.closest('.dropdown');
+      if (dropdown) {
+        const parentLink = dropdown.querySelector('a.nav-link');
+        if (parentLink) parentLink.classList.add('active');
+      }
+    }
+  });
+
+  // fallback: try partial matching
+  if (!document.querySelector('a.nav-link.active')) {
+    links.forEach(link => {
+      const href = (link.getAttribute('href') || '').replace(/^\/+/, '');
+      if (href && current.indexOf(href) !== -1) link.classList.add('active');
+    });
+  }
+}
+
+function initNavInteractions() {
+  const links = Array.from(document.querySelectorAll('a.nav-link'));
+  const navMenu = document.querySelector('.nav-menu');
+  const hamburgerEl = document.querySelector('.hamburger');
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      links.forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
+      const dropdown = link.closest('.dropdown');
+      if (dropdown) {
+        const parentLink = dropdown.querySelector('a.nav-link');
+        if (parentLink) parentLink.classList.add('active');
+      }
+      if (navMenu && navMenu.classList.contains('active')) {
+        navMenu.classList.remove('active');
+        if (hamburgerEl) hamburgerEl.innerHTML = '<i class="fas fa-bars"></i>';
+      }
+    });
+  });
+}
 
