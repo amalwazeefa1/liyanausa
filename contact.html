@@ -1,0 +1,1566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Liyana Logistics USA INC</title>
+    <meta name="description"
+        content="Get in touch with Liyana Logistics global offices. Contact our logistics experts for shipping quotes, service inquiries, and support.">
+    <meta name="keywords" content="contact logistics, shipping contact, freight forwarding contact, logistics support">
+    <meta name="author" content="Liyana Logistics USA INC">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chilanka&family=Italianno&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+    <style>
+        /* Global Styles - Same as other pages */
+        :root {
+            --primary-blue: #1a3c6e;
+            --secondary-blue: #2a5ba0;
+            --accent-blue: #4a7fc8;
+            --light-blue: #e6f0ff;
+            --light-gray: #f5f7fa;
+            --medium-gray: #e1e5eb;
+            --dark-gray: #6c757d;
+            --white: #ffffff;
+            --text-dark: #333333;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+            --card-bg: #fff;
+            --card-border: #e6e9ee;
+            --accent: #2b6cb0;
+            --text: #1f2937;
+            --muted: #6b7280;
+            --gap: 18px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        h2.center-heading {
+            text-align: center;
+        }
+
+        h2.center-heading:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent-blue);
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 4px;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-blue);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-blue);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-secondary {
+            background-color: var(--white);
+            color: var(--primary-blue);
+            border: 2px solid var(--primary-blue);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-light {
+            background-color: var(--white);
+        }
+
+        .section-gray {
+            background-color: var(--light-gray);
+        }
+
+        /* Header & Navigation - Same as other pages */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-img {
+            height: 50px;
+            width: auto;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .logo-img:hover {
+            transform: scale(1.05);
+        }
+
+        .logo h1 {
+            line-height: 0.8;
+            font-size: 1.5rem;
+            margin-bottom: 0;
+            color: var(--primary-blue);
+            margin-left: 10px;
+        }
+
+        .small-text {
+        font-weight: 600 !important;
+        font-size: 18px;
+        font-family: "Italianno", cursive;
+        color: unset !important;
+        color: black !important;
+      }
+
+        .logo span {
+            color: var(--accent-blue);
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-menu li {
+            margin-left: 25px;
+            position: relative;
+        }
+
+        .nav-menu a {
+            font-weight: 600;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-menu a:hover {
+            color: var(--accent-blue);
+        }
+
+        .nav-menu a.active {
+            color: var(--accent-blue);
+        }
+
+        .nav-menu a:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-blue);
+            transition: var(--transition);
+        }
+
+        .nav-menu a:hover:after,
+        .nav-menu a.active:after {
+            width: 100%;
+        }
+
+        /* Dropdown Menu */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: var(--white);
+            width: 500px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border-radius: 4px;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 15px;
+        }
+
+        .dropdown-content-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .dropdown-column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .dropdown-content a {
+            color: var(--text-dark);
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+            transition: var(--transition);
+            border-radius: 4px;
+        }
+
+        .dropdown-content a:hover {
+            background-color: var(--light-gray);
+            color: var(--accent-blue);
+            transform: translateX(5px);
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+        }
+
+        /* Hero Section */
+        .service-hero {
+            background: linear-gradient(rgba(26, 60, 110, 0.8), rgba(26, 60, 110, 0.8)), url('./images/contact-us.avif');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 120px 0 80px;
+            text-align: center;
+            margin-top: 70px;
+        }
+
+        .service-hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            background-color: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--medium-gray);
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 0 2px rgba(74, 127, 200, 0.2);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* CTA Section */
+        .service-cta {
+            background: linear-gradient(rgba(26, 60, 110, 0.9), rgba(26, 60, 110, 0.9)), url('./images/contact-us.avif');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .service-cta h2 {
+            color: var(--white);
+        }
+
+        .service-cta h2:after {
+            background-color: var(--white);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .service-cta p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            background-color: var(--light-gray);
+            padding: 15px 0;
+            margin-bottom: 0;
+        }
+
+        .breadcrumb-links {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb-links a {
+            color: var(--dark-gray);
+            transition: var(--transition);
+        }
+
+        .breadcrumb-links a:hover {
+            color: var(--accent-blue);
+        }
+
+        .breadcrumb-links i {
+            font-size: 0.8rem;
+            color: var(--dark-gray);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            color: var(--white);
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--accent-blue);
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-blue);
+            padding-left: 5px;
+        }
+
+        .contact-link {
+            color: var(--white);
+            transition: var(--transition);
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .contact-link:hover {
+            color: var(--accent-blue);
+        }
+
+        .contact-link i {
+            margin-right: 10px;
+            width: 20px;
+            margin-top: 3px;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .footer-social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .footer-social-links a:hover {
+            background-color: var(--accent-blue);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 90px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-blue);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--secondary-blue);
+            transform: translateY(-5px);
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+        }
+
+        /* Global Branches Section */
+        .branches-section {
+            margin-top: 40px;
+        }
+
+        .branches-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .branch-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-top: 4px solid var(--primary-blue);
+        }
+
+        .branch-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .branch-header {
+            background-color: var(--light-gray);
+            padding: 20px;
+            border-bottom: 1px solid var(--medium-gray);
+        }
+
+        .branch-country {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 5px;
+        }
+
+        .branch-company {
+            font-size: 1rem;
+            color: var(--dark-gray);
+            font-weight: 600;
+        }
+
+        .branch-content {
+            padding: 25px;
+        }
+
+        .branch-details {
+            margin-bottom: 20px;
+        }
+
+        .branch-detail {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+
+        .branch-detail i {
+            color: var(--accent-blue);
+            margin-right: 10px;
+            width: 20px;
+            margin-top: 3px;
+        }
+
+        /* Map Section */
+        .map-section {
+            background-color: var(--light-gray);
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+
+        .map-placeholder {
+            background-color: var(--white);
+            height: 400px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        .map-placeholder i {
+            font-size: 4rem;
+            color: var(--primary-blue);
+        }
+
+        /* Office Hours Section */
+        .office-hours {
+            height: 100%;
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .hours-table th,
+        .hours-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--medium-gray);
+        }
+
+        .hours-table th {
+            background-color: var(--light-gray);
+            font-weight: 600;
+        }
+
+        .hours-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Contact Options */
+        .contact-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .contact-option-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .contact-option-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-option-header {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 20px;
+        }
+
+        .contact-option-content {
+            padding: 25px;
+        }
+
+        /* Mobile and Tablet Improvements */
+        .contact-form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .branches-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.4rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .dropdown-content {
+                width: 400px;
+            }
+
+            .branches-grid {
+                grid-template-columns: 1fr;
+            }
+
+            /* Stack contact form and office hours on tablets */
+            .contact-form-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 15px;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                right: -100%;
+                background-color: var(--white);
+                width: 80%;
+                height: calc(100vh - 70px);
+                flex-direction: column;
+                align-items: center;
+                padding-top: 50px;
+                transition: var(--transition);
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+                overflow-y: auto;
+            }
+
+            .nav-menu.active {
+                right: 0;
+            }
+
+            .nav-menu li {
+                margin: 0 0 30px 0;
+                width: 100%;
+                text-align: center;
+            }
+
+            .dropdown-content {
+                position: static;
+                box-shadow: none;
+                display: none;
+                background-color: var(--light-gray);
+                margin-top: 10px;
+                border-radius: 4px;
+                width: 100%;
+                transform: none;
+                left: 0;
+            }
+
+            .dropdown.active .dropdown-content {
+                display: block;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .service-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .dropdown-content-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            /* Adjust section padding for mobile */
+            .service-hero {
+                padding: 100px 0 60px;
+                margin-top: 60px;
+            }
+
+            /* Improve form spacing for mobile */
+            .contact-form {
+                padding: 25px;
+            }
+
+            /* Adjust branch cards for mobile */
+            .branch-content {
+                padding: 20px;
+            }
+
+            .branch-header {
+                padding: 15px;
+            }
+
+            /* Center buttons on mobile */
+            .branch-content .btn {
+                width: 100%;
+            }
+
+            /* Improve office hours table for mobile */
+            .office-hours {
+                padding: 20px;
+            }
+
+            .hours-table th,
+            .hours-table td {
+                padding: 10px;
+                font-size: 0.9rem;
+            }
+
+            /* Fix map for mobile */
+            .map-placeholder {
+                height: 300px;
+            }
+
+            /* Improve CTA buttons for mobile */
+            .service-cta .btn {
+                margin-bottom: 10px;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .service-hero h1 {
+                font-size: 2rem;
+            }
+
+            .service-hero p {
+                font-size: 1rem;
+            }
+
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+            }
+
+            .contact-form {
+                padding: 20px;
+            }
+
+            .branch-card,
+            .contact-option-card {
+                padding: 15px;
+            }
+
+            .office-hours {
+                padding: 15px;
+            }
+
+            /* Improve form inputs for mobile */
+            input,
+            select,
+            textarea {
+                padding: 10px 12px;
+            }
+
+            /* Adjust footer for mobile */
+            .footer-container {
+                gap: 30px;
+            }
+
+            /* Adjust back to top button position for mobile */
+            .back-to-top {
+                bottom: 70px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo h1 {
+                font-size: 1.2rem;
+            }
+
+            .service-hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .branches-grid {
+                gap: 20px;
+            }
+
+            .branch-card {
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/19176519824" class="whatsapp-float" target="_blank" aria-label="Contact us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <!-- Logo - Clickable -->
+                <img alt="Liyana Logistics Logo" class="logo-img" onclick="window.location.href='/'"
+                    src="images/logo.png" />
+                <h1><a href="/">Liyana Logistics <span>USA INC.</span><br>
+                <span class="small-text">Your Ultimate Logistics Partner</span></a>
+                </h1>
+            </div>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu">
+                <li><a class="nav-link active" href="/">Home</a></li>
+                <li><a class="nav-link" href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a class="nav-link" href="services.html">Services <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <div class="dropdown-content-wrapper">
+                            <div class="dropdown-column">
+                                <a class="nav-link" href="export-sea-air.html">Export Sea / Air</a>
+                                <a class="nav-link" href="import-sea-air.html">Import Sea / Air</a>
+                                <a class="nav-link" href="project-cargo.html">Project Cargo</a>
+                                <a class="nav-link" href="dg-cargo-handling.html">DG Cargo Handling</a>
+                                <a class="nav-link" href="reefer-container.html">Reefer Container</a>
+                            </div>
+                            <div class="dropdown-column">
+                                <a class="nav-link" href="cross-trade.html">Cross Trade</a>
+                                <a class="nav-link" href="warehousing.html">Warehousing</a>
+                                <a class="nav-link" href="custom-clearing.html">Custom Clearing</a>
+                                <a class="nav-link" href="door-delivery.html">Door Delivery</a>
+                                <a class="nav-link" href="project-shipment.html">Project Shipment</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a class="nav-link" href="request-quote.html">Request Quote</a></li>
+                <li><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Contact Us Page -->
+    <main id="contact-us">
+        <!-- Hero Section -->
+        <section class="service-hero">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p>Get in touch with our global logistics experts. We're here to answer your questions and provide
+                    solutions for all your shipping needs.</p>
+                <a href="#contact-form" class="btn btn-primary">Send Message</a>
+            </div>
+        </section>
+
+        <!-- Get In Touch Section -->
+        <section class="section-gray">
+            <div class="container">
+                <h2 class="center-heading">Get In Touch</h2>
+                <p style="text-align: center; margin-bottom: 40px;">Have questions or need assistance? Send us a message
+                    and our team will respond promptly.</p>
+
+                <div class="contact-form-grid">
+                    <!-- Contact Form -->
+                    <div>
+                        <div class="contact-form" id="contact-form">
+                            <form id="contactForm">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="name">Full Name *</label>
+                                        <input type="text" id="name" name="name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="company">Company</label>
+                                        <input type="text" id="company" name="company">
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="email">Email Address *</label>
+                                        <input type="email" id="email" name="email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">Phone Number</label>
+                                        <input type="tel" id="phone" name="phone">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="subject">Subject *</label>
+                                    <select id="subject" name="subject" required>
+                                        <option value="">Select Subject</option>
+                                        <option value="general-inquiry">General Inquiry</option>
+                                        <option value="quote-request">Quote Request</option>
+                                        <option value="service-inquiry">Service Inquiry</option>
+                                        <option value="shipment-tracking">Shipment Tracking</option>
+                                        <option value="complaint">Complaint</option>
+                                        <option value="partnership">Partnership Opportunity</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="message">Message *</label>
+                                    <textarea id="message" name="message" required
+                                        placeholder="Please provide details about your inquiry..."></textarea>
+                                </div>
+
+                                <div style="text-align: center;">
+                                    <button type="submit" class="btn btn-primary"
+                                        style="padding: 15px 40px; font-size: 1.1rem;">Send Message</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Office Hours -->
+                    <div class="office-hours">
+                        <h3>Office Hours (USA)</h3>
+                        <table class="hours-table">
+                            <thead>
+                                <tr>
+                                    <th>Day</th>
+                                    <th>Hours</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Monday</td>
+                                    <td>8:00 AM - 6:00 PM</td>
+                                </tr>
+                                <tr>
+                                    <td>Tuesday</td>
+                                    <td>8:00 AM - 6:00 PM</td>
+                                </tr>
+                                <tr>
+                                    <td>Wednesday</td>
+                                    <td>8:00 AM - 6:00 PM</td>
+                                </tr>
+                                <tr>
+                                    <td>Thursday</td>
+                                    <td>8:00 AM - 6:00 PM</td>
+                                </tr>
+                                <tr>
+                                    <td>Friday</td>
+                                    <td>8:00 AM - 6:00 PM</td>
+                                </tr>
+                                <tr>
+                                    <td>Saturday</td>
+                                    <td>9:00 AM - 2:00 PM</td>
+                                </tr>
+                                <tr>
+                                    <td>Sunday</td>
+                                    <td>Closed</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p style="margin-top: 40px; font-style: italic; text-align: center;">After-hours support
+                            available for urgent matters</p>
+                    </div>
+                </div>
+
+                <!-- Map Section -->
+                <div class="map-section">
+                    <h3>Our Headquarters (USA)</h3>
+                    <div class="map-placeholder">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.015714964567!2d-73.6887!3d40.7505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c288cd8e7f3b3f%3A0x1234567890abcdef!2s600%20Hillside%20Ave%2C%20New%20Hyde%20Park%2C%20NY%2011040!5e0!3m2!1sen!2sus!4v1234567890"
+                            width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Global Branches Section -->
+        <section class="section-light">
+            <div class="container">
+                <h2 class="center-heading">Our Global Branches</h2>
+                <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">With offices across the world, we
+                    provide localized logistics solutions with global expertise.</p>
+
+                <div class="branches-grid">
+                    <!-- USA Branch -->
+                    <div class="branch-card">
+                        <div class="branch-header">
+                            <div class="branch-country">United States</div>
+                            <div class="branch-company">Liyana Logistics USA INC</div>
+                        </div>
+                        <div class="branch-content">
+                            <div class="branch-details">
+                                <div class="branch-detail">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>600 Hillside Ave, New Hyde Park, NY 11040, United States</span>
+                                </div>
+                                <div class="branch-detail">
+                                    <i class="fas fa-phone-alt"></i>
+                                    <div class="contact-details">
+                                        <a href="tel:+19176519824">+1 (917) 651 9824</a>
+                                        <a href="tel:+15166541145">+1 (516) 654 1145</a>
+                                    </div>
+                                </div>
+                                <div class="branch-detail">
+                                    <i class="fas fa-envelope"></i>
+                                    <div class="contact-details">
+                                        <a href="mailto:info@liyanausa.com">info@liyanausa.com</a>
+                                        <a href="mailto:llus@liyanalogistics.com">llus@liyanalogistics.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--<div style="text-align: center;">-->
+                            <!--    <a href="https://maps.google.com/?q=600+Hillside+Ave+New+Hyde+Park+NY+11040"-->
+                            <!--        target="_blank" class="btn btn-secondary">Get Directions</a>-->
+                            <!--</div>-->
+                        </div>
+                    </div>
+
+                    <!-- UK Branch (Head Office) -->
+                    <div class="branch-card">
+                        <div class="branch-header">
+                            <div class="branch-country">United Kingdom (Head Office)</div>
+                            <div class="branch-company">Warid Logistics Ltd</div>
+                        </div>
+                        <div class="branch-content">
+                            <div class="branch-details">
+                                <div class="branch-detail">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Opus Business Park Unit 01, Wheaton Road Witham, Essex CMB 3ZL, United
+                                        Kingdom</span>
+                                </div>
+                                <div class="branch-detail">
+                                    <i class="fas fa-envelope"></i>
+                                    <div class="contact-details">
+                                        <a href="mailto:wrkhan@liyanalogistics.com">wrkhan@liyanalogistics.com</a>
+                                    </div>
+                                </div>
+                                <div class="branch-detail">
+                                    <i class="fas fa-globe"></i>
+                                    <div class="contact-details">
+                                        <a href="https://www.waridlogistics.co.uk"
+                                            target="_blank">www.waridlogistics.co.uk</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--<div style="text-align: center;">-->
+                            <!--    <a href="https://maps.google.com/?q=Opus+Business+Park+Unit+01+Wheaton+Road+Witham+Essex+CMB+3ZL+United+Kingdom"-->
+                            <!--        target="_blank" class="btn btn-secondary">Get Directions</a>-->
+                            <!--</div>-->
+                        </div>
+                    </div>
+
+                    <!-- Bangladesh Branch -->
+                    <div class="branch-card">
+                        <div class="branch-header">
+                            <div class="branch-country">Bangladesh</div>
+                            <div class="branch-company">Liyana Logistics BD</div>
+                        </div>
+                        <div class="branch-content">
+                            <div class="branch-details">
+                                <div class="branch-detail">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>House 28/2 Alien Pacific Park 3rd Floor Pallabi, Dhaka 1206, Bangladesh</span>
+                                </div>
+                                <div class="branch-detail">
+                                    <i class="fas fa-envelope"></i>
+                                    <div class="contact-details">
+                                        <a href="mailto:llbd@liyanalogistics.com">llbd@liyanalogistics.com</a>
+                                    </div>
+                                </div>
+                                <div class="branch-detail">
+                                    <i class="fas fa-globe"></i>
+                                    <div class="contact-details">
+                                        <a href="https://www.liyanabangladesh.com"
+                                            target="_blank">www.liyanabangladesh.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--<div style="text-align: center;">-->
+                            <!--    <a href="https://maps.google.com/?q=House+28/2+Alien+Pacific+Park+3rd+Floor+Pallabi+Dhaka+1206+Bangladesh"-->
+                            <!--        target="_blank" class="btn btn-secondary">Get Directions</a>-->
+                            <!--</div>-->
+                        </div>
+                    </div>
+
+                    <!-- India Branch -->
+                    <div class="branch-card">
+                        <div class="branch-header">
+                            <div class="branch-country">India</div>
+                            <div class="branch-company">Liyana Logistics Pvt Ltd</div>
+                        </div>
+                        <div class="branch-content">
+                            <div class="branch-details">
+                                <div class="branch-detail">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>72 Rishi Aurobindo Sarani, Kolkata West Bengal 700028, India</span>
+                                </div>
+                                <div class="branch-detail">
+                                    <i class="fas fa-envelope"></i>
+                                    <div class="contact-details">
+                                        <a href="mailto:sales@liyanalogistics.com">sales@liyanalogistics.com</a>
+                                    </div>
+                                </div>
+                                <div class="branch-detail">
+                                    <i class="fas fa-globe"></i>
+                                    <div class="contact-details">
+                                        <a href="https://www.liyanaindia.com" target="_blank">www.liyanaindia.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--<div style="text-align: center;">-->
+                            <!--    <a href="https://maps.google.com/?q=72+Rishi+Aurobindo+Sarani+Kolkata+West+Bengal+700028+India"-->
+                            <!--        target="_blank" class="btn btn-secondary">Get Directions</a>-->
+                            <!--</div>-->
+                        </div>
+                    </div>
+
+                    <!-- Pakistan Branch -->
+                    <div class="branch-card">
+                        <div class="branch-header">
+                            <div class="branch-country">Pakistan</div>
+                            <div class="branch-company">Liyana Logistics PK</div>
+                        </div>
+                        <div class="branch-content">
+                            <div class="branch-details">
+                                <div class="branch-detail">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>1/6 N First Floor Block 6 PECHS Karachi 75600, Pakistan</span>
+                                </div>
+                                <div class="branch-detail">
+                                    <i class="fas fa-envelope"></i>
+                                    <div class="contact-details">
+                                        <a href="mailto:bdm@liyanalogistics.com">bdm@liyanalogistics.com</a>
+                                    </div>
+                                </div>
+                                <div class="branch-detail">
+                                    <i class="fas fa-globe"></i>
+                                    <div class="contact-details">
+                                        <a href="https://www.liyanalogistics.com/pk"
+                                            target="_blank">www.liyanalogistics.com/pk</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--<div style="text-align: center;">-->
+                            <!--    <a href="https://maps.google.com/?q=1/6+N+First+Floor+Block+6+PECHS+Karachi+75600+Pakistan"-->
+                            <!--        target="_blank" class="btn btn-secondary">Get Directions</a>-->
+                            <!--</div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Emergency Contact -->
+        <section class="service-cta">
+            <div class="container">
+                <h2 class="center-heading">Urgent Shipment?</h2>
+                <p>For time-sensitive or emergency shipments, contact us directly for immediate assistance.</p>
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                    <a href="tel:+19176519824" class="btn btn-primary">
+                        <i class="fas fa-phone-alt"></i> Call Now
+                    </a>
+                    <a href="mailto:info@liyanalogistics.com" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i> Emergency Email
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer style="background-color:#002b6d !important;color:#fff;padding:50px 0 20px;width:100%;margin:0;border:none;">
+        <div style="max-width:1200px;margin:0 auto;padding:0 20px;">
+            <div
+                style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:30px;margin-bottom:30px;">
+                <div>
+                    <h3
+                        style="color:#fff;margin-bottom:15px;font-size:1.1rem;font-weight:600;padding-bottom:8px;border-bottom:2px solid #4a7fc8;width:fit-content;">
+                        Liyana Logistics USA INC</h3>
+
+                    <p style="font-size:0.9rem;line-height:1.5;">Your trusted partner for international freight
+                        forwarding and comprehensive logistics solutions.</p>
+                    <div style="display:flex;gap:15px;margin-top:20px;">
+                        <a href="#" onmouseout="this.style.color='#fff';this.style.transform='none';"
+                            onmouseover="this.style.color='#4a7fc8';this.style.transform='translateY(-3px)';"
+                            style="color:#fff;transition:all 0.3s ease;"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" onmouseout="this.style.color='#fff';this.style.transform='none';"
+                            onmouseover="this.style.color='#4a7fc8';this.style.transform='translateY(-3px)';"
+                            style="color:#fff;transition:all 0.3s ease;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" onmouseout="this.style.color='#fff';this.style.transform='none';"
+                            onmouseover="this.style.color='#4a7fc8';this.style.transform='translateY(-3px)';"
+                            style="color:#fff;transition:all 0.3s ease;"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" onmouseout="this.style.color='#fff';this.style.transform='none';"
+                            onmouseover="this.style.color='#4a7fc8';this.style.transform='translateY(-3px)';"
+                            style="color:#fff;transition:all 0.3s ease;"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3
+                        style="color:#fff;margin-bottom:15px;font-size:1.1rem;font-weight:600;padding-bottom:8px;border-bottom:2px solid #4a7fc8;width:fit-content;">
+                        Quick Links</h3>
+                    <ul style="list-style:none;padding:0;margin:0;">
+                        <li><a href="/" onmouseout="this.style.color='#fff';" onmouseover="this.style.color='#4a7fc8';"
+                                style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:8px;">Home</a>
+                        </li>
+                        <li><a href="about.html" onmouseout="this.style.color='#fff';"
+                                onmouseover="this.style.color='#4a7fc8';"
+                                style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:8px;">About
+                                Us</a></li>
+                        <li><a href="services.html" onmouseout="this.style.color='#fff';"
+                                onmouseover="this.style.color='#4a7fc8';"
+                                style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:8px;">Services</a>
+                        </li>
+                        <li><a href="request-quote.html" onmouseout="this.style.color='#fff';"
+                                onmouseover="this.style.color='#4a7fc8';"
+                                style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:8px;">Request
+                                Quote</a></li>
+                        <li><a href="contact.html" onmouseout="this.style.color='#fff';"
+                                onmouseover="this.style.color='#4a7fc8';"
+                                style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:8px;">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3
+                        style="color:#fff;margin-bottom:15px;font-size:1.1rem;font-weight:600;padding-bottom:8px;border-bottom:2px solid #4a7fc8;width:fit-content;">
+                        Our Services</h3>
+                    <ul style="list-style:none;padding:0;margin:0;">
+                        <li><a href="export-sea-air.html" onmouseout="this.style.color='#fff';"
+                                onmouseover="this.style.color='#4a7fc8';"
+                                style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:8px;">Export
+                                Sea / Air</a></li>
+                        <li><a href="import-sea-air.html" onmouseout="this.style.color='#fff';"
+                                onmouseover="this.style.color='#4a7fc8';"
+                                style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:8px;">Import
+                                Sea / Air</a></li>
+                        <li><a href="project-cargo.html" onmouseout="this.style.color='#fff';"
+                                onmouseover="this.style.color='#4a7fc8';"
+                                style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:8px;">Project
+                                Cargo</a></li>
+                        <li><a href="warehousing.html" onmouseout="this.style.color='#fff';"
+                                onmouseover="this.style.color='#4a7fc8';"
+                                style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:8px;">Warehousing</a>
+                        </li>
+                        <li><a href="custom-clearing.html" onmouseout="this.style.color='#fff';"
+                                onmouseover="this.style.color='#4a7fc8';"
+                                style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:8px;">Custom
+                                Clearing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3
+                        style="color:#fff;margin-bottom:15px;font-size:1.1rem;font-weight:600;padding-bottom:8px;border-bottom:2px solid #4a7fc8;width:fit-content;">
+                        Contact Info</h3>
+                    <ul style="list-style:none;padding:0;margin:0;">
+                        <li style="margin-bottom:12px;display:flex;align-items:flex-start;gap:10px;">
+                            <i class="fas fa-map-marker-alt" style="min-width:20px;margin-top:4px;"></i>
+                            <div style="font-size:0.9rem;">
+                                600 Hillside Ave, New Hyde Park,<br />
+                                <span style="display:inline-block;padding-left:2px;">NY 11040</span>
+                            </div>
+                        </li>
+                        <li style="margin-bottom:12px;display:flex;align-items:flex-start;gap:10px;">
+                            <i class="fas fa-phone-alt" style="min-width:20px;margin-top:4px;"></i>
+                            <div>
+                                <a href="tel:+19176519824" onmouseout="this.style.color='#fff';"
+                                    onmouseover="this.style.color='#4a7fc8';"
+                                    style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:4px;">+1
+                                    (917) 651 9824</a>
+                                <a href="tel:+15166541145" onmouseout="this.style.color='#fff';"
+                                    onmouseover="this.style.color='#4a7fc8';"
+                                    style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;">+1
+                                    (516) 654 1145</a>
+                            </div>
+                        </li>
+                        <li style="margin-bottom:12px;display:flex;align-items:flex-start;gap:10px;">
+                            <i class="fas fa-envelope" style="min-width:20px;margin-top:4px;"></i>
+                            <div>
+                                <a href="mailto:info@liyanausa.com" onmouseout="this.style.color='#fff';"
+                                    onmouseover="this.style.color='#4a7fc8';"
+                                    style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:4px;">info@liyanausa.com</a>
+                                <a href="mailto:llus@liyanalogistics.com" onmouseout="this.style.color='#fff';"
+                                    onmouseover="this.style.color='#4a7fc8';"
+                                    style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;">llus@liyanalogistics.com</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                style="display:flex;justify-content:space-between;align-items:center;padding-top:20px;border-top:1px solid rgba(255,255,255,0.15);font-size:0.85rem;line-height:1.6;flex-wrap:wrap;gap:10px;">
+                <div style="color:#fff;">
+                    © 2025 Liyana Logistics USA INC. All Rights Reserved.
+                </div>
+                <div style="color:#fff;">
+                    <a href="privacy-policy.html" onmouseout="this.style.color='#fff';"
+                        onmouseover="this.style.color='#4a7fc8';"
+                        style="color:#fff;text-decoration:underline;transition:color 0.3s;">Privacy Policy</a> |
+                    <a href="terms-and-conditions.html" onmouseout="this.style.color='#fff';"
+                        onmouseover="this.style.color='#4a7fc8';"
+                        style="color:#fff;text-decoration:underline;transition:color 0.3s;">Terms &amp; Conditions</a> |
+                    Made with <span style="color:#e25555;">❤</span> by
+                    <a href="https://www.wazeefa.in/" rel="noopener" onmouseout="this.style.color='#fff';"
+                        onmouseover="this.style.color='#4a7fc8';"
+                        style="color:#fff;text-decoration:underline;font-weight:600;transition:color 0.3s;"
+                        target="_blank">Wazeefa</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <script>
+        // Mobile Navigation Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        const dropdowns = document.querySelectorAll('.dropdown');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.innerHTML = navMenu.classList.contains('active')
+                ? '<i class="fas fa-times"></i>'
+                : '<i class="fas fa-bars"></i>';
+        });
+
+        // Handle dropdowns on mobile
+        dropdowns.forEach(dropdown => {
+            const link = dropdown.querySelector('a');
+
+            link.addEventListener('click', (e) => {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    dropdown.classList.toggle('active');
+                }
+            });
+        });
+
+        // Back to Top Button
+        const backToTopButton = document.querySelector('.back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('active');
+            } else {
+                backToTopButton.classList.remove('active');
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Form Submission
+        const contactForm = document.getElementById('contactForm');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                alert('Thank you for your message! We will get back to you within 24 hours.');
+                contactForm.reset();
+            });
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,2201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warehousing Services | Liyana Logistics USA INC</title>
+    <meta name="description"
+        content="Professional warehousing and storage solutions with advanced inventory management, secure facilities, and flexible distribution options.">
+    <meta name="keywords"
+        content="warehousing, storage solutions, inventory management, distribution centers, logistics storage, fulfillment services">
+    <meta name="author" content="Liyana Logistics USA INC">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chilanka&family=Italianno&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-blue: #1a3c6e;
+            --secondary-blue: #2a5ba0;
+            --accent-blue: #4a7fc8;
+            --light-blue: #e6f0ff;
+            --light-gray: #f5f7fa;
+            --medium-gray: #e1e5eb;
+            --dark-gray: #6c757d;
+            --white: #ffffff;
+            --text-dark: #333333;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+            --card-bg: #fff;
+            --card-border: #e6e9ee;
+            --accent: #2b6cb0;
+            --text: #1f2937;
+            --muted: #6b7280;
+            --gap: 18px;
+            --danger-red: #dc3545;
+            --warning-orange: #fd7e14;
+            --success-green: #28a745;
+            --warehouse-blue: #1a3c6e;
+            --warehouse-light-blue: #e1f0fa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        h2.center-heading {
+            text-align: center;
+        }
+
+        h2.center-heading:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-blue);
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 4px;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-blue);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-blue);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-secondary {
+            background-color: var(--white);
+            color: var(--primary-blue);
+            border: 2px solid var(--primary-blue);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-warehouse {
+            background-color: var(--primary-blue);
+            color: var(--white);
+        }
+
+        .btn-warehouse:hover {
+            background-color: #d35400;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-light {
+            background-color: var(--white);
+        }
+
+        .section-gray {
+            background-color: var(--light-gray);
+        }
+
+        .section-warehouse {
+            background-color: var(--warehouse-light-blue);
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-img {
+            height: 50px;
+            width: auto;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .logo-img:hover {
+            transform: scale(1.05);
+        }
+
+        .logo h1 {
+            line-height: 0.8;
+            font-size: 1.5rem;
+            margin-bottom: 0;
+            color: var(--primary-blue);
+            margin-left: 10px;
+        }
+
+        .small-text {
+        font-weight: 600 !important;
+        font-size: 18px;
+        font-family: "Italianno", cursive;
+        color: unset !important;
+        color: black !important;
+      }
+
+        .logo span {
+            color: var(--accent-blue);
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-menu li {
+            margin-left: 25px;
+            position: relative;
+        }
+
+        .nav-menu a {
+            font-weight: 600;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-menu a:hover {
+            color: var(--accent-blue);
+        }
+
+        .nav-menu a.active {
+            color: var(--accent-blue);
+        }
+
+        .nav-menu a:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-blue);
+            transition: var(--transition);
+        }
+
+        .nav-menu a:hover:after,
+        .nav-menu a.active:after {
+            width: 100%;
+        }
+
+        /* Dropdown Menu */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: var(--white);
+            width: 500px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border-radius: 4px;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 15px;
+        }
+
+        .dropdown-content-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .dropdown-column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .dropdown-content a {
+            color: var(--text-dark);
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+            transition: var(--transition);
+            border-radius: 4px;
+        }
+
+        .dropdown-content a:hover {
+            background-color: var(--light-gray);
+            color: var(--accent-blue);
+            transform: translateX(5px);
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+        }
+
+        /* Hero Section */
+        .service-hero {
+            background: linear-gradient(rgba(26, 60, 110, 0.8), rgba(26, 60, 110, 0.8)), url('https://images.unsplash.com/photo-1553413077-190dd305871c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 120px 0 80px;
+            text-align: center;
+            margin-top: 70px;
+        }
+
+        .service-hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+        }
+
+        /* Service Overview */
+        .service-overview {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .service-image {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .service-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Service Features */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+        position: relative;
+        z-index: 100 !important;
+        background-color: var(--white);
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+      }
+      .feature-card::before {
+        position: absolute;
+        content: "";
+        top: -10px;
+        left: -10px;
+        height: 100%;
+        width: 100%;
+        border-radius: 8px;
+        /* border: 1px solid #1a3c6e; */
+        border: 1px solid transparent;
+        z-index: -1 !important;
+      }
+
+      .feature-card:hover::before {
+        border-color: var(--primary-blue);
+        transition: 0.5s all ease;
+        transition-delay: 0.3s;
+      }
+
+      .feature-card:hover {
+        background-color: var(--primary-blue);
+        transform: translateY(-5px);
+        color: white;
+      }
+
+      .feature-icon {
+        font-size: 2.5rem;
+        color: var(--primary-blue);
+        margin-bottom: 20px;
+      }
+
+      .feature-card:hover .feature-icon {
+        color: white;
+      }
+
+        /* Service Options */
+        .service-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .option-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .option-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .option-header {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .option-header.warehouse-header {
+            background-color: var(--primary-blue);
+        }
+
+        .option-content {
+            padding: 25px;
+        }
+
+        .option-features {
+            margin: 20px 0;
+        }
+
+        .option-features li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            color: var(--dark-gray);
+        }
+
+        .option-features i {
+            color: var(--accent-blue);
+            margin-right: 10px;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            background-color: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--medium-gray);
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 0 2px rgba(74, 127, 200, 0.2);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* CTA Section */
+        .service-cta {
+            background: linear-gradient(rgba(26, 60, 110, 0.9), rgba(26, 60, 110, 0.9)), url('https://images.unsplash.com/photo-1553413077-190dd305871c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .service-cta h2 {
+            color: var(--white);
+        }
+
+        .service-cta h2:after {
+            background-color: var(--white);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .service-cta p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            color: var(--white);
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--accent-blue);
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-blue);
+            padding-left: 5px;
+        }
+
+        .contact-link {
+            color: var(--white);
+            transition: var(--transition);
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .contact-link:hover {
+            color: var(--accent-blue);
+        }
+
+        .contact-link i {
+            margin-right: 10px;
+            width: 20px;
+            margin-top: 3px;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .footer-social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .footer-social-links a:hover {
+            background-color: var(--accent-blue);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 90px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-blue);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--secondary-blue);
+            transform: translateY(-5px);
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+        }
+
+        /* Service Tabs */
+        .service-tabs {
+            margin-top: 40px;
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://images.unsplash.com/photo-1553413077-190dd305871c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 40px;
+            border-radius: 8px;
+        }
+
+        .tab-buttons {
+            display: flex;
+            border-bottom: 1px solid var(--medium-gray);
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .tab-button {
+            padding: 15px 25px;
+            background: none;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            border-bottom: 3px solid transparent;
+        }
+
+        .tab-button.active {
+            color: var(--primary-blue);
+            border-bottom: 3px solid var(--primary-blue);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Warehouse Banner */
+        .warehouse-banner {
+            background: linear-gradient(135deg, var(--warehouse-blue), #0d5a9d);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 30px 0;
+            box-shadow: var(--shadow);
+        }
+
+        .warehouse-banner i {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        /* Facility Badges */
+        .facility-badges {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .facility-badge {
+            background-color: var(--white);
+            padding: 25px 15px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            border: 2px solid var(--warehouse-blue);
+            transition: var(--transition);
+        }
+
+        .facility-badge:hover {
+            transform: translateY(-5px);
+        }
+
+        .facility-badge i {
+            color: var(--warehouse-blue);
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        /* Process Section */
+        .warehouse-process-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--gap);
+            align-items: start;
+        }
+
+        .process-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 18px;
+            box-shadow: 0 2px 6px rgba(16, 24, 40, 0.04);
+            min-height: 160px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: var(--transition);
+        }
+
+        .process-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .process-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .process-icon {
+            width: 44px;
+            height: 44px;
+            flex: 0 0 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            background: linear-gradient(180deg, rgba(43, 108, 176, 0.12), rgba(43, 108, 176, 0.06));
+            color: var(--primary-blue);
+            font-size: 1.2rem;
+        }
+
+        .process-title h3 {
+            color: var(--warehouse-blue);
+            margin-bottom: 0;
+            font-size: 1.2rem;
+            line-height: 1.3;
+        }
+
+        .process-body {
+            padding-left: 4px;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .process-features {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0 0;
+        }
+
+        .process-features li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 6px;
+            color: var(--text-dark);
+            font-size: 0.9rem;
+            padding: 2px 0;
+        }
+
+        .process-features i {
+            color: var(--warehouse-blue);
+            margin-right: 8px;
+            font-size: 0.8rem;
+            width: 14px;
+        }
+
+        /* Storage Types Grid */
+        .storage-types-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--gap);
+            align-items: start;
+        }
+
+        .storage-type-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 18px;
+            box-shadow: 0 2px 6px rgba(16, 24, 40, 0.04);
+            min-height: 160px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: var(--transition);
+        }
+
+        .storage-type-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .storage-type-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .storage-type-icon {
+            width: 44px;
+            height: 44px;
+            flex: 0 0 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            background: linear-gradient(180deg, rgba(43, 108, 176, 0.12), rgba(43, 108, 176, 0.06));
+
+            color: var(--warehouse-blue);
+            font-size: 1.2rem;
+        }
+
+        .storage-type-title h3 {
+            color: var(--warehouse-blue);
+            margin-bottom: 0;
+            font-size: 1.2rem;
+            line-height: 1.3;
+        }
+
+        .storage-type-body {
+            padding-left: 4px;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        /* Warehouse Diagram */
+        .warehouse-diagram {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 40px;
+            box-shadow: var(--shadow);
+        }
+
+        .diagram-placeholder {
+            background-image: url(./images/warehouse.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            /* background-color: var(--light-gray); */
+            height: 300px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .diagram-placeholder i {
+            font-size: 4rem;
+            color: var(--warehouse-blue);
+        }
+
+        /* Coverage Map */
+        .coverage-map {
+            background-color: var(--light-gray);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .map-placeholder {
+            background-color: var(--white);
+            height: 300px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        .map-placeholder i {
+            font-size: 4rem;
+            color: var(--primary-blue);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .warehouse-process-grid,
+            .storage-types-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .facility-badges {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.4rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .service-overview {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .dropdown-content {
+                width: 400px;
+            }
+
+            .service-options {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 15px;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                right: -100%;
+                background-color: var(--white);
+                width: 80%;
+                height: calc(100vh - 70px);
+                flex-direction: column;
+                align-items: center;
+                padding-top: 50px;
+                transition: var(--transition);
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+                overflow-y: auto;
+            }
+
+            .nav-menu.active {
+                right: 0;
+            }
+
+            .nav-menu li {
+                margin: 0 0 30px 0;
+            }
+
+            .dropdown-content {
+                position: static;
+                box-shadow: none;
+                display: none;
+                background-color: var(--light-gray);
+                margin-top: 10px;
+                border-radius: 4px;
+                width: 100%;
+                transform: none;
+                left: 0;
+            }
+
+            .dropdown.active .dropdown-content {
+                display: block;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .service-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .dropdown-content-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .tab-buttons {
+                flex-direction: column;
+            }
+
+            .tab-button {
+                width: 100%;
+                text-align: left;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .warehouse-process-grid,
+            .storage-types-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .facility-badges {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .service-hero h1 {
+                font-size: 2rem;
+            }
+
+            .service-hero p {
+                font-size: 1rem;
+            }
+
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+            }
+
+            .contact-form {
+                padding: 20px;
+            }
+
+            .feature-card,
+            .option-card {
+                padding: 20px;
+            }
+
+            .service-tabs {
+                padding: 20px;
+            }
+
+            .process-card,
+            .storage-type-card {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/19176519824" class="whatsapp-float" target="_blank" aria-label="Contact us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <!-- Logo - Clickable -->
+                <img alt="Liyana Logistics Logo" class="logo-img" onclick="window.location.href='/'"
+                    src="images/logo.png" />
+                <h1><a href="/">Liyana Logistics <span>USA INC.</span><br>
+                <span class="small-text">Your Ultimate Logistics Partner</span></a>
+                </h1>
+            </div>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu">
+                <li><a class="nav-link active" href="/">Home</a></li>
+                <li><a class="nav-link" href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a class="nav-link" href="services.html">Services <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <div class="dropdown-content-wrapper">
+                            <div class="dropdown-column">
+                                <a class="nav-link" href="export-sea-air.html">Export Sea / Air</a>
+                                <a class="nav-link" href="import-sea-air.html">Import Sea / Air</a>
+                                <a class="nav-link" href="project-cargo.html">Project Cargo</a>
+                                <a class="nav-link" href="dg-cargo-handling.html">DG Cargo Handling</a>
+                                <a class="nav-link" href="reefer-container.html">Reefer Container</a>
+                            </div>
+                            <div class="dropdown-column">
+                                <a class="nav-link" href="cross-trade.html">Cross Trade</a>
+                                <a class="nav-link" href="warehousing.html">Warehousing</a>
+                                <a class="nav-link" href="custom-clearing.html">Custom Clearing</a>
+                                <a class="nav-link" href="door-delivery.html">Door Delivery</a>
+                                <a class="nav-link" href="project-shipment.html">Project Shipment</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a class="nav-link" href="request-quote.html">Request Quote</a></li>
+                <li><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Warehousing Service Page -->
+    <main id="service-warehousing">
+
+        <!-- Hero Section -->
+        <section class="service-hero">
+            <div class="container">
+                <h1>Warehousing Services</h1>
+                <p>Secure, scalable, and efficient storage solutions with advanced inventory management and flexible
+                    distribution options.</p>
+                <a href="#inquiry" class="btn btn-primary">Get Storage Quote</a>
+            </div>
+        </section>
+
+        <!-- Warehouse Banner -->
+        <section class="section-light">
+            <div class="container">
+                <div class="warehouse-banner">
+                    <i class="fas fa-warehouse"></i>
+                    <h3>State-of-the-Art Storage Facilities</h3>
+                    <p>Our modern warehouses provide secure, climate-controlled storage with advanced inventory
+                        management systems.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Overview -->
+        <section class="section-light">
+            <div class="container">
+                <div class="service-overview">
+                    <div class="service-content">
+                        <h2>Comprehensive Warehousing Solutions</h2>
+                        <p>At Liyana Logistics, we provide state-of-the-art warehousing facilities designed to meet your
+                            storage and distribution needs. Our strategically located warehouses offer secure, scalable,
+                            and cost-effective storage solutions for businesses of all sizes.</p>
+                        <p>From short-term storage to long-term inventory management, we offer flexible solutions with
+                            advanced tracking systems, climate-controlled environments, and comprehensive security
+                            measures to protect your valuable goods.</p>
+                        <div style="display: flex; gap: 15px; margin-top: 30px; flex-wrap: wrap;">
+                            <div style="display: flex; align-items: center;">
+                                <i class="fas fa-check" style="color: var(--warehouse-blue); margin-right: 10px;"></i>
+                                <span>Advanced Inventory Management</span>
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <i class="fas fa-check" style="color: var(--warehouse-blue); margin-right: 10px;"></i>
+                                <span>Climate-Controlled Storage</span>
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <i class="fas fa-check" style="color: var(--warehouse-blue); margin-right: 10px;"></i>
+                                <span>24/7 Security Monitoring</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                            alt="Modern warehouse facility with organized storage">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Warehouse Diagram -->
+        <section class="section-warehouse">
+            <div class="container">
+                <h2 class="center-heading">Our Warehouse Operations</h2>
+                <p style="text-align: center; max-width: 800px; margin: 0 auto 30px;">Our warehouses are designed for
+                    efficiency, security, and seamless integration with your supply chain.</p>
+
+                <div class="warehouse-diagram">
+                    <div class="diagram-placeholder">
+                        <!-- <i class="fas fa-warehouse"></i> -->
+                    </div>
+                    <h3>Optimized Warehouse Layout</h3>
+                    <p>Our facilities feature organized storage zones, efficient material handling systems, and advanced
+                        inventory tracking.</p>
+
+                    <div
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 30px;">
+                        <div style="text-align: center;">
+                            <div
+                                style="background: var(--warehouse-blue); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 1.5rem;">
+                                <i class="fas fa-truck-loading"></i>
+                            </div>
+                            <h4>Receiving Area</h4>
+                            <p>Efficient goods receiving and inspection</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <div
+                                style="background: var(--warehouse-blue); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 1.5rem;">
+                                <i class="fas fa-boxes"></i>
+                            </div>
+                            <h4>Storage Zones</h4>
+                            <p>Organized storage with inventory tracking</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <div
+                                style="background: var(--warehouse-blue); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 1.5rem;">
+                                <i class="fas fa-shipping-fast"></i>
+                            </div>
+                            <h4>Dispatch Area</h4>
+                            <p>Order picking, packing, and shipping</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Features -->
+        <section class="section-gray">
+            <div class="container">
+                <h2 class="center-heading">Why Choose Our Warehousing Services</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Secure Facilities</h3>
+                        <p>24/7 security monitoring, access control, and fire protection systems for complete peace of
+                            mind.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-thermometer-half"></i>
+                        </div>
+                        <h3>Climate Control</h3>
+                        <p>Temperature and humidity-controlled environments for sensitive products and materials.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Inventory Management</h3>
+                        <p>Advanced WMS for real-time inventory tracking, reporting, and optimization.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-expand-arrows-alt"></i>
+                        </div>
+                        <h3>Scalable Space</h3>
+                        <p>Flexible storage options that grow with your business needs and seasonal demands.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Storage Types Section -->
+        <section class="section-light">
+            <div class="container">
+                <h2 class="center-heading">Our Storage Solutions</h2>
+                <p style="text-align: center; max-width: 800px; margin: 0 auto 50px;">We offer diverse storage options
+                    to accommodate various product types and business requirements.</p>
+
+                <div class="storage-types-grid">
+                    <!-- General Storage -->
+                    <div class="storage-type-card">
+                        <div>
+                            <div class="storage-type-header">
+                                <div class="storage-type-icon">
+                                    <i class="fas fa-pallet"></i>
+                                </div>
+                                <div class="storage-type-title">
+                                    <h3>General Storage</h3>
+                                </div>
+                            </div>
+                            <div class="storage-type-body">
+                                <p>Secure storage for standard goods with efficient racking systems and organized
+                                    layout.</p>
+                                <ul class="process-features">
+                                    <li><i class="fas fa-check"></i> Pallet racking</li>
+                                    <li><i class="fas fa-check"></i> Standard shelving</li>
+                                    <li><i class="fas fa-check"></i> Bulk storage areas</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Temperature Controlled -->
+                    <div class="storage-type-card">
+                        <div>
+                            <div class="storage-type-header">
+                                <div class="storage-type-icon">
+                                    <i class="fas fa-snowflake"></i>
+                                </div>
+                                <div class="storage-type-title">
+                                    <h3>Temperature Controlled</h3>
+                                </div>
+                            </div>
+                            <div class="storage-type-body">
+                                <p>Climate-controlled environments for temperature-sensitive products and perishables.
+                                </p>
+                                <ul class="process-features">
+                                    <li><i class="fas fa-check"></i> Refrigerated storage</li>
+                                    <li><i class="fas fa-check"></i> Climate monitoring</li>
+                                    <li><i class="fas fa-check"></i> Humidity control</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hazardous Materials -->
+                    <div class="storage-type-card">
+                        <div>
+                            <div class="storage-type-header">
+                                <div class="storage-type-icon">
+                                    <i class="fas fa-radiation-alt"></i>
+                                </div>
+                                <div class="storage-type-title">
+                                    <h3>Hazardous Materials</h3>
+                                </div>
+                            </div>
+                            <div class="storage-type-body">
+                                <p>Specialized storage for dangerous goods with proper safety protocols and containment.
+                                </p>
+                                <ul class="process-features">
+                                    <li><i class="fas fa-check"></i> Compliant storage</li>
+                                    <li><i class="fas fa-check"></i> Safety systems</li>
+                                    <li><i class="fas fa-check"></i> Spill containment</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- High-Value Storage -->
+                    <div class="storage-type-card">
+                        <div>
+                            <div class="storage-type-header">
+                                <div class="storage-type-icon">
+                                    <i class="fas fa-gem"></i>
+                                </div>
+                                <div class="storage-type-title">
+                                    <h3>High-Value Storage</h3>
+                                </div>
+                            </div>
+                            <div class="storage-type-body">
+                                <p>Enhanced security storage for valuable items with restricted access and monitoring.
+                                </p>
+                                <ul class="process-features">
+                                    <li><i class="fas fa-check"></i> Secure cages</li>
+                                    <li><i class="fas fa-check"></i> Access control</li>
+                                    <li><i class="fas fa-check"></i> Enhanced monitoring</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- E-commerce Fulfillment -->
+                    <div class="storage-type-card">
+                        <div>
+                            <div class="storage-type-header">
+                                <div class="storage-type-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </div>
+                                <div class="storage-type-title">
+                                    <h3>E-commerce Fulfillment</h3>
+                                </div>
+                            </div>
+                            <div class="storage-type-body">
+                                <p>Optimized storage for e-commerce with efficient picking, packing, and shipping
+                                    integration.</p>
+                                <ul class="process-features">
+                                    <li><i class="fas fa-check"></i> Pick-and-pack areas</li>
+                                    <li><i class="fas fa-check"></i> Order processing</li>
+                                    <li><i class="fas fa-check"></i> Shipping integration</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bulk Storage -->
+                    <div class="storage-type-card">
+                        <div>
+                            <div class="storage-type-header">
+                                <div class="storage-type-icon">
+                                    <i class="fas fa-box-open"></i>
+                                </div>
+                                <div class="storage-type-title">
+                                    <h3>Bulk Storage</h3>
+                                </div>
+                            </div>
+                            <div class="storage-type-body">
+                                <p>Large-scale storage solutions for bulk materials with specialized handling equipment.
+                                </p>
+                                <ul class="process-features">
+                                    <li><i class="fas fa-check"></i> Bulk racking</li>
+                                    <li><i class="fas fa-check"></i> Heavy equipment</li>
+                                    <li><i class="fas fa-check"></i> Floor storage</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Options -->
+        <section class="section-gray">
+            <div class="container">
+                <h2 class="center-heading">Our Warehousing Plans</h2>
+                <div class="service-options">
+                    <!-- Basic Storage Service -->
+                    <div class="option-card">
+                        <div class="option-header warehouse-header">
+                            <h3>Basic Storage</h3>
+                        </div>
+                        <div class="option-content">
+                            <p>Cost-effective storage solutions for standard goods with essential security and
+                                management.</p>
+                            <ul class="option-features">
+                                <li><i class="fas fa-check"></i> Secure general storage</li>
+                                <li><i class="fas fa-check"></i> Basic inventory tracking</li>
+                                <li><i class="fas fa-check"></i> Standard security</li>
+                                <li><i class="fas fa-check"></i> Monthly reporting</li>
+                                <li><i class="fas fa-check"></i> Business hours access</li>
+                            </ul>
+                            <div style="text-align: center; margin-top: 20px;">
+                                <a href="#inquiry" class="btn btn-warehouse" style="width: 100%;">Get Basic Quote</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Premium Storage Service -->
+                    <div class="option-card">
+                        <div class="option-header warehouse-header">
+                            <h3>Premium Storage</h3>
+                        </div>
+                        <div class="option-content">
+                            <p>Comprehensive storage solutions with advanced features and value-added services.</p>
+                            <ul class="option-features">
+                                <li><i class="fas fa-check"></i> Climate-controlled options</li>
+                                <li><i class="fas fa-check"></i> Advanced WMS integration</li>
+                                <li><i class="fas fa-check"></i> Enhanced security systems</li>
+                                <li><i class="fas fa-check"></i> Real-time reporting</li>
+                                <li><i class="fas fa-check"></i> 24/7 monitored access</li>
+                            </ul>
+                            <div style="text-align: center; margin-top: 20px;">
+                                <a href="#inquiry" class="btn btn-warehouse" style="width: 100%;">Get Premium Quote</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Facilities Section -->
+        <section class="section-light">
+            <div class="container">
+                <h2 class="center-heading">Our Warehouse Facilities</h2>
+                <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">Modern facilities equipped with
+                    advanced technology to ensure the safety and integrity of your goods.</p>
+
+                <div class="facility-badges">
+                    <div class="facility-badge">
+                        <i class="fas fa-camera"></i>
+                        <h4>24/7 Surveillance</h4>
+                        <p>Comprehensive CCTV monitoring</p>
+                    </div>
+                    <div class="facility-badge">
+                        <i class="fas fa-fire-extinguisher"></i>
+                        <h4>Fire Protection</h4>
+                        <p>Advanced fire detection & suppression</p>
+                    </div>
+                    <div class="facility-badge">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <h4>Climate Control</h4>
+                        <p>Temperature & humidity monitoring</p>
+                    </div>
+                    <div class="facility-badge">
+                        <i class="fas fa-robot"></i>
+                        <h4>Automated Systems</h4>
+                        <p>Modern material handling equipment</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Tabs -->
+        <section class="section-gray">
+            <div class="container">
+                <h2 class="center-heading">Warehousing Service Details</h2>
+                <div class="service-tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-button active" data-tab="storage">Storage Solutions</button>
+                        <button class="tab-button" data-tab="inventory">Inventory Management</button>
+                        <button class="tab-button" data-tab="value">Value-Added Services</button>
+                        <button class="tab-button" data-tab="security">Security & Safety</button>
+                    </div>
+
+                    <div class="tab-content active" id="storage">
+                        <h3>Comprehensive Storage Solutions</h3>
+                        <p>We offer diverse storage options to meet your specific requirements:</p>
+                        <ul class="option-features">
+                            <li><i class="fas fa-check"></i> Pallet racking systems</li>
+                            <li><i class="fas fa-check"></i> Shelving for smaller items</li>
+                            <li><i class="fas fa-check"></i> Bulk storage areas</li>
+                            <li><i class="fas fa-check"></i> Refrigerated and frozen storage</li>
+                            <li><i class="fas fa-check"></i> Hazardous materials storage</li>
+                            <li><i class="fas fa-check"></i> High-value secure storage</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-content" id="inventory">
+                        <h3>Advanced Inventory Management</h3>
+                        <p>Comprehensive inventory tracking and management services:</p>
+                        <ul class="option-features">
+                            <li><i class="fas fa-check"></i> Real-time inventory tracking</li>
+                            <li><i class="fas fa-check"></i> Barcode/RFID scanning</li>
+                            <li><i class="fas fa-check"></i> Cycle counting programs</li>
+                            <li><i class="fas fa-check"></i> Stock rotation management</li>
+                            <li><i class="fas fa-check"></i> Custom reporting</li>
+                            <li><i class="fas fa-check"></i> Integration with your systems</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-content" id="value">
+                        <h3>Value-Added Services</h3>
+                        <p>Additional services to enhance your supply chain efficiency:</p>
+                        <ul class="option-features">
+                            <li><i class="fas fa-check"></i> Pick and pack services</li>
+                            <li><i class="fas fa-check"></i> Kitting and assembly</li>
+                            <li><i class="fas fa-check"></i> Labeling and repackaging</li>
+                            <li><i class="fas fa-check"></i> Quality inspections</li>
+                            <li><i class="fas fa-check"></i> Returns processing</li>
+                            <li><i class="fas fa-check"></i> Cross-docking services</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-content" id="security">
+                        <h3>Security & Safety Measures</h3>
+                        <p>Comprehensive security protocols to protect your inventory:</p>
+                        <ul class="option-features">
+                            <li><i class="fas fa-check"></i> 24/7 CCTV surveillance</li>
+                            <li><i class="fas fa-check"></i> Access control systems</li>
+                            <li><i class="fas fa-check"></i> Alarm systems</li>
+                            <li><i class="fas fa-check"></i> Fire detection and suppression</li>
+                            <li><i class="fas fa-check"></i> Regular safety audits</li>
+                            <li><i class="fas fa-check"></i> Insurance compliance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="section-light">
+            <div class="container">
+                <h2 class="center-heading">Our Warehousing Process</h2>
+                <p style="text-align: center; max-width: 800px; margin: 0 auto 50px;">We follow a structured process to
+                    ensure efficient storage operations and inventory management.</p>
+
+                <div class="warehouse-process-grid">
+                    <!-- Card 1 -->
+                    <div class="process-card">
+                        <div>
+                            <div class="process-header">
+                                <div class="process-icon">
+                                    <i class="fas fa-clipboard-check"></i>
+                                </div>
+                                <div class="process-title">
+                                    <h3>Needs Assessment</h3>
+                                </div>
+                            </div>
+                            <div class="process-body">
+                                <p>Comprehensive analysis of your storage requirements, inventory profile, and business
+                                    objectives.</p>
+                                <ul class="process-features">
+                                    <li><i class="fas fa-check"></i> Storage requirements</li>
+                                    <li><i class="fas fa-check"></i> Inventory analysis</li>
+                                    <li><i class="fas fa-check"></i> Business objectives</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="process-card">
+                        <div>
+                            <div class="process-header">
+                                <div class="process-icon">
+                                    <i class="fas fa-truck-loading"></i>
+                                </div>
+                                <div class="process-title">
+                                    <h3>Receiving & Inspection</h3>
+                                </div>
+                            </div>
+                            <div class="process-body">
+                                <p>Efficient receiving of goods with thorough inspection, counting, and quality checks.
+                                </p>
+                                <ul class="process-features">
+                                    <li><i class="fas fa-check"></i> Goods receiving</li>
+                                    <li><i class="fas fa-check"></i> Quality inspection</li>
+                                    <li><i class="fas fa-check"></i> Documentation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="process-card">
+                        <div>
+                            <div class="process-header">
+                                <div class="process-icon">
+                                    <i class="fas fa-warehouse"></i>
+                                </div>
+                                <div class="process-title">
+                                    <h3>Storage & Organization</h3>
+                                </div>
+                            </div>
+                            <div class="process-body">
+                                <p>Systematic storage of goods with proper labeling, location assignment, and inventory
+                                    recording.</p>
+                                <ul class="process-features">
+                                    <li><i class="fas fa-check"></i> Location assignment</li>
+                                    <li><i class="fas fa-check"></i> Inventory recording</li>
+                                    <li><i class="fas fa-check"></i> System updating</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="process-card">
+                        <div>
+                            <div class="process-header">
+                                <div class="process-icon">
+                                    <i class="fas fa-chart-bar"></i>
+                                </div>
+                                <div class="process-title">
+                                    <h3>Inventory Management</h3>
+                                </div>
+                            </div>
+                            <div class="process-body">
+                                <p>Continuous monitoring, tracking, and management of inventory with regular reporting.
+                                </p>
+                                <ul class="process-features">
+                                    <li><i class="fas fa-check"></i> Inventory tracking</li>
+                                    <li><i class="fas fa-check"></i> Cycle counting</li>
+                                    <li><i class="fas fa-check"></i> Reporting</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="process-card">
+                        <div>
+                            <div class="process-header">
+                                <div class="process-icon">
+                                    <i class="fas fa-box-open"></i>
+                                </div>
+                                <div class="process-title">
+                                    <h3>Order Fulfillment</h3>
+                                </div>
+                            </div>
+                            <div class="process-body">
+                                <p>Efficient picking, packing, and preparation of orders for shipment according to
+                                    requirements.</p>
+                                <ul class="process-features">
+                                    <li><i class="fas fa-check"></i> Order picking</li>
+                                    <li><i class="fas fa-check"></i> Packing</li>
+                                    <li><i class="fas fa-check"></i> Quality check</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="process-card">
+                        <div>
+                            <div class="process-header">
+                                <div class="process-icon">
+                                    <i class="fas fa-shipping-fast"></i>
+                                </div>
+                                <div class="process-title">
+                                    <h3>Dispatch & Reporting</h3>
+                                </div>
+                            </div>
+                            <div class="process-body">
+                                <p>Coordinated dispatch of orders and comprehensive reporting on warehouse operations.
+                                </p>
+                                <ul class="process-features">
+                                    <li><i class="fas fa-check"></i> Order dispatch</li>
+                                    <li><i class="fas fa-check"></i> Documentation</li>
+                                    <li><i class="fas fa-check"></i> Performance reporting</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 50px;">
+                    <a href="#inquiry" class="btn btn-warehouse">Start Your Storage Solution</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Locations Section -->
+        <section class="section-gray">
+            <div class="container">
+                <h2 class="center-heading">Our Warehouse Locations</h2>
+                <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">Strategically located facilities
+                    to optimize your supply chain and reduce transportation costs.</p>
+
+                <div class="coverage-map">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>Strategic Warehouse Network</h3>
+                    <p>Our facilities are strategically located near major transportation hubs for efficient
+                        distribution.</p>
+
+                    <div
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 30px;">
+                        <div>
+                            <h4>New York Facility</h4>
+                            <ul class="option-features">
+                                <li><i class="fas fa-check"></i> 50,000 sq. ft.</li>
+                                <li><i class="fas fa-check"></i> Climate-controlled</li>
+                                <li><i class="fas fa-check"></i> Near JFK Airport</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>New Jersey Facility</h4>
+                            <ul class="option-features">
+                                <li><i class="fas fa-check"></i> 75,000 sq. ft.</li>
+                                <li><i class="fas fa-check"></i> Refrigerated section</li>
+                                <li><i class="fas fa-check"></i> Port Newark access</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>California Facility</h4>
+                            <ul class="option-features">
+                                <li><i class="fas fa-check"></i> 60,000 sq. ft.</li>
+                                <li><i class="fas fa-check"></i> E-commerce optimized</li>
+                                <li><i class="fas fa-check"></i> LA/Long Beach access</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Inquiry Section -->
+        <section id="inquiry" class="section-light">
+            <div class="container">
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <h2 class="center-heading">Request Storage Quote</h2>
+                    <p style="text-align: center; margin-bottom: 40px;">Fill out the form below and our warehousing
+                        specialists will provide you with a comprehensive quote for your storage needs.</p>
+
+                    <div class="contact-form">
+                        <form id="warehouseQuoteForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Full Name *</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="company">Company</label>
+                                    <input type="text" id="company" name="company">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number *</label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="storage-type">Storage Type Needed</label>
+                                    <select id="storage-type" name="storage-type">
+                                        <option value="">Select Storage Type</option>
+                                        <option value="general">General Storage</option>
+                                        <option value="temperature">Temperature Controlled</option>
+                                        <option value="hazardous">Hazardous Materials</option>
+                                        <option value="high-value">High-Value Storage</option>
+                                        <option value="ecommerce">E-commerce Fulfillment</option>
+                                        <option value="bulk">Bulk Storage</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="space-needed">Space Needed (sq. ft.)</label>
+                                    <input type="number" id="space-needed" name="space-needed" min="0">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="duration">Expected Duration</label>
+                                    <select id="duration" name="duration">
+                                        <option value="">Select Duration</option>
+                                        <option value="short-term">Short-term (1-3 months)</option>
+                                        <option value="medium-term">Medium-term (3-12 months)</option>
+                                        <option value="long-term">Long-term (1+ years)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inventory-value">Inventory Value (USD)</label>
+                                    <input type="number" id="inventory-value" name="inventory-value" min="0">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="product-description">Product Description</label>
+                                <textarea id="product-description" name="product-description"
+                                    placeholder="Please describe the products you need to store, including any special handling requirements."></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="special-requirements">Special Requirements</label>
+                                <textarea id="special-requirements" name="special-requirements"
+                                    placeholder="Please specify any special requirements like temperature control, security needs, access requirements, etc."></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="service-level">Service Level</label>
+                                <select id="service-level" name="service-level">
+                                    <option value="">Select Service Level</option>
+                                    <option value="basic">Basic Storage</option>
+                                    <option value="premium">Premium Storage</option>
+                                </select>
+                            </div>
+                            <div style="text-align: center;">
+                                <button type="submit" class="btn btn-warehouse"
+                                    style="padding: 15px 40px; font-size: 1.1rem;">Submit Storage Quote Request</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="service-cta">
+            <div class="container">
+                <h2 class="center-heading">Need Storage Solutions?</h2>
+                <p>Contact our warehousing specialists today for secure, scalable, and cost-effective storage solutions.
+                </p>
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                    <a href="tel:+19176519824" class="btn btn-primary">
+                        <i class="fas fa-phone-alt"></i> Call Us Now
+                    </a>
+                    <a href="mailto:info@liyanalogistics.com" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i> Email Us
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer style="background-color:#002b6d !important;color:#fff;padding:50px 0 20px;width:100%;margin:0;border:none;">
+        <div style="max-width:1200px;margin:0 auto;padding:0 20px;">
+            <div
+                style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:30px;margin-bottom:30px;">
+                <div>
+                    <h3
+                        style="color:#fff;margin-bottom:15px;font-size:1.1rem;font-weight:600;padding-bottom:8px;border-bottom:2px solid #4a7fc8;width:fit-content;">
+                        Liyana Logistics USA INC</h3>
+                    <p style="font-size:0.9rem;line-height:1.5;">Your trusted partner for international freight
+                        forwarding and comprehensive logistics solutions.</p>
+                    <div style="display:flex;gap:15px;margin-top:20px;">
+                        <a href="#" onmouseout="this.style.color='#fff';this.style.transform='none';"
+                            onmouseover="this.style.color='#4a7fc8';this.style.transform='translateY(-3px)';"
+                            style="color:#fff;transition:all 0.3s ease;"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" onmouseout="this.style.color='#fff';this.style.transform='none';"
+                            onmouseover="this.style.color='#4a7fc8';this.style.transform='translateY(-3px)';"
+                            style="color:#fff;transition:all 0.3s ease;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" onmouseout="this.style.color='#fff';this.style.transform='none';"
+                            onmouseover="this.style.color='#4a7fc8';this.style.transform='translateY(-3px)';"
+                            style="color:#fff;transition:all 0.3s ease;"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" onmouseout="this.style.color='#fff';this.style.transform='none';"
+                            onmouseover="this.style.color='#4a7fc8';this.style.transform='translateY(-3px)';"
+                            style="color:#fff;transition:all 0.3s ease;"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3
+                        style="color:#fff;margin-bottom:15px;font-size:1.1rem;font-weight:600;padding-bottom:8px;border-bottom:2px solid #4a7fc8;width:fit-content;">
+                        Quick Links</h3>
+                    <ul style="list-style:none;padding:0;margin:0;">
+                        <li><a href="/" onmouseout="this.style.color='#fff';" onmouseover="this.style.color='#4a7fc8';"
+                                style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:8px;">Home</a>
+                        </li>
+                        <li><a href="about.html" onmouseout="this.style.color='#fff';"
+                                onmouseover="this.style.color='#4a7fc8';"
+                                style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:8px;">About
+                                Us</a></li>
+                        <li><a href="services.html" onmouseout="this.style.color='#fff';"
+                                onmouseover="this.style.color='#4a7fc8';"
+                                style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:8px;">Services</a>
+                        </li>
+                        <li><a href="request-quote.html" onmouseout="this.style.color='#fff';"
+                                onmouseover="this.style.color='#4a7fc8';"
+                                style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:8px;">Request
+                                Quote</a></li>
+                        <li><a href="contact.html" onmouseout="this.style.color='#fff';"
+                                onmouseover="this.style.color='#4a7fc8';"
+                                style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:8px;">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3
+                        style="color:#fff;margin-bottom:15px;font-size:1.1rem;font-weight:600;padding-bottom:8px;border-bottom:2px solid #4a7fc8;width:fit-content;">
+                        Our Services</h3>
+                    <ul style="list-style:none;padding:0;margin:0;">
+                        <li><a href="export-sea-air.html" onmouseout="this.style.color='#fff';"
+                                onmouseover="this.style.color='#4a7fc8';"
+                                style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:8px;">Export
+                                Sea / Air</a></li>
+                        <li><a href="import-sea-air.html" onmouseout="this.style.color='#fff';"
+                                onmouseover="this.style.color='#4a7fc8';"
+                                style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:8px;">Import
+                                Sea / Air</a></li>
+                        <li><a href="project-cargo.html" onmouseout="this.style.color='#fff';"
+                                onmouseover="this.style.color='#4a7fc8';"
+                                style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:8px;">Project
+                                Cargo</a></li>
+                        <li><a href="warehousing.html" onmouseout="this.style.color='#fff';"
+                                onmouseover="this.style.color='#4a7fc8';"
+                                style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:8px;">Warehousing</a>
+                        </li>
+                        <li><a href="custom-clearing.html" onmouseout="this.style.color='#fff';"
+                                onmouseover="this.style.color='#4a7fc8';"
+                                style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:8px;">Custom
+                                Clearing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3
+                        style="color:#fff;margin-bottom:15px;font-size:1.1rem;font-weight:600;padding-bottom:8px;border-bottom:2px solid #4a7fc8;width:fit-content;">
+                        Contact Info</h3>
+                    <ul style="list-style:none;padding:0;margin:0;">
+                        <li style="margin-bottom:12px;display:flex;align-items:flex-start;gap:10px;">
+                            <i class="fas fa-map-marker-alt" style="min-width:20px;margin-top:4px;"></i>
+                            <div style="font-size:0.9rem;">
+                                600 Hillside Ave, New Hyde Park,<br />
+                                <span style="display:inline-block;padding-left:2px;">NY 11040</span>
+                            </div>
+                        </li>
+                        <li style="margin-bottom:12px;display:flex;align-items:flex-start;gap:10px;">
+                            <i class="fas fa-phone-alt" style="min-width:20px;margin-top:4px;"></i>
+                            <div>
+                                <a href="tel:+19176519824" onmouseout="this.style.color='#fff';"
+                                    onmouseover="this.style.color='#4a7fc8';"
+                                    style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:4px;">+1
+                                    (917) 651 9824</a>
+                                <a href="tel:+15166541145" onmouseout="this.style.color='#fff';"
+                                    onmouseover="this.style.color='#4a7fc8';"
+                                    style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;">+1
+                                    (516) 654 1145</a>
+                            </div>
+                        </li>
+                        <li style="margin-bottom:12px;display:flex;align-items:flex-start;gap:10px;">
+                            <i class="fas fa-envelope" style="min-width:20px;margin-top:4px;"></i>
+                            <div>
+                                <a href="mailto:info@liyanausa.com" onmouseout="this.style.color='#fff';"
+                                    onmouseover="this.style.color='#4a7fc8';"
+                                    style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;display:block;margin-bottom:4px;">info@liyanausa.com</a>
+                                <a href="mailto:llus@liyanalogistics.com" onmouseout="this.style.color='#fff';"
+                                    onmouseover="this.style.color='#4a7fc8';"
+                                    style="color:#fff;text-decoration:none;transition:color 0.3s;font-size:0.9rem;">llus@liyanalogistics.com</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                style="display:flex;justify-content:space-between;align-items:center;padding-top:20px;border-top:1px solid rgba(255,255,255,0.15);font-size:0.85rem;line-height:1.6;flex-wrap:wrap;gap:10px;">
+                <div style="color:#fff;">
+                    © 2025 Liyana Logistics USA INC. All Rights Reserved.
+                </div>
+                <div style="color:#fff;">
+                    <a href="privacy-policy.html" onmouseout="this.style.color='#fff';"
+                        onmouseover="this.style.color='#4a7fc8';"
+                        style="color:#fff;text-decoration:underline;transition:color 0.3s;">Privacy Policy</a> |
+                    <a href="terms-and-conditions.html" onmouseout="this.style.color='#fff';"
+                        onmouseover="this.style.color='#4a7fc8';"
+                        style="color:#fff;text-decoration:underline;transition:color 0.3s;">Terms &amp; Conditions</a> |
+                    Made with <span style="color:#e25555;">❤</span> by
+                    <a href="https://www.wazeefa.in/" rel="noopener" onmouseout="this.style.color='#fff';"
+                        onmouseover="this.style.color='#4a7fc8';"
+                        style="color:#fff;text-decoration:underline;font-weight:600;transition:color 0.3s;"
+                        target="_blank">Wazeefa</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+        <svg class="progress-circle" width="60" height="60">
+        <circle cx="30" cy="30" r="25" />
+        <circle class="progress" cx="30" cy="30" r="25" />
+      </svg>
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+          //prgress circle
+      window.addEventListener("scroll", () => {
+        const scrollTop = window.scrollY;
+        const docHeight =
+          document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPercent = scrollTop / docHeight;
+        const offset = 157 - 157 * scrollPercent; // 157 = 2πr
+
+        document.querySelector(".progress").style.strokeDashoffset = offset;
+      });
+
+        // Mobile Navigation Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.innerHTML = navMenu.classList.contains('active')
+                ? '<i class="fas fa-times"></i>'
+                : '<i class="fas fa-bars"></i>';
+        });
+
+        // Back to Top Button
+        const backToTopButton = document.querySelector('.back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('active');
+            } else {
+                backToTopButton.classList.remove('active');
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Service Tabs Functionality
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons and contents
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+
+                // Add active class to clicked button
+                button.classList.add('active');
+
+                // Show corresponding content
+                const tabId = button.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        // Form Submission
+        const quoteForm = document.getElementById('warehouseQuoteForm');
+
+        if (quoteForm) {
+            quoteForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                alert('Thank you for your warehousing quote request! Our specialists will contact you shortly.');
+                quoteForm.reset();
+            });
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
