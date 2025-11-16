@@ -2004,6 +2004,7 @@ circle:first-child {
   font-size: 1.5rem;
   font-weight: 700;
   margin: 0 auto 20px;
+      border: 7px solid #32609e;
 }
 
 /* Contact Form */
@@ -9424,6 +9425,7 @@ header {
   font-size: 1.5rem;
   font-weight: 700;
   margin: 0 auto 20px;
+      border: 7px solid #32609e;
 }
 
 /* Contact Form */
@@ -12790,6 +12792,7 @@ footer {
   font-size: 1.5rem;
   font-weight: 700;
   margin: 0 auto 20px;
+      border: 7px solid #32609e;
 }
 
 /* Service Cards */
