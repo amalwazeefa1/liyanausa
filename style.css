@@ -3678,7 +3678,6 @@ footer {
 
 .progress-circle .progress {
   stroke-width: 3 !important;
-  stroke: #00f;
 }
 
 circle {
@@ -12981,7 +12980,7 @@ footer {
 
         /* Hero Section */
         .service-hero {
-          background: linear-gradient(to top, #1a3c6e 0%, #4a7fc8 100%);
+          background: linear-gradient(rgba(26, 60, 110, 0.8), rgba(26, 60, 110, 0.8));
           background-size: cover;
           background-position: center;
           color: var(--white);

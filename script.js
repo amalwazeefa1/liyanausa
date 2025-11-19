@@ -162,7 +162,10 @@ function initScrollAnimations() {
 // Number Counter Animation
 function initNumberCounter() {
   const counters = document.querySelectorAll(".stat-number");
-  const speed = 200; // The lower the slower
+  // Larger `speed` value => smaller increments per tick => slower animation
+  const speed = 600; // increased from 200 to slow the count
+  // Use a small delay between ticks (ms)
+  const tickDelay = 10; // was 1 ms, now 10 ms for a visibly slower animation
 
   counters.forEach((counter) => {
     const updateCount = () => {
@@ -176,8 +179,8 @@ function initNumberCounter() {
       if (count < target) {
         // Add inc to count and output in counter
         counter.innerText = Math.ceil(count + inc);
-        // Call function every ms
-        setTimeout(updateCount, 1);
+        // Call function after tickDelay ms
+        setTimeout(updateCount, tickDelay);
       } else {
         counter.innerText = target;
       }
