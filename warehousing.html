@@ -1171,9 +1171,9 @@
                 <!-- Logo - Clickable -->
                 <img alt="Liyana Logistics Logo" class="logo-img" onclick="window.location.href='/'"
                     src="images/logo.png" />
-                <h1><a href="/">Liyana Logistics <span>USA INC.</span><br>
+                <div class="site-title"><a href="/">Liyana Logistics <span>USA INC.</span><br>
                 <span class="small-text">Your Ultimate Logistics Partner</span></a>
-                </h1>
+                </div>
             </div>
             <div class="hamburger">
                 <i class="fas fa-bars"></i>
@@ -1958,7 +1958,8 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer"
+    <footer
+      class="footer"
       style="
         background-color: #002b6d !important;
         color: #fff;
@@ -1985,7 +1986,6 @@
                 font-size: 1.1rem;
                 font-weight: 600;
                 padding-bottom: 8px;
-                border-bottom: 2px solid #4a7fc8;
                 width: fit-content;
               "
             >
@@ -2034,7 +2034,7 @@
                 font-size: 1.1rem;
                 font-weight: 600;
                 padding-bottom: 8px;
-                border-bottom: 2px solid #4a7fc8;
+
                 width: fit-content;
               "
             >
@@ -2042,37 +2042,25 @@
             </h3>
             <ul style="list-style: none; padding: 0; margin-top: 20px">
               <li>
-                <a
-                  href="/" data-replace="Home"
-                  ><span>Home</span></a
-                >
+                <a href="/" data-replace="Home"><span>Home</span></a>
               </li>
               <li>
-                <a
-                  href="about.html"
-                  
-                  data-replace="About Us"
+                <a href="about.html" data-replace="About Us"
                   ><span>About Us</span></a
                 >
               </li>
               <li>
-                <a
-                  href="services.html"
-                  data-replace="Services"
+                <a href="services.html" data-replace="Services"
                   ><span>Services</span></a
                 >
               </li>
               <li>
-                <a
-                  href="request-quote.html"
-                  data-replace="Request Quote"
+                <a href="request-quote.html" data-replace="Request Quote"
                   ><span>Request Quote</span></a
                 >
               </li>
               <li>
-                <a
-                  href="contact.html"
-                  data-replace="Contact"
+                <a href="contact.html" data-replace="Contact"
                   ><span>Contact</span></a
                 >
               </li>
@@ -2086,7 +2074,6 @@
                 font-size: 1.1rem;
                 font-weight: 600;
                 padding-bottom: 8px;
-                border-bottom: 2px solid #4a7fc8;
                 width: fit-content;
               "
             >
@@ -2094,37 +2081,27 @@
             </h3>
             <ul style="list-style: none; padding: 0; margin-top: 20px">
               <li>
-                <a
-                  href="export-sea-air.html"
-                  data-replace="Export Sea / Air"
+                <a href="export-sea-air.html" data-replace="Export Sea / Air"
                   ><span>Export Sea / Air</span></a
                 >
               </li>
               <li>
-                <a
-                  href="import-sea-air.html"
-                  data-replace="Import Sea / Air"
+                <a href="import-sea-air.html" data-replace="Import Sea / Air"
                   ><span>Import Sea / Air</span></a
                 >
               </li>
               <li>
-                <a
-                  href="project-cargo.html"
-                  data-replace="Project Cargo"
+                <a href="project-cargo.html" data-replace="Project Cargo"
                   ><span>Project Cargo</span></a
                 >
               </li>
               <li>
-                <a
-                  href="warehousing.html"
-                  data-replace="Warehousing"
+                <a href="warehousing.html" data-replace="Warehousing"
                   ><span>Warehousing</span></a
                 >
               </li>
               <li>
-                <a
-                  href="custom-clearing.html"
-                  data-replace="Custom Clearing"
+                <a href="custom-clearing.html" data-replace="Custom Clearing"
                   ><span>Custom Clearing</span></a
                 >
               </li>
@@ -2138,13 +2115,13 @@
                 font-size: 1.1rem;
                 font-weight: 600;
                 padding-bottom: 8px;
-                border-bottom: 2px solid #4a7fc8;
                 width: fit-content;
               "
             >
               Contact Info
             </h3>
             <ul style="list-style: none; padding: 0; margin-top: 20px">
+             
               <li
                 style="
                   margin-bottom: 12px;
@@ -2155,12 +2132,22 @@
               >
                 <i
                   class="fas fa-map-marker-alt"
-                  style="min-width: 20px; margin-top: 4px"
+                  style="min-width: 20px; margin-top: 4px; color: white;"
                 ></i>
-                <div style="font-size: 0.9rem">
-                  600 Hillside Ave, New Hyde Park,<br />
-                  <span style="display: inline-block; padding-left: 2px"
-                    >NY 11040</span
+                <div>
+                  <a
+                    href=""
+                    onmouseout="this.style.color='#a4c8ff';"
+                    onmouseover="this.style.color='#4a7fc8';"
+                    style="
+                      color: #a4c8ff;
+                      text-decoration: none;
+                      transition: color 0.3s;
+                      font-size: 0.9rem;
+                      display: block;
+                      margin-bottom: 4px;
+                    "
+                    >600 Hillside Ave, New Hyde Park, NY 11040</a
                   >
                 </div>
               </li>
@@ -2174,15 +2161,15 @@
               >
                 <i
                   class="fas fa-phone-alt"
-                  style="min-width: 20px; margin-top: 4px"
+                  style="min-width: 20px; margin-top: 4px; color: white"
                 ></i>
                 <div>
                   <a
                     href="tel:+19176519824"
-                    onmouseout="this.style.color='#fff';"
+                    onmouseout="this.style.color='#a4c8ff';"
                     onmouseover="this.style.color='#4a7fc8';"
                     style="
-                      color: #fff;
+                      color: #a4c8ff;
                       text-decoration: none;
                       transition: color 0.3s;
                       font-size: 0.9rem;
@@ -2193,10 +2180,10 @@
                   >
                   <a
                     href="tel:+15166541145"
-                    onmouseout="this.style.color='#fff';"
+                    onmouseout="this.style.color='#a4c8ff';"
                     onmouseover="this.style.color='#4a7fc8';"
                     style="
-                      color: #fff;
+                      color: #a4c8ff;
                       text-decoration: none;
                       transition: color 0.3s;
                       font-size: 0.9rem;
@@ -2215,15 +2202,15 @@
               >
                 <i
                   class="fas fa-envelope"
-                  style="min-width: 20px; margin-top: 4px"
+                  style="min-width: 20px; margin-top: 4px; color: white"
                 ></i>
                 <div>
                   <a
                     href="mailto:info@liyanausa.com"
-                    onmouseout="this.style.color='#fff';"
+                    onmouseout="this.style.color='#a4c8ff';"
                     onmouseover="this.style.color='#4a7fc8';"
                     style="
-                      color: #fff;
+                      color: #a4c8ff;
                       text-decoration: none;
                       transition: color 0.3s;
                       font-size: 0.9rem;
@@ -2234,10 +2221,10 @@
                   >
                   <a
                     href="mailto:llus@liyanalogistics.com"
-                    onmouseout="this.style.color='#fff';"
+                    onmouseout="this.style.color='#a4c8ff';"
                     onmouseover="this.style.color='#4a7fc8';"
                     style="
-                      color: #fff;
+                      color: #a4c8ff;
                       text-decoration: none;
                       transition: color 0.3s;
                       font-size: 0.9rem;

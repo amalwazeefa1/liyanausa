@@ -16,698 +16,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Chilanka&family=Italianno&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./style.css">
     <style>
-        /* Global Styles - Same as other pages */
-        :root {
-            --primary-blue: #1a3c6e;
-            --secondary-blue: #2a5ba0;
-            --accent-blue: #4a7fc8;
-            --light-blue: #e6f0ff;
-            --light-gray: #f5f7fa;
-            --medium-gray: #e1e5eb;
-            --dark-gray: #6c757d;
-            --white: #ffffff;
-            --text-dark: #333333;
-            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            --transition: all 0.3s ease;
-            --card-bg: #fff;
-            --card-border: #e6e9ee;
-            --accent: #2b6cb0;
-            --text: #1f2937;
-            --muted: #6b7280;
-            --gap: 18px;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            background-color: var(--white);
-            overflow-x: hidden;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4 {
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 1rem;
-        }
-
-        h1 {
-            font-size: 2.8rem;
-        }
-
-        h2 {
-            font-size: 2.2rem;
-            margin-bottom: 2rem;
-            position: relative;
-        }
-
-        h2.center-heading {
-            text-align: center;
-        }
-
-        h2.center-heading:after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background-color: var(--accent-blue);
-        }
-
-        h3 {
-            font-size: 1.5rem;
-        }
-
-        p {
-            margin-bottom: 1rem;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 28px;
-            border-radius: 4px;
-            font-weight: 600;
-            text-align: center;
-            cursor: pointer;
-            transition: var(--transition);
-            border: none;
-            font-size: 1rem;
-        }
-
-        .btn-primary {
-            background-color: var(--primary-blue);
-            color: var(--white);
-        }
-
-        .btn-primary:hover {
-            background-color: var(--secondary-blue);
-            transform: translateY(-3px);
-            box-shadow: var(--shadow);
-        }
-
-        .btn-secondary {
-            background-color: var(--white);
-            color: var(--primary-blue);
-            border: 2px solid var(--primary-blue);
-        }
-
-        .btn-secondary:hover {
-            background-color: var(--primary-blue);
-            color: var(--white);
-            transform: translateY(-3px);
-            box-shadow: var(--shadow);
-        }
-
-        section {
-            padding: 80px 0;
-        }
-
-        .section-light {
-            background-color: var(--white);
-        }
-
-        .section-gray {
-            background-color: var(--light-gray);
-        }
-
-        /* Header & Navigation - Same as other pages */
-        header {
-            background-color: var(--white);
-            box-shadow: var(--shadow);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-
-        .logo-img {
-            height: 50px;
-            width: auto;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .logo-img:hover {
-            transform: scale(1.05);
-        }
-
-        .logo h1 {
-            line-height: 0.8;
-            font-size: 1.5rem;
-            margin-bottom: 0;
-            color: var(--primary-blue);
-            margin-left: 10px;
-        }
-
-        .small-text {
-        font-weight: 600 !important;
-        font-size: 18px;
-        font-family: "Italianno", cursive;
-        color: unset !important;
-        color: black !important;
-      }
-
-        .logo span {
-            color: var(--accent-blue);
-        }
-
-        .nav-menu {
-            display: flex;
-            align-items: center;
-        }
-
-        .nav-menu li {
-            margin-left: 25px;
-            position: relative;
-        }
-
-        .nav-menu a {
-            font-weight: 600;
-            transition: var(--transition);
-            position: relative;
-        }
-
-        .nav-menu a:hover {
-            color: var(--accent-blue);
-        }
-
-        .nav-menu a.active {
-            color: var(--accent-blue);
-        }
-
-        .nav-menu a:after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--accent-blue);
-            transition: var(--transition);
-        }
-
-        .nav-menu a:hover:after,
-        .nav-menu a.active:after {
-            width: 100%;
-        }
-
-        /* Dropdown Menu */
-        .dropdown {
-            position: relative;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: var(--white);
-            width: 500px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-            border-radius: 4px;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 15px;
-        }
-
-        .dropdown-content-wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-        }
-
-        .dropdown-column {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .dropdown-content a {
-            color: var(--text-dark);
-            padding: 10px 15px;
-            text-decoration: none;
-            display: block;
-            transition: var(--transition);
-            border-radius: 4px;
-        }
-
-        .dropdown-content a:hover {
-            background-color: var(--light-gray);
-            color: var(--accent-blue);
-            transform: translateX(5px);
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        .hamburger {
-            display: none;
-            cursor: pointer;
-            font-size: 1.5rem;
-            color: var(--primary-blue);
-        }
-
-        /* Hero Section */
-        .service-hero {
-            background: linear-gradient(rgba(26, 60, 110, 0.8), rgba(26, 60, 110, 0.8)), url('https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
-            background-size: cover;
-            background-position: center;
-            color: var(--white);
-            padding: 120px 0 80px;
-            text-align: center;
-            margin-top: 70px;
-        }
-
-        .service-hero h1 {
-            font-size: 3.2rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .service-hero p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 2.5rem;
-        }
-
-        /* Breadcrumb */
-        .breadcrumb {
-            background-color: var(--light-gray);
-            padding: 15px 0;
-            margin-bottom: 0;
-        }
-
-        .breadcrumb-links {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 0.9rem;
-        }
-
-        .breadcrumb-links a {
-            color: var(--dark-gray);
-            transition: var(--transition);
-        }
-
-        .breadcrumb-links a:hover {
-            color: var(--accent-blue);
-        }
-
-        .breadcrumb-links i {
-            font-size: 0.8rem;
-            color: var(--dark-gray);
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--primary-blue);
-            color: var(--white);
-            padding: 60px 0 30px;
-        }
-
-        .footer-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-col h3 {
-            color: var(--white);
-            margin-bottom: 25px;
-            position: relative;
-            padding-bottom: 10px;
-        }
-
-        .footer-col h3:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 40px;
-            height: 3px;
-            background-color: var(--accent-blue);
-        }
-
-        .footer-links li {
-            margin-bottom: 12px;
-        }
-
-        .footer-links a {
-            transition: var(--transition);
-        }
-
-        .footer-links a:hover {
-            color: var(--accent-blue);
-            padding-left: 5px;
-        }
-
-        .contact-link {
-            color: var(--white);
-            transition: var(--transition);
-            display: flex;
-            align-items: flex-start;
-        }
-
-        .contact-link:hover {
-            color: var(--accent-blue);
-        }
-
-        .contact-link i {
-            margin-right: 10px;
-            width: 20px;
-            margin-top: 3px;
-        }
-
-        .contact-details {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .footer-social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .footer-social-links a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            transition: var(--transition);
-        }
-
-        .footer-social-links a:hover {
-            background-color: var(--accent-blue);
-            transform: translateY(-3px);
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 0.9rem;
-        }
-
-        /* Back to Top Button */
-        .back-to-top {
-            position: fixed;
-            bottom: 90px;
-            right: 30px;
-            width: 50px;
-            height: 50px;
-            background-color: var(--primary-blue);
-            color: var(--white);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            cursor: pointer;
-            opacity: 0;
-            visibility: hidden;
-            transition: var(--transition);
-            z-index: 999;
-        }
-
-        .back-to-top.active {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .back-to-top:hover {
-            background-color: var(--secondary-blue);
-            transform: translateY(-5px);
-        }
-
-        /* WhatsApp Button */
-        .whatsapp-float {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25d366;
-            color: #FFF;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 2px 2px 3px #999;
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: var(--transition);
-        }
-
-        .whatsapp-float:hover {
-            background-color: #128C7E;
-            transform: scale(1.1);
-        }
-
-        /* Terms & Conditions Styles */
-        .terms-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 40px;
-            background-color: var(--white);
-            border-radius: 8px;
-            box-shadow: var(--shadow);
-        }
-
-        .terms-header {
-            text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid var(--medium-gray);
-        }
-
-        .terms-header h1 {
-            color: var(--primary-blue);
-            margin-bottom: 10px;
-        }
-
-        .effective-date {
-            color: var(--dark-gray);
-            font-style: italic;
-            margin-bottom: 20px;
-        }
-
-        .terms-content h2 {
-            color: var(--primary-blue);
-            font-size: 1.8rem;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid var(--light-gray);
-        }
-
-        .terms-content h3 {
-            color: var(--secondary-blue);
-            font-size: 1.3rem;
-            margin-top: 25px;
-            margin-bottom: 10px;
-        }
-
-        .terms-content p {
-            margin-bottom: 15px;
-            line-height: 1.7;
-        }
-
-        .terms-content ul {
-            margin: 15px 0;
-            padding-left: 20px;
-        }
-
-        .terms-content li {
-            margin-bottom: 10px;
-            position: relative;
-            padding-left: 20px;
-        }
-
-        .terms-content li:before {
-            content: "•";
-            color: var(--accent-blue);
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
-
-        .note-box {
-            background-color: var(--light-blue);
-            border-left: 4px solid var(--accent-blue);
-            padding: 15px 20px;
-            margin: 20px 0;
-            border-radius: 4px;
-        }
-
-        .note-box p {
-            margin-bottom: 0;
-        }
-
-        .contact-info-box {
-            background-color: var(--light-gray);
-            padding: 25px;
-            border-radius: 8px;
-            margin-top: 30px;
-        }
-
-        .contact-info-box h3 {
-            margin-top: 0;
-            color: var(--primary-blue);
-        }
-
-        /* Responsive Styles */
-        @media (max-width: 992px) {
-            h1 {
-                font-size: 2.4rem;
-            }
-
-            h2 {
-                font-size: 2rem;
-            }
-
-            .dropdown-content {
-                width: 400px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .header-container {
-                padding: 15px;
-            }
-
-            .nav-menu {
-                position: fixed;
-                top: 70px;
-                right: -100%;
-                background-color: var(--white);
-                width: 80%;
-                height: calc(100vh - 70px);
-                flex-direction: column;
-                align-items: center;
-                padding-top: 50px;
-                transition: var(--transition);
-                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-                overflow-y: auto;
-            }
-
-            .nav-menu.active {
-                right: 0;
-            }
-
-            .nav-menu li {
-                margin: 0 0 30px 0;
-            }
-
-            .dropdown-content {
-                position: static;
-                box-shadow: none;
-                display: none;
-                background-color: var(--light-gray);
-                margin-top: 10px;
-                border-radius: 4px;
-                width: 100%;
-                transform: none;
-                left: 0;
-            }
-
-            .dropdown.active .dropdown-content {
-                display: block;
-            }
-
-            .hamburger {
-                display: block;
-            }
-
-            .service-hero h1 {
-                font-size: 2.5rem;
-            }
-
-            section {
-                padding: 60px 0;
-            }
-
-            .dropdown-content-wrapper {
-                grid-template-columns: 1fr;
-            }
-
-            .terms-container {
-                padding: 25px;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .service-hero h1 {
-                font-size: 2rem;
-            }
-
-            .service-hero p {
-                font-size: 1rem;
-            }
-
-            .whatsapp-float {
-                width: 50px;
-                height: 50px;
-                font-size: 24px;
-            }
-
-            .terms-container {
-                padding: 20px;
-            }
-        }
+        
     </style>
 </head>
 
@@ -724,9 +33,9 @@
                 <!-- Logo - Clickable -->
                 <img alt="Liyana Logistics Logo" class="logo-img" onclick="window.location.href='/'"
                     src="images/logo.png" />
-                <h1><a href="/">Liyana Logistics <span>USA INC.</span><br>
+                <div class="site-title"><a href="/">Liyana Logistics <span>USA INC.</span><br>
                 <span class="small-text">Your Ultimate Logistics Partner</span></a>
-                </h1>
+                </div>
             </div>
             <div class="hamburger">
                 <i class="fas fa-bars"></i>
@@ -990,7 +299,8 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer"
+    <footer
+      class="footer"
       style="
         background-color: #002b6d !important;
         color: #fff;
@@ -1017,7 +327,6 @@
                 font-size: 1.1rem;
                 font-weight: 600;
                 padding-bottom: 8px;
-                border-bottom: 2px solid #4a7fc8;
                 width: fit-content;
               "
             >
@@ -1066,7 +375,7 @@
                 font-size: 1.1rem;
                 font-weight: 600;
                 padding-bottom: 8px;
-                border-bottom: 2px solid #4a7fc8;
+
                 width: fit-content;
               "
             >
@@ -1074,37 +383,25 @@
             </h3>
             <ul style="list-style: none; padding: 0; margin-top: 20px">
               <li>
-                <a
-                  href="/" data-replace="Home"
-                  ><span>Home</span></a
-                >
+                <a href="/" data-replace="Home"><span>Home</span></a>
               </li>
               <li>
-                <a
-                  href="about.html"
-                  
-                  data-replace="About Us"
+                <a href="about.html" data-replace="About Us"
                   ><span>About Us</span></a
                 >
               </li>
               <li>
-                <a
-                  href="services.html"
-                  data-replace="Services"
+                <a href="services.html" data-replace="Services"
                   ><span>Services</span></a
                 >
               </li>
               <li>
-                <a
-                  href="request-quote.html"
-                  data-replace="Request Quote"
+                <a href="request-quote.html" data-replace="Request Quote"
                   ><span>Request Quote</span></a
                 >
               </li>
               <li>
-                <a
-                  href="contact.html"
-                  data-replace="Contact"
+                <a href="contact.html" data-replace="Contact"
                   ><span>Contact</span></a
                 >
               </li>
@@ -1118,7 +415,6 @@
                 font-size: 1.1rem;
                 font-weight: 600;
                 padding-bottom: 8px;
-                border-bottom: 2px solid #4a7fc8;
                 width: fit-content;
               "
             >
@@ -1126,37 +422,27 @@
             </h3>
             <ul style="list-style: none; padding: 0; margin-top: 20px">
               <li>
-                <a
-                  href="export-sea-air.html"
-                  data-replace="Export Sea / Air"
+                <a href="export-sea-air.html" data-replace="Export Sea / Air"
                   ><span>Export Sea / Air</span></a
                 >
               </li>
               <li>
-                <a
-                  href="import-sea-air.html"
-                  data-replace="Import Sea / Air"
+                <a href="import-sea-air.html" data-replace="Import Sea / Air"
                   ><span>Import Sea / Air</span></a
                 >
               </li>
               <li>
-                <a
-                  href="project-cargo.html"
-                  data-replace="Project Cargo"
+                <a href="project-cargo.html" data-replace="Project Cargo"
                   ><span>Project Cargo</span></a
                 >
               </li>
               <li>
-                <a
-                  href="warehousing.html"
-                  data-replace="Warehousing"
+                <a href="warehousing.html" data-replace="Warehousing"
                   ><span>Warehousing</span></a
                 >
               </li>
               <li>
-                <a
-                  href="custom-clearing.html"
-                  data-replace="Custom Clearing"
+                <a href="custom-clearing.html" data-replace="Custom Clearing"
                   ><span>Custom Clearing</span></a
                 >
               </li>
@@ -1170,13 +456,13 @@
                 font-size: 1.1rem;
                 font-weight: 600;
                 padding-bottom: 8px;
-                border-bottom: 2px solid #4a7fc8;
                 width: fit-content;
               "
             >
               Contact Info
             </h3>
             <ul style="list-style: none; padding: 0; margin-top: 20px">
+             
               <li
                 style="
                   margin-bottom: 12px;
@@ -1187,12 +473,22 @@
               >
                 <i
                   class="fas fa-map-marker-alt"
-                  style="min-width: 20px; margin-top: 4px"
+                  style="min-width: 20px; margin-top: 4px; color: white;"
                 ></i>
-                <div style="font-size: 0.9rem">
-                  600 Hillside Ave, New Hyde Park,<br />
-                  <span style="display: inline-block; padding-left: 2px"
-                    >NY 11040</span
+                <div>
+                  <a
+                    href=""
+                    onmouseout="this.style.color='#a4c8ff';"
+                    onmouseover="this.style.color='#4a7fc8';"
+                    style="
+                      color: #a4c8ff;
+                      text-decoration: none;
+                      transition: color 0.3s;
+                      font-size: 0.9rem;
+                      display: block;
+                      margin-bottom: 4px;
+                    "
+                    >600 Hillside Ave, New Hyde Park, NY 11040</a
                   >
                 </div>
               </li>
@@ -1206,15 +502,15 @@
               >
                 <i
                   class="fas fa-phone-alt"
-                  style="min-width: 20px; margin-top: 4px"
+                  style="min-width: 20px; margin-top: 4px; color: white"
                 ></i>
                 <div>
                   <a
                     href="tel:+19176519824"
-                    onmouseout="this.style.color='#fff';"
+                    onmouseout="this.style.color='#a4c8ff';"
                     onmouseover="this.style.color='#4a7fc8';"
                     style="
-                      color: #fff;
+                      color: #a4c8ff;
                       text-decoration: none;
                       transition: color 0.3s;
                       font-size: 0.9rem;
@@ -1225,10 +521,10 @@
                   >
                   <a
                     href="tel:+15166541145"
-                    onmouseout="this.style.color='#fff';"
+                    onmouseout="this.style.color='#a4c8ff';"
                     onmouseover="this.style.color='#4a7fc8';"
                     style="
-                      color: #fff;
+                      color: #a4c8ff;
                       text-decoration: none;
                       transition: color 0.3s;
                       font-size: 0.9rem;
@@ -1247,15 +543,15 @@
               >
                 <i
                   class="fas fa-envelope"
-                  style="min-width: 20px; margin-top: 4px"
+                  style="min-width: 20px; margin-top: 4px; color: white"
                 ></i>
                 <div>
                   <a
                     href="mailto:info@liyanausa.com"
-                    onmouseout="this.style.color='#fff';"
+                    onmouseout="this.style.color='#a4c8ff';"
                     onmouseover="this.style.color='#4a7fc8';"
                     style="
-                      color: #fff;
+                      color: #a4c8ff;
                       text-decoration: none;
                       transition: color 0.3s;
                       font-size: 0.9rem;
@@ -1266,10 +562,10 @@
                   >
                   <a
                     href="mailto:llus@liyanalogistics.com"
-                    onmouseout="this.style.color='#fff';"
+                    onmouseout="this.style.color='#a4c8ff';"
                     onmouseover="this.style.color='#4a7fc8';"
                     style="
-                      color: #fff;
+                      color: #a4c8ff;
                       text-decoration: none;
                       transition: color 0.3s;
                       font-size: 0.9rem;
