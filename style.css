@@ -2634,6 +2634,7 @@ footer {
   font-weight: 700;
   margin: 0 auto 20px;
   border: 7px solid #32609e;
+  transition: all 0.3s ease-in-out;
 }
 
 /* Contact Form */
@@ -3208,6 +3209,8 @@ footer {
 
 /* Contact Form */
 .contact-form {
+  position: relative;
+  z-index: 0;
   background-color: var(--white);
   padding: 40px;
   box-shadow: var(--shadow);
@@ -4043,6 +4046,8 @@ header {
 
 /* Contact Form */
 .contact-form {
+  position: relative;
+  z-index: 0;
   background-color: var(--white);
   padding: 40px;
   box-shadow: var(--shadow);
@@ -4965,6 +4970,8 @@ header {
 
 /* Contact Form */
 .contact-form {
+  position: relative;
+  z-index: 0;
   background-color: var(--white);
   padding: 40px;
   box-shadow: var(--shadow);
@@ -5714,6 +5721,8 @@ footer {
 
 /* Contact Form */
 .contact-form {
+  position: relative;
+  z-index: 0;
   background-color: var(--white);
   padding: 40px;
   box-shadow: var(--shadow);
@@ -6451,6 +6460,8 @@ footer {
 
 /* Contact Form */
 .contact-form {
+  position: relative;
+  z-index: 0;
   background-color: var(--white);
   padding: 40px;
   box-shadow: var(--shadow);
@@ -7433,6 +7444,8 @@ header {
 
 /* Contact Form */
 .contact-form {
+  position: relative;
+  z-index: 0;
   background-color: var(--white);
   padding: 40px;
   box-shadow: var(--shadow);
@@ -8489,6 +8502,8 @@ header {
 
 /* Contact Form */
 .contact-form {
+  position: relative;
+  z-index: 0;
   background-color: var(--white);
   padding: 40px;
   box-shadow: var(--shadow);
@@ -9345,6 +9360,8 @@ header {
 
 /* Contact Form */
 .contact-form {
+  position: relative;
+  z-index: 0;
   background-color: var(--white);
   padding: 40px;
   box-shadow: var(--shadow);
@@ -10245,6 +10262,8 @@ header {
 
 /* Contact Form */
 .contact-form {
+  position: relative;
+  z-index: 0;
   background-color: var(--white);
   padding: 40px;
   box-shadow: var(--shadow);
@@ -10873,6 +10892,8 @@ footer {
 
 /* Contact Form */
 .contact-form {
+  position: relative;
+  z-index: 0;
   background-color: var(--white);
   padding: 40px;
   box-shadow: var(--shadow);
@@ -11125,6 +11146,7 @@ footer {
 }
 
 /* Quote Process Steps */
+
 .quote-process {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -11151,7 +11173,12 @@ footer {
   font-weight: 700;
   margin: 0 auto 20px;
   border: 7px solid #32609e;
+  color: #b5e1ffc4;
   transition: all 0.3s ease-in-out;
+}
+
+.process-step:hover .step-number {
+  color: white;
 }
 
 /* Service Cards */
@@ -11430,6 +11457,8 @@ footer {
 
 /* Contact Form */
 .contact-form {
+  position: relative;
+  z-index: 0;
   background-color: var(--white);
   padding: 40px;
   box-shadow: var(--shadow);
@@ -13736,7 +13765,6 @@ footer {
         z-index: 100 !important;
         background-color: var(--white);
         padding: 30px;
-        border-radius: 8px;
         box-shadow: var(--shadow);
         transition: var(--transition);
       }
@@ -13747,7 +13775,6 @@ footer {
         left: -10px;
         height: 100%;
         width: 100%;
-        border-radius: 8px;
         /* border: 1px solid #1a3c6e; */
         border: 1px solid transparent;
         z-index: -1 !important;
