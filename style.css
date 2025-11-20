@@ -340,6 +340,7 @@ section {
 
 .section-light {
   position: relative;
+  z-index: 0;
   background-color: var(--white);
 }
 
@@ -1963,6 +1964,8 @@ footer {
 /* ABOUT PAGE_______________________________________________________________________________________ */
 /* Hero Section */
 .about-hero {
+  position: relative;
+  z-index: 0;
   background: linear-gradient(rgba(26, 60, 110, 0.8), rgba(26, 60, 110, 0.8)),
     url("./images/about-us.jpg");
   background-size: cover;
@@ -2140,7 +2143,6 @@ footer {
 
 .team-card {
   background-color: var(--white);
-  border-radius: 8px;
   overflow: hidden;
   box-shadow: var(--shadow);
   transition: var(--transition);
@@ -2234,7 +2236,6 @@ footer {
 .certification-item {
   background-color: var(--white);
   padding: 20px;
-  border-radius: 8px;
   box-shadow: var(--shadow);
   text-align: center;
   transition: var(--transition);
@@ -2254,6 +2255,8 @@ footer {
 /* SERVICES PAGE__________________________________________________________________________________________ */
 /* Hero Section */
 .services-hero {
+  position: relative;
+  z-index: 0;
   background: linear-gradient(rgba(26, 60, 110, 0.8), rgba(26, 60, 110, 0.8)),
     url("./images/contact-us.avif") !important;
   background-size: cover;
@@ -3789,6 +3792,8 @@ section {
 }
 
 .section-light {
+  position: relative;
+  z-index: 0;
   background-color: var(--white);
 }
 
@@ -4709,6 +4714,8 @@ section {
 }
 
 .section-light {
+  position: relative;
+  z-index: 0;
   background-color: var(--white);
 }
 
@@ -7167,6 +7174,8 @@ section {
 }
 
 .section-light {
+  position: relative;
+  z-index: 0;
   background-color: var(--white);
 }
 
@@ -8132,6 +8141,8 @@ section {
 }
 
 .section-light {
+  position: relative;
+  z-index: 0;
   background-color: var(--white);
 }
 
@@ -9083,6 +9094,8 @@ section {
 }
 
 .section-light {
+  position: relative;
+  z-index: 0;
   background-color: var(--white);
 }
 
@@ -9981,6 +9994,8 @@ section {
 }
 
 .section-light {
+  position: relative;
+  z-index: 0;
   background-color: var(--white);
 }
 
@@ -11825,6 +11840,7 @@ footer {
 }
 
 .section-light {
+  z-index: 0;
   position: relative;
 }
 .section-light .global-branches-image {
@@ -12151,6 +12167,8 @@ section {
 }
 
 .section-light {
+  position: relative;
+  z-index: 0;
   background-color: var(--white);
 }
 
@@ -12819,6 +12837,8 @@ section {
 }
 
 .section-light {
+  position: relative;
+  z-index: 0;
   background-color: var(--white);
 }
 
@@ -13368,6 +13388,8 @@ footer {
 /* TERMS AND CONDITIONS PAGE END */
 
 
+/* WAREHOUSING PAGE__________________________________________________________________________________ */
+
         /* Global Styles */
         :root {
             --primary-blue: #1a3c6e;
@@ -13492,6 +13514,8 @@ footer {
         }
 
         .section-light {
+          position: relative;
+  z-index: 0;
             background-color: var(--white);
         }
 
@@ -14474,3 +14498,4 @@ footer {
             }
         }
     
+        /* WAREHOUSING PAGE END__________________________________________________________________________ */
