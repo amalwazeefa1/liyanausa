@@ -1272,17 +1272,16 @@ footer {
   color: var(--text-dark);
   transition: background-color 0.3s ease, color 0.3s ease !important;
 }
-.service-tile:before {
+/* .service-tile:before {
   position: absolute;
   content: "";
   top: -10px;
   left: -10px;
   height: 100%;
   width: 100%;
-  /* border: 1px solid #1a3c6e; */
   border: 1px solid transparent;
   z-index: 1 !important;
-}
+} */
 .service-tile.white:hover {
   background-color: var(--primary-blue);
   color: var(--light-blue);
@@ -1302,9 +1301,20 @@ footer {
   box-shadow: 0 15px 35px rgba(26, 60, 110, 0.2);
 }
 
-.service-tile.white:hover::before {
-  border-color: var(--accent-blue);
+.service-tile:hover::before {
+  position: absolute;
+  content: "";
+  top: -10px;
+  left: -10px;
+  height: 100%;
+  width: 100%;
+  border: 1px solid transparent;
+  z-index: -1 !important;
+  border-color: var(--white);
+  border-color: #1a3c6e;
+  transition: all 5s ease 2s;
 }
+
 
 .services-cta {
   text-align: center;
@@ -1400,7 +1410,6 @@ footer {
 .highlight-item {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
   opacity: 0;
   transform: translateY(30px);
 }
@@ -1442,7 +1451,7 @@ footer {
 .why-choose-item {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   opacity: 0;
   transform: translateY(30px);
 }
@@ -2160,7 +2169,6 @@ footer {
 .highlight-item {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
 }
 
 .highlight-icon {
@@ -5237,7 +5245,6 @@ footer {
 }
 
 .btn-secondary:hover {
-  background: var(--light-blue);
   color: var(--primary-blue);
 }
 
@@ -5430,6 +5437,7 @@ footer {
   background: var(--light-blue);
   border-radius: 12px;
   transition: var(--transition);
+  margin-bottom: 20px;
 }
 
 .about-highlights .highlight-item:hover {
@@ -5498,7 +5506,6 @@ footer {
 .why-choose-list {
   display: flex;
   flex-direction: column;
-  gap: 25px;
 }
 
 .why-choose-item {
@@ -16593,14 +16600,14 @@ footer {
   margin-top: 40px;
 }
 
-.btn-submit {
+/* .btn-submit {
   padding: 15px 40px;
   font-size: 1.1rem;
   display: inline-flex;
   align-items: center;
   gap: 10px;
   transition: var(--transition);
-}
+} */
 
 .btn-submit i {
   transition: transform 0.3s ease;
