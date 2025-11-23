@@ -1279,10 +1279,9 @@ footer {
   left: -10px;
   height: 100%;
   width: 100%;
-  border-radius: 8px;
   /* border: 1px solid #1a3c6e; */
   border: 1px solid transparent;
-  z-index: -1 !important;
+  z-index: 1 !important;
 }
 .service-tile.white:hover {
   background-color: var(--primary-blue);
@@ -5552,7 +5551,6 @@ footer {
 
 .why-choose-image .image-wrapper {
   position: relative;
-  border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
   transition: var(--transition);
@@ -5584,7 +5582,6 @@ footer {
 
 .industry-card {
   position: relative;
-  border-radius: 16px;
   overflow: hidden;
   min-height: 280px;
   transition: var(--transition);
