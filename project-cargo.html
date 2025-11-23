@@ -129,6 +129,7 @@
         <div class="container">
           <div class="service-overview">
             <div class="service-content">
+              <span class="section-label">Our Expertise</span>
               <h2>Specialized Project Cargo Solutions</h2>
               <p>
                 At Liyana Logistics, we specialize in handling complex project
@@ -143,42 +144,30 @@
                 logistics solutions tailored to your project's unique
                 requirements and timeline.
               </p>
-              <div
-                style="
-                  display: flex;
-                  gap: 15px;
-                  margin-top: 30px;
-                  flex-wrap: wrap;
-                "
-              >
-                <div style="display: flex; align-items: center">
-                  <i
-                    class="fas fa-check"
-                    style="color: var(--accent-blue); margin-right: 10px"
-                  ></i>
+              <div class="service-highlights">
+                <div class="highlight-item">
+                  <i class="fas fa-check-circle"></i>
                   <span>Oversized & Heavy Lift Expertise</span>
                 </div>
-                <div style="display: flex; align-items: center">
-                  <i
-                    class="fas fa-check"
-                    style="color: var(--accent-blue); margin-right: 10px"
-                  ></i>
+                <div class="highlight-item">
+                  <i class="fas fa-check-circle"></i>
                   <span>End-to-End Project Management</span>
                 </div>
-                <div style="display: flex; align-items: center">
-                  <i
-                    class="fas fa-check"
-                    style="color: var(--accent-blue); margin-right: 10px"
-                  ></i>
+                <div class="highlight-item">
+                  <i class="fas fa-check-circle"></i>
                   <span>Global Project Experience</span>
                 </div>
               </div>
             </div>
             <div class="service-image">
-              <img
-                src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                alt="Project Cargo Logistics - Heavy equipment transport"
-              />
+              <div class="image-wrapper">
+                <img
+                  src="./images/specialised-cargo-solutions.jpg"
+                  alt="Project Cargo Logistics - Heavy equipment transport"
+                  loading="lazy"
+                />
+                <div class="image-overlay"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -236,8 +225,9 @@
       <!-- Industry Sectors -->
       <section class="section-light">
         <div class="container">
+          <span class="section-label center-label">Industries</span>
           <h2 class="center-heading">Industry Sectors We Serve</h2>
-          <p style="text-align: center; max-width: 800px; margin: 0 auto 40px">
+          <p class="section-description">
             We provide specialized project cargo solutions for various
             industrial sectors with tailored approaches for each industry's
             unique requirements.
@@ -310,6 +300,7 @@
       <!-- Service Options -->
       <section class="section-gray">
         <div class="container">
+          <span class="section-label center-label">Solutions</span>
           <h2 class="center-heading">Our Project Cargo Solutions</h2>
           <div class="service-options">
             <!-- Heavy Lift Option -->
@@ -339,8 +330,8 @@
                     <i class="fas fa-check"></i> On-site Technical Supervision
                   </li>
                 </ul>
-                <div style="text-align: center; margin-top: 20px">
-                  <a href="#inquiry" class="btn btn-primary" style="width: 100%"
+                <div class="option-card-footer">
+                  <a href="#inquiry" class="btn btn-primary btn-block"
                     >Get Heavy Lift Quote</a
                   >
                 </div>
@@ -375,8 +366,8 @@
                     <i class="fas fa-check"></i> Comprehensive Documentation
                   </li>
                 </ul>
-                <div style="text-align: center; margin-top: 20px">
-                  <a href="#inquiry" class="btn btn-primary" style="width: 100%"
+                <div class="option-card-footer">
+                  <a href="#inquiry" class="btn btn-primary btn-block"
                     >Get Project Management Quote</a
                   >
                 </div>
@@ -389,54 +380,79 @@
       <!-- Equipment Section -->
       <section class="section-light">
         <div class="container">
+          <span class="section-label center-label">Capabilities</span>
           <h2 class="center-heading">Specialized Equipment & Capabilities</h2>
-          <p style="text-align: center; max-width: 800px; margin: 0 auto 40px">
+          <p class="section-description">
             We utilize advanced equipment and specialized solutions to handle
             the most complex project cargo requirements.
           </p>
 
           <div class="equipment-grid">
-            <div class="equipment-item blue-card">
-              <div class="equipment-icon">
-                <i class="fas fa-weight-hanging"></i>
+            <div class="equipment-card">
+              <div class="equipment-card-header">
+                <div class="equipment-icon-wrapper">
+                  <i class="fas fa-weight-hanging"></i>
+                </div>
+                <h4>Heavy Lift Cranes</h4>
               </div>
-              <h4>Heavy Lift Cranes</h4>
-              <p>Up to 1,000 tons capacity</p>
+              <div class="equipment-card-body">
+                <p>Up to 1,000 tons capacity</p>
+              </div>
             </div>
-            <div class="equipment-item blue-card">
-              <div class="equipment-icon">
-                <i class="fas fa-trailer"></i>
+            <div class="equipment-card">
+              <div class="equipment-card-header">
+                <div class="equipment-icon-wrapper">
+                  <i class="fas fa-trailer"></i>
+                </div>
+                <h4>Multi-Axle Trailers</h4>
               </div>
-              <h4>Multi-Axle Trailers</h4>
-              <p>For oversized road transport</p>
+              <div class="equipment-card-body">
+                <p>For oversized road transport</p>
+              </div>
             </div>
-            <div class="equipment-item blue-card">
-              <div class="equipment-icon">
-                <i class="fas fa-ship"></i>
+            <div class="equipment-card">
+              <div class="equipment-card-header">
+                <div class="equipment-icon-wrapper">
+                  <i class="fas fa-ship"></i>
+                </div>
+                <h4>Heavy Lift Vessels</h4>
               </div>
-              <h4>Heavy Lift Vessels</h4>
-              <p>Specialized project carriers</p>
+              <div class="equipment-card-body">
+                <p>Specialized project carriers</p>
+              </div>
             </div>
-            <div class="equipment-item blue-card">
-              <div class="equipment-icon">
-                <i class="fas fa-box-open"></i>
+            <div class="equipment-card">
+              <div class="equipment-card-header">
+                <div class="equipment-icon-wrapper">
+                  <i class="fas fa-box-open"></i>
+                </div>
+                <h4>Flat Rack Containers</h4>
               </div>
-              <h4>Flat Rack Containers</h4>
-              <p>For non-containerizable cargo</p>
+              <div class="equipment-card-body">
+                <p>For non-containerizable cargo</p>
+              </div>
             </div>
-            <div class="equipment-item blue-card">
-              <div class="equipment-icon">
-                <i class="fas fa-ruler-combined"></i>
+            <div class="equipment-card">
+              <div class="equipment-card-header">
+                <div class="equipment-icon-wrapper">
+                  <i class="fas fa-ruler-combined"></i>
+                </div>
+                <h4>Engineering Support</h4>
               </div>
-              <h4>Engineering Support</h4>
-              <p>Route surveys & planning</p>
+              <div class="equipment-card-body">
+                <p>Route surveys & planning</p>
+              </div>
             </div>
-            <div class="equipment-item blue-card">
-              <div class="equipment-icon">
-                <i class="fas fa-file-contract"></i>
+            <div class="equipment-card">
+              <div class="equipment-card-header">
+                <div class="equipment-icon-wrapper">
+                  <i class="fas fa-file-contract"></i>
+                </div>
+                <h4>Permit Management</h4>
               </div>
-              <h4>Permit Management</h4>
-              <p>All required documentation</p>
+              <div class="equipment-card-body">
+                <p>All required documentation</p>
+              </div>
             </div>
           </div>
         </div>
@@ -445,6 +461,7 @@
       <!-- Service Tabs -->
       <section class="section-gray">
         <div class="container">
+          <span class="section-label center-label">Services</span>
           <h2 class="center-heading">Project Cargo Service Details</h2>
           <div class="service-tabs">
             <div class="tab-buttons">
@@ -578,8 +595,9 @@
       <!-- Process Section - Updated -->
       <section class="section-light">
         <div class="container">
+          <span class="section-label center-label">Process</span>
           <h2 class="center-heading">Our Project Cargo Process</h2>
-          <p style="text-align: center; max-width: 800px; margin: 0 auto 50px">
+          <p class="section-description">
             We follow a comprehensive, engineering-driven process to ensure your
             complex project cargo reaches its destination safely and
             efficiently.
@@ -737,7 +755,7 @@
             </div>
           </div>
 
-          <div style="text-align: center; margin-top: 50px">
+          <div class="process-cta">
             <a href="#inquiry" class="btn btn-primary">Start Your Project</a>
           </div>
         </div>
@@ -746,8 +764,9 @@
       <!-- Global Coverage -->
       <section class="section-gray">
         <div class="container">
+          <span class="section-label center-label">Global Reach</span>
           <h2 class="center-heading">Global Project Experience</h2>
-          <p style="text-align: center; max-width: 800px; margin: 0 auto 40px">
+          <p class="section-description">
             We have successfully managed complex project cargo shipments across
             all continents with proven expertise in challenging environments.
           </p>
@@ -761,14 +780,7 @@
               project outcomes in even the most challenging locations.
             </p>
 
-            <div
-              style="
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                gap: 20px;
-                margin-top: 30px;
-              "
-            >
+            <div class="project-portfolio-grid">
               <div>
                 <h4>Energy Projects</h4>
                 <ul class="option-features">
@@ -821,11 +833,12 @@
       </section>
 
       <!-- Inquiry Section -->
-      <section id="inquiry" class="section-light">
+      <section id="inquiry" class="section-light inquiry-section">
         <div class="container">
-          <div style="max-width: 800px; margin: 0 auto">
+          <div class="inquiry-wrapper">
+            <span class="section-label center-label">Get Started</span>
             <h2 class="center-heading">Request Project Cargo Quote</h2>
-            <p style="text-align: center; margin-bottom: 40px">
+            <p class="section-description">
               Fill out the form below and our project cargo specialists will
               provide you with a comprehensive quote tailored to your specific
               project requirements.
@@ -929,13 +942,10 @@
                   <label for="timeline">Project Timeline & Requirements</label>
                   <textarea id="timeline" name="timeline"></textarea>
                 </div>
-                <div style="text-align: center">
-                  <button
-                    type="submit"
-                    class="btn btn-primary"
-                    style="padding: 15px 40px; font-size: 1.1rem"
-                  >
-                    Submit Project Quote Request
+                <div class="form-submit-wrapper">
+                  <button type="submit" class="btn btn-primary btn-submit">
+                    <span>Submit Project Quote Request</span>
+                    <i class="fas fa-arrow-right"></i>
                   </button>
                 </div>
               </form>
@@ -947,25 +957,22 @@
       <!-- CTA Section -->
       <section class="service-cta">
         <div class="container">
-          <h2 class="center-heading">Ready to Start Your Project?</h2>
-          <p>
-            Contact our project cargo specialists today for comprehensive
-            logistics solutions tailored to your complex project requirements.
-          </p>
-          <div
-            style="
-              display: flex;
-              gap: 20px;
-              justify-content: center;
-              flex-wrap: wrap;
-            "
-          >
-            <a href="tel:+19176519824" class="btn btn-primary">
-              <i class="fas fa-phone-alt"></i> Call Us Now
-            </a>
-            <a href="mailto:info@liyanalogistics.com" class="btn btn-secondary">
-              <i class="fas fa-envelope"></i> Email Us
-            </a>
+          <div class="cta-content">
+            <h2 class="center-heading">Ready to Start Your Project?</h2>
+            <p class="cta-description">
+              Contact our project cargo specialists today for comprehensive
+              logistics solutions tailored to your complex project requirements.
+            </p>
+            <div class="cta-buttons">
+              <a href="tel:+19176519824" class="btn btn-primary btn-cta">
+                <i class="fas fa-phone-alt"></i> 
+                <span>Call Us Now</span>
+              </a>
+              <a href="mailto:info@liyanalogistics.com" class="btn btn-secondary btn-cta">
+                <i class="fas fa-envelope"></i> 
+                <span>Email Us</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
