@@ -15779,7 +15779,6 @@ footer {
         .storage-type-card {
             background: var(--card-bg);
             border: 1px solid var(--card-border);
-            border-radius: 12px;
             padding: 18px;
             box-shadow: 0 2px 6px rgba(16, 24, 40, 0.04);
             min-height: 160px;
@@ -15790,6 +15789,7 @@ footer {
         }
 
         .storage-type-card:hover {
+          border: 1px solid #4a7fc8;
             transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
         }
