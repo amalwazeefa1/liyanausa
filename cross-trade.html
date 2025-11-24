@@ -24,7 +24,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
-     <style>
+     <!-- <style>
         /* Global Styles */
         :root {
             --primary-blue: #1a3c6e;
@@ -133,52 +133,6 @@
             display: block;
         }
 
-        .btn {
-            display: inline-block;
-            padding: 12px 28px;
-            border-radius: 4px;
-            font-weight: 600;
-            text-align: center;
-            cursor: pointer;
-            transition: var(--transition);
-            border: none;
-            font-size: 1rem;
-        }
-
-        .btn-primary {
-            background-color: var(--primary-blue);
-            color: var(--white);
-        }
-
-        .btn-primary:hover {
-            background-color: var(--secondary-blue);
-            transform: translateY(-3px);
-            box-shadow: var(--shadow);
-        }
-
-        .btn-secondary {
-            background-color: var(--white);
-            color: var(--primary-blue);
-            border: 2px solid var(--primary-blue);
-        }
-
-        .btn-secondary:hover {
-            background-color: var(--primary-blue);
-            color: var(--white);
-            transform: translateY(-3px);
-            box-shadow: var(--shadow);
-        }
-
-        .btn-cross-trade {
-            background-color: var(--cross-trade-purple);
-            color: var(--white);
-        }
-
-        .btn-cross-trade:hover {
-            background-color: var(--secondary-blue);
-            transform: translateY(-3px);
-            box-shadow: var(--shadow);
-        }
 
         section {
             padding: 80px 0;
@@ -791,21 +745,6 @@
             color: var(--primary-blue);
         }
 
-        /* Cross Trade Banner */
-        .cross-trade-banner {
-            background: linear-gradient(135deg, var(--cross-trade-purple), #5a3d8a);
-            color: white;
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
-            margin: 30px 0;
-            box-shadow: var(--shadow);
-        }
-
-        .cross-trade-banner i {
-            font-size: 2rem;
-            margin-bottom: 15px;
-        }
 
         /* Compliance Badges */
         .compliance-badges {
@@ -1159,7 +1098,7 @@
                 padding: 15px;
             }
         }
-    </style> 
+    </style>  -->
   </head>
 
   <body>
@@ -1255,7 +1194,7 @@
             Expert logistics solutions for international trade between third
             countries with streamlined documentation and compliance management.
           </p>
-          <a href="#inquiry" class="btn btn-primary btn-hero">Get Cross Trade Quote</a>
+          <a href="#inquiry" class="btn btn-primary">Get Cross Trade Quote</a>
         </div>
       </section>
 
@@ -1311,7 +1250,7 @@
             </div>
             <div class="service-image">
               <img
-                src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                src="./images/expert-cross-trade.webp"
                 alt="Cross Trade - International logistics between third countries"
               />
             </div>
@@ -1332,7 +1271,6 @@
 
           <div class="cross-trade-diagram">
             <div class="diagram-placeholder">
-              <i class="fas fa-project-diagram"></i>
             </div>
             <h3>Simplified Cross Trade Process</h3>
             <p>
@@ -1429,7 +1367,7 @@
                 requirements and compliance.
               </p>
             </div>
-            <div class="feature-card">
+            <div class="feature-card blue-card">
               <div class="feature-icon">
                 <i class="fas fa-hand-holding-usd"></i>
               </div>
@@ -1439,7 +1377,7 @@
                 multiple jurisdictions.
               </p>
             </div>
-            <div class="feature-card">
+            <div class="feature-card blue-card">
               <div class="feature-icon">
                 <i class="fas fa-balance-scale"></i>
               </div>
@@ -1641,7 +1579,7 @@
           <div class="service-options">
             <!-- Standard Cross Trade Service -->
             <div class="option-card">
-              <div class="option-header cross-trade-header">
+              <div class="option-header">
                 <h3>Standard Cross Trade</h3>
               </div>
               <div class="option-content">
@@ -1663,20 +1601,16 @@
                   <li><i class="fas fa-check"></i> Logistics coordination</li>
                   <li><i class="fas fa-check"></i> Basic reporting</li>
                 </ul>
-                <div style="text-align: center; margin-top: 20px;">
-                  <a
-                    href="#inquiry"
-                    class="btn btn-cross-trade"
-                    style="width: 100%"
-                    >Get Standard Quote</a
-                  >
+                <div class="option-card-footer">
+                  <a href="#inquiry" class="btn btn-primary" style="width: 100%"
+                    >Get Sea Import Quote</a>
                 </div>
               </div>
             </div>
 
             <!-- Premium Cross Trade Service -->
             <div class="option-card">
-              <div class="option-header cross-trade-header">
+              <div class="option-header">
                 <h3>Premium Cross Trade</h3>
               </div>
               <div class="option-content">
@@ -1704,13 +1638,9 @@
                     <i class="fas fa-check"></i> Detailed analytics & reporting
                   </li>
                 </ul>
-                <div style="text-align: center; margin-top: 20px">
-                  <a
-                    href="#inquiry"
-                    class="btn btn-cross-trade"
-                    style="width: 100%"
-                    >Get Premium Quote</a
-                  >
+                <div class="option-card-footer">
+                  <a href="#inquiry" class="btn btn-secondary" style="width: 100%"
+                    >Get Sea Import Quote</a>
                 </div>
               </div>
             </div>
@@ -2025,7 +1955,7 @@
           </div>
 
           <div style="text-align: center; margin-top: 50px">
-            <a href="#inquiry" class="btn btn-cross-trade"
+            <a href="#inquiry" class="btn btn-primary"
               >Start Your Cross Trade</a
             >
           </div>
@@ -2043,6 +1973,7 @@
 
           <div class="coverage-map">
             <div class="map-placeholder">
+              <img src="./images/global-cross-trade-expertise.jpg" alt="">
             </div>
             <h3>Our Cross Trade Network</h3>
             <p>
@@ -2196,7 +2127,7 @@
                 <div style="text-align: center">
                   <button
                     type="submit"
-                    class="btn btn-cross-trade"
+                    class="btn btn-primary"
                     style="padding: 15px 40px; font-size: 1.1rem"
                   >
                     Submit Cross Trade Quote Request
@@ -2414,7 +2345,7 @@
                 ></i>
                 <div>
                   <a
-                    href=""
+                    href="https://maps.app.goo.gl/mKgX7h9hEX2T1Nyk6"
                     onmouseout="this.style.color='#a4c8ff';"
                     onmouseover="this.style.color='#4a7fc8';"
                     style="
@@ -2425,7 +2356,7 @@
                       display: block;
                       margin-bottom: 4px;
                     "
-                    >600 Hillside Ave, New Hyde Park, NY 11040</a
+                    >89-85 212th Street Queens Village NY 11427 USA</a
                   >
                 </div>
               </li>
