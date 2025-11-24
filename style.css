@@ -4795,6 +4795,15 @@ footer {
   }
 }
 
+@media (max-width: 576px) {
+  .equipment-card-header {
+    align-items: start;
+  }
+  .equipment-card {
+    text-align: start;
+  }
+}
+
 /* Hero Section Enhancements */
 .service-hero {
   background: linear-gradient(
