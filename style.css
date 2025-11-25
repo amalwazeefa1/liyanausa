@@ -106,6 +106,10 @@ body {
   background-color: #d4def1;
 }
 
+.fa-phone-alt {
+  transform: scaleX(-1);
+}
+
 .container {
   width: 100%;
   max-width: 1200px;
@@ -7938,9 +7942,6 @@ footer {
   text-align: center;
   margin-top: 70px;
 }
-.service-hero {
-  
-}
 
 .service-hero h1 {
   font-size: 3.2rem;
@@ -12984,9 +12985,10 @@ footer {
 }
 
 /* Hero Section */
-.service-hero {
+
+#contact-us .service-hero {
   background: linear-gradient(rgba(26, 60, 110, 0.8), rgba(26, 60, 110, 0.8)),
-    url("./images/contact-us.avif");
+    url("./images/contact.jpg");
   background-size: cover;
   background-position: center;
   color: var(--white);
